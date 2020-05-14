@@ -19,8 +19,6 @@
 		88465874246C2319008DAE9D /* Management.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88465873246C2319008DAE9D /* Management.storyboard */; };
 		88465877246C278B008DAE9D /* ManagementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88465876246C278B008DAE9D /* ManagementVC.swift */; };
 		88465879246C297D008DAE9D /* Employee.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88465878246C297D008DAE9D /* Employee.storyboard */; };
-		8846587C246C2ADF008DAE9D /* EmTraining.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8846587B246C2ADF008DAE9D /* EmTraining.storyboard */; };
-		8846587E246C2B19008DAE9D /* EmChallenge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8846587D246C2B19008DAE9D /* EmChallenge.storyboard */; };
 		88465880246C2FA4008DAE9D /* MgEditTraining.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8846587F246C2FA4008DAE9D /* MgEditTraining.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -39,8 +37,6 @@
 		88465873246C2319008DAE9D /* Management.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Management.storyboard; sourceTree = "<group>"; };
 		88465876246C278B008DAE9D /* ManagementVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementVC.swift; sourceTree = "<group>"; };
 		88465878246C297D008DAE9D /* Employee.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Employee.storyboard; sourceTree = "<group>"; };
-		8846587B246C2ADF008DAE9D /* EmTraining.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = EmTraining.storyboard; path = FnBTrainingApp/View/EmTraining.storyboard; sourceTree = SOURCE_ROOT; };
-		8846587D246C2B19008DAE9D /* EmChallenge.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = EmChallenge.storyboard; path = FnBTrainingApp/View/EmChallenge.storyboard; sourceTree = SOURCE_ROOT; };
 		8846587F246C2FA4008DAE9D /* MgEditTraining.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MgEditTraining.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,8 +124,6 @@
 		8846587A246C2A19008DAE9D /* Employee */ = {
 			isa = PBXGroup;
 			children = (
-				8846587D246C2B19008DAE9D /* EmChallenge.storyboard */,
-				8846587B246C2ADF008DAE9D /* EmTraining.storyboard */,
 			);
 			path = Employee;
 			sourceTree = "<group>";
@@ -195,10 +189,8 @@
 				88465880246C2FA4008DAE9D /* MgEditTraining.storyboard in Resources */,
 				88465870246C1DB2008DAE9D /* MgTrain.storyboard in Resources */,
 				8846586E246C1D7C008DAE9D /* MgMain.storyboard in Resources */,
-				8846587E246C2B19008DAE9D /* EmChallenge.storyboard in Resources */,
 				88465879246C297D008DAE9D /* Employee.storyboard in Resources */,
 				88465860246BAC63008DAE9D /* LaunchScreen.storyboard in Resources */,
-				8846587C246C2ADF008DAE9D /* EmTraining.storyboard in Resources */,
 				8846585D246BAC63008DAE9D /* Assets.xcassets in Resources */,
 				88465872246C1DDE008DAE9D /* MgEmployees.storyboard in Resources */,
 				8846585B246BAC61008DAE9D /* Main.storyboard in Resources */,
