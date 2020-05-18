@@ -1,36 +1,158 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3oe-tY-IMf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Boi-1X-Hwg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Karyawan-->
         <scene sceneID="Ows-9O-ug1">
             <objects>
-                <viewController id="3oe-tY-IMf" sceneMemberID="viewController">
+                <viewController title="Karyawan" id="3oe-tY-IMf" customClass="ManagementEmployeeVC" customModule="FnBTrainingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mbr-vX-EWb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Menu List Karyawan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnW-uM-M3Y">
-                                <rect key="frame" x="65" y="416" width="285" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sle-7A-P8K" customClass="EmployeeTable" customModule="FnBTrainingApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="206" width="414" height="656"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="2" indentationWidth="0.0" reuseIdentifier="empTableCell" rowHeight="190" id="YSU-oS-CQs" customClass="EmployeeTableCell" customModule="FnBTrainingApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="190"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YSU-oS-CQs" id="b1Y-0s-8t6">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HH7-c2-yX5">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="47"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employee Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UW6-dZ-46V">
+                                                            <rect key="frame" x="15" y="15.5" width="126" height="16"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="47" id="RpG-2d-pQ6"/>
+                                                        <constraint firstItem="UW6-dZ-46V" firstAttribute="leading" secondItem="HH7-c2-yX5" secondAttribute="leading" constant="15" id="eJM-CI-oaH"/>
+                                                        <constraint firstItem="UW6-dZ-46V" firstAttribute="centerY" secondItem="HH7-c2-yX5" secondAttribute="centerY" id="yq4-1g-T5f"/>
+                                                    </constraints>
+                                                </view>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vhe-1c-9jn" customClass="EmployeeCollectionView" customModule="FnBTrainingApp" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="47" width="414" height="143"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="143" id="xhn-Px-ROe"/>
+                                                    </constraints>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="2" minimumInteritemSpacing="6" id="fyE-sp-xgN">
+                                                        <size key="itemSize" width="128" height="129"/>
+                                                        <size key="estimatedItemSize" width="130" height="130"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="empCollectionCell" id="LNK-Dr-NIP" customClass="EmployeeCollectionCell" customModule="FnBTrainingApp" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="7" width="130" height="129"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="245-0z-AkL">
+                                                                <rect key="frame" x="0.0" y="0.0" width="130" height="129"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="M9u-cs-jSp">
+                                                                        <rect key="frame" x="24.5" y="8" width="80" height="80"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rei" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yu9-Se-Cb3">
+                                                                        <rect key="frame" x="0.0" y="96" width="129" height="21"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </collectionViewCellContentView>
+                                                            <size key="customSize" width="130" height="129"/>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="vhe-1c-9jn" firstAttribute="leading" secondItem="b1Y-0s-8t6" secondAttribute="leading" id="KNN-Na-IB3"/>
+                                                <constraint firstItem="vhe-1c-9jn" firstAttribute="top" secondItem="HH7-c2-yX5" secondAttribute="bottom" id="XT5-0i-WbC"/>
+                                                <constraint firstAttribute="trailing" secondItem="HH7-c2-yX5" secondAttribute="trailing" id="cQy-Wi-som"/>
+                                                <constraint firstAttribute="trailing" secondItem="vhe-1c-9jn" secondAttribute="trailing" id="dBS-In-jxh"/>
+                                                <constraint firstItem="HH7-c2-yX5" firstAttribute="top" secondItem="b1Y-0s-8t6" secondAttribute="top" id="eqE-TG-hr6"/>
+                                                <constraint firstAttribute="bottom" secondItem="vhe-1c-9jn" secondAttribute="bottom" id="fRT-yb-CBe"/>
+                                                <constraint firstItem="HH7-c2-yX5" firstAttribute="leading" secondItem="b1Y-0s-8t6" secondAttribute="leading" id="fds-mj-5KO"/>
+                                                <constraint firstItem="HH7-c2-yX5" firstAttribute="width" secondItem="b1Y-0s-8t6" secondAttribute="width" id="jmY-Om-Iho"/>
+                                                <constraint firstItem="vhe-1c-9jn" firstAttribute="top" secondItem="HH7-c2-yX5" secondAttribute="bottom" id="odZ-Zg-qyh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <searchBar contentMode="redraw" misplaced="YES" placeholder="Search Employees" translatesAutoresizingMaskIntoConstraints="NO" id="5CG-MA-sVa">
+                                <rect key="frame" x="20" y="140" width="374" height="56"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5CG-MA-sVa" firstAttribute="top" secondItem="Fpn-8N-Jwk" secondAttribute="top" constant="5" id="TSc-rg-a60"/>
+                            <constraint firstItem="5CG-MA-sVa" firstAttribute="leading" secondItem="Fpn-8N-Jwk" secondAttribute="leading" constant="20" id="WEa-PB-BgI"/>
+                            <constraint firstItem="sle-7A-P8K" firstAttribute="leading" secondItem="mbr-vX-EWb" secondAttribute="leading" id="Xaa-T4-e2P"/>
+                            <constraint firstItem="sle-7A-P8K" firstAttribute="bottom" secondItem="Fpn-8N-Jwk" secondAttribute="bottom" id="ZBi-Uj-g0T"/>
+                            <constraint firstAttribute="trailing" secondItem="sle-7A-P8K" secondAttribute="trailing" id="dGL-su-rfU"/>
+                            <constraint firstItem="sle-7A-P8K" firstAttribute="top" secondItem="5CG-MA-sVa" secondAttribute="bottom" constant="5" id="mbW-wg-l9Z"/>
+                            <constraint firstItem="Fpn-8N-Jwk" firstAttribute="trailing" secondItem="5CG-MA-sVa" secondAttribute="trailing" constant="20" id="toG-gt-9Vt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Fpn-8N-Jwk"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Karyawan" id="YTJ-7S-nBW"/>
+                    <navigationItem key="navigationItem" title="Karyawan" largeTitleDisplayMode="always" id="PJe-rH-EIR"/>
+                    <connections>
+                        <outlet property="searchBar" destination="5CG-MA-sVa" id="1Ay-ht-bhS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QX7-Wn-bmy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="249" y="931"/>
+            <point key="canvasLocation" x="2976.811594202899" y="930.80357142857133"/>
+        </scene>
+        <!--Karyawan-->
+        <scene sceneID="stX-ic-nzb">
+            <objects>
+                <navigationController title="Karyawan" automaticallyAdjustsScrollViewInsets="NO" id="Boi-1X-Hwg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="0KG-5R-De4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.43137254901960786" green="0.78431372549019607" blue="0.51764705882352935" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.054902471600000002" green="0.050903998319999998" blue="0.0549024865" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.31372549020000001" green="0.7843137255" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3oe-tY-IMf" kind="relationship" relationship="rootViewController" id="K8f-pG-AV7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qae-5W-SdA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2066.666666666667" y="930.80357142857133"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="2000" height="2000"/>
+    </resources>
 </document>
