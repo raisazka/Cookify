@@ -28,6 +28,9 @@
 		88E77183247009B8007D9E59 /* ManagementEmployeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E77182247009B8007D9E59 /* ManagementEmployeeVC.swift */; };
 		8D78988624722CCA00CB164C /* MgMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D78988524722CCA00CB164C /* MgMainTableViewCell.swift */; };
 		8DF16E9A2473836600974F0D /* HomeAdminModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF16E992473836600974F0D /* HomeAdminModel.swift */; };
+		8DFCED502473F52500EA1564 /* MgEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFCED4F2473F52500EA1564 /* MgEditViewController.swift */; };
+		8DFCED542473F7DD00EA1564 /* PersiapanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFCED532473F7DC00EA1564 /* PersiapanTableViewCell.swift */; };
+		8DFCED5C2473FF2C00EA1564 /* PersiapanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFCED5B2473FF2C00EA1564 /* PersiapanModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		88E77182247009B8007D9E59 /* ManagementEmployeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementEmployeeVC.swift; sourceTree = "<group>"; };
 		8D78988524722CCA00CB164C /* MgMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MgMainTableViewCell.swift; sourceTree = "<group>"; };
 		8DF16E992473836600974F0D /* HomeAdminModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAdminModel.swift; sourceTree = "<group>"; };
+		8DFCED4F2473F52500EA1564 /* MgEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MgEditViewController.swift; sourceTree = "<group>"; };
+		8DFCED532473F7DC00EA1564 /* PersiapanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersiapanTableViewCell.swift; sourceTree = "<group>"; };
+		8DFCED5B2473FF2C00EA1564 /* PersiapanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersiapanModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,7 @@
 				8D78988524722CCA00CB164C /* MgMainTableViewCell.swift */,
 				8811F57E247187EF00C142ED /* EmployeeTable.swift */,
 				8811F5822471892000C142ED /* EmployeeTableCell.swift */,
+				8DFCED532473F7DC00EA1564 /* PersiapanTableViewCell.swift */,
 			);
 			path = Table;
 			sourceTree = "<group>";
@@ -154,6 +161,8 @@
 		88465875246C2757008DAE9D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8DFCED4F2473F52500EA1564 /* MgEditViewController.swift */,
+				8DFCED5B2473FF2C00EA1564 /* PersiapanModel.swift */,
 				88465876246C278B008DAE9D /* ManagementVC.swift */,
 				8DF16E992473836600974F0D /* HomeAdminModel.swift */,
 				88E77182247009B8007D9E59 /* ManagementEmployeeVC.swift */,
@@ -245,13 +254,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DFCED5C2473FF2C00EA1564 /* PersiapanModel.swift in Sources */,
 				88465858246BAC61008DAE9D /* ViewController.swift in Sources */,
+				8DFCED542473F7DD00EA1564 /* PersiapanTableViewCell.swift in Sources */,
 				8811F5852471896E00C142ED /* EmployeeCollectionCell.swift in Sources */,
 				8DF16E9A2473836600974F0D /* HomeAdminModel.swift in Sources */,
 				884A354A2470449200D8A252 /* Employee.swift in Sources */,
 				88465854246BAC61008DAE9D /* AppDelegate.swift in Sources */,
 				8811F5832471892000C142ED /* EmployeeTableCell.swift in Sources */,
 				88E77183247009B8007D9E59 /* ManagementEmployeeVC.swift in Sources */,
+				8DFCED502473F52500EA1564 /* MgEditViewController.swift in Sources */,
 				88465856246BAC61008DAE9D /* SceneDelegate.swift in Sources */,
 				8D78988624722CCA00CB164C /* MgMainTableViewCell.swift in Sources */,
 				88465877246C278B008DAE9D /* ManagementVC.swift in Sources */,
