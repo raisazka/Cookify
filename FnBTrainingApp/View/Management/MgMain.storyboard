@@ -15,14 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rV9-XV-t0g">
-                                <rect key="frame" x="165" y="524" width="85" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Edit Training"/>
-                                <connections>
-                                    <segue destination="RMr-3d-FZE" kind="show" id="glc-sM-9yy"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zs1-Zp-DYt">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -38,34 +30,39 @@
                                 <color key="backgroundColor" red="0.43137254899999999" green="0.7843137255" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="ctk-bt-DPU">
-                                <rect key="frame" x="20" y="142" width="374" height="301"/>
+                                <rect key="frame" x="20" y="142" width="374" height="454"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cookCell" rowHeight="130" id="ceH-3F-bfP" customClass="MgMainTableViewCell" customModule="FnBTrainingApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="374" height="130"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cookCell" rowHeight="145" id="ceH-3F-bfP" customClass="MgMainTableViewCell" customModule="FnBTrainingApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.5" width="374" height="145"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ceH-3F-bfP" id="Usz-5J-qKh">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="130"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="145"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Hd-4Y-YMw" customClass="MgMainTableViewCell" customModule="FnBTrainingApp" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="7" width="374" height="116"/>
+                                                    <rect key="frame" x="0.0" y="7" width="374" height="130"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mTf-mn-6wE">
+                                                            <rect key="frame" x="0.0" y="0.0" width="16" height="130"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="backgroundColor" red="0.43137254899999999" green="0.7843137255" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogk-0e-lmQ">
-                                                            <rect key="frame" x="31" y="8" width="194" height="27"/>
+                                                            <rect key="frame" x="31" y="12" width="194" height="27"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
                                                             <color key="textColor" red="0.050980392159999999" green="0.53725490200000003" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fYA-zf-z2M">
-                                                            <rect key="frame" x="31" y="59" width="243" height="43"/>
+                                                            <rect key="frame" x="31" y="79" width="243" height="43"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </imageView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A3F-U2-ymN">
-                                                            <rect key="frame" x="318" y="40" width="38" height="29"/>
+                                                            <rect key="frame" x="318" y="50" width="38" height="29"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </imageView>
                                                     </subviews>
@@ -74,11 +71,6 @@
                                                         <outlet property="assigneeImage" destination="fYA-zf-z2M" id="MuE-n5-FZs"/>
                                                         <outlet property="titleCell" destination="Ogk-0e-lmQ" id="eO9-cp-YPv"/>
                                                     </connections>
-                                                </view>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mTf-mn-6wE">
-                                                    <rect key="frame" x="0.0" y="7" width="16" height="116"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.43137254899999999" green="0.7843137255" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -90,6 +82,14 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rV9-XV-t0g">
+                                <rect key="frame" x="165" y="604" width="85" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Edit Training"/>
+                                <connections>
+                                    <segue destination="RMr-3d-FZE" kind="show" id="glc-sM-9yy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="cHN-22-tx5"/>
