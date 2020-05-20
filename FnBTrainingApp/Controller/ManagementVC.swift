@@ -20,10 +20,8 @@ class ManagementVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         cell.personImage.image = UIImage(named: imageItem[indexPath.row])
         
             return cell
-            
     }
     
-
     let titleCell = ["Cook"]
     
     var dataType = [homeAdminModel(recipe: "Telor orak arik", imageModel: "TelorAssignee.png"),
@@ -32,8 +30,6 @@ class ManagementVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     
     let imageItem = ["Telor Person 1.png","Telor Person 2.png","Telor Person 3.png","Telor Person 4.png"]
     
-    
-
     @IBOutlet weak var cookTableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -81,7 +77,24 @@ class ManagementVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         cell.backImage.image = #imageLiteral(resourceName: "back logo")
         
         return cell
-       
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let edit = UIContextualAction(style: .normal, title: "Edit") { (contextualAction, view, actionPerformed: (Bool)-> ()) in
+            //perform segue
+            self.performSegue(withIdentifier: "toEditTrainingSegue", sender:nil)
+            actionPerformed(true)
+        }
+        
+        edit.backgroundColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
+        return UISwipeActionsConfiguration(actions: [edit])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toEditTrainingSegue"
+        {
+            //siapin data sebelum pindah
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,11 +105,6 @@ class ManagementVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         
         cookTableView.dataSource = self
         cookTableView.delegate = self
-        
     }
     
 }
-
-
-
-

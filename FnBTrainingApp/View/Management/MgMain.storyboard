@@ -117,7 +117,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Edit Training"/>
                                 <connections>
-                                    <segue destination="RMr-3d-FZE" kind="show" id="glc-sM-9yy"/>
+                                    <segue destination="RMr-3d-FZE" kind="show" identifier="toEditTrainingSegue" id="glc-sM-9yy"/>
                                 </connections>
                             </button>
                         </subviews>
