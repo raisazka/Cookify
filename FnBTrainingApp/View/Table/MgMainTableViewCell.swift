@@ -12,7 +12,6 @@ import UIKit
 
     
     @IBOutlet weak var titleCell: UILabel!
-    @IBOutlet weak var assigneeImage: UIImageView!
     @IBOutlet weak var backImage: UIImageView!
     
     override func awakeFromNib() {

@@ -8,7 +8,21 @@
 
 import UIKit
 
-class ManagementVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ManagementVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate
+{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return imageItem.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "personImageCell", for: indexPath) as! AssigneeCollectionViewCell
+            
+        cell.personImage.image = UIImage(named: imageItem[indexPath.row])
+        
+            return cell
+            
+    }
+    
 
     let titleCell = ["Cook"]
     
@@ -16,8 +30,10 @@ class ManagementVC: UIViewController, UITableViewDataSource, UITableViewDelegate
                     homeAdminModel(recipe: "Wafflee", imageModel: "Waffle Assignee.png")
                     ]
     
+    let imageItem = ["Telor Person 1.png","Telor Person 2.png","Telor Person 3.png","Telor Person 4.png"]
+    
+    
 
-      
     @IBOutlet weak var cookTableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -62,8 +78,6 @@ class ManagementVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         let cell = tableView.dequeueReusableCell(withIdentifier: "cookCell", for: indexPath) as! MgMainTableViewCell
         
         cell.titleCell.text = dataType[indexPath.row].recipe
-        cell.assigneeImage.image = UIImage(named: dataType[indexPath.row].imageModel)
-        
         cell.backImage.image = #imageLiteral(resourceName: "back logo")
         
         return cell
