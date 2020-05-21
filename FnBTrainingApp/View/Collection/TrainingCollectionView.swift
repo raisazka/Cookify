@@ -8,14 +8,25 @@
 
 import UIKit
 
-class TrainingCollectionView: UICollectionView {
+class TrainingCollectionView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+        override func awakeFromNib() {
+        self.delegate = self
+        self.dataSource = self
     }
-    */
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    override var numberOfSections: Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "employeeCategoryCell", for: indexPath) as! TrainingCollectionViewCell
+        return cell
+    }
 
 }
