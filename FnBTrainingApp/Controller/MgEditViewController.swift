@@ -77,6 +77,18 @@ class MgEditViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let persiapanEdit = dataType1[indexPath.row]
+        performSegue(withIdentifier: "persiapanEditVC", sender: persiapanEdit)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let persiapanEditVC = segue.destination as? MgEditTable{
+            persiapanEditVC.initProduct(category: sender as! persiapanModel)
+        }
+
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if tableView == persiapanTabel

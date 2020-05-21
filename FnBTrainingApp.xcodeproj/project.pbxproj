@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C4836DF247706F1008C1636 /* MgEditTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4836DE247706F1008C1636 /* MgEditTable.swift */; };
 		8811F57F247187EF00C142ED /* EmployeeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8811F57E247187EF00C142ED /* EmployeeTable.swift */; };
 		8811F5812471881800C142ED /* EmployeeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8811F5802471881800C142ED /* EmployeeCollectionView.swift */; };
 		8811F5832471892000C142ED /* EmployeeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8811F5822471892000C142ED /* EmployeeTableCell.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C4836DE247706F1008C1636 /* MgEditTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MgEditTable.swift; sourceTree = "<group>"; };
 		8811F57E247187EF00C142ED /* EmployeeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTable.swift; sourceTree = "<group>"; };
 		8811F5802471881800C142ED /* EmployeeCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCollectionView.swift; sourceTree = "<group>"; };
 		8811F5822471892000C142ED /* EmployeeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableCell.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				8DFCED4F2473F52500EA1564 /* MgEditViewController.swift */,
 				8D6F21EB2476645C00561B38 /* ProsedurModel.swift */,
 				8DFCED5B2473FF2C00EA1564 /* PersiapanModel.swift */,
+				2C4836DE247706F1008C1636 /* MgEditTable.swift */,
 				88465876246C278B008DAE9D /* ManagementVC.swift */,
 				8DF16E992473836600974F0D /* HomeAdminModel.swift */,
 				88E77182247009B8007D9E59 /* ManagementEmployeeVC.swift */,
@@ -275,6 +278,7 @@
 				88465877246C278B008DAE9D /* ManagementVC.swift in Sources */,
 				8DAA50D12474C1D1005D0DDC /* ProsedurTableViewCell.swift in Sources */,
 				8D6F21EC2476645C00561B38 /* ProsedurModel.swift in Sources */,
+				2C4836DF247706F1008C1636 /* MgEditTable.swift in Sources */,
 				8811F5812471881800C142ED /* EmployeeCollectionView.swift in Sources */,
 				8811F57F247187EF00C142ED /* EmployeeTable.swift in Sources */,
 			);
