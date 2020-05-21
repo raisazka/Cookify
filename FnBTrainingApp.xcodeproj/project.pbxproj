@@ -23,9 +23,9 @@
 		88465874246C2319008DAE9D /* Management.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88465873246C2319008DAE9D /* Management.storyboard */; };
 		88465877246C278B008DAE9D /* ManagementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88465876246C278B008DAE9D /* ManagementVC.swift */; };
 		88465879246C297D008DAE9D /* Employee.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88465878246C297D008DAE9D /* Employee.storyboard */; };
-		88465880246C2FA4008DAE9D /* MgEditTraining.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8846587F246C2FA4008DAE9D /* MgEditTraining.storyboard */; };
 		884A354A2470449200D8A252 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884A35492470449200D8A252 /* Employee.swift */; };
 		88E77183247009B8007D9E59 /* ManagementEmployeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E77182247009B8007D9E59 /* ManagementEmployeeVC.swift */; };
+		8D6F21EC2476645C00561B38 /* ProsedurModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F21EB2476645C00561B38 /* ProsedurModel.swift */; };
 		8D78988624722CCA00CB164C /* MgMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D78988524722CCA00CB164C /* MgMainTableViewCell.swift */; };
 		8DAA50D12474C1D1005D0DDC /* ProsedurTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAA50D02474C1D0005D0DDC /* ProsedurTableViewCell.swift */; };
 		8DAA50D32474D330005D0DDC /* AssigneeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAA50D22474D330005D0DDC /* AssigneeCollectionViewCell.swift */; };
@@ -54,9 +54,9 @@
 		88465873246C2319008DAE9D /* Management.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Management.storyboard; sourceTree = "<group>"; };
 		88465876246C278B008DAE9D /* ManagementVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementVC.swift; sourceTree = "<group>"; };
 		88465878246C297D008DAE9D /* Employee.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Employee.storyboard; sourceTree = "<group>"; };
-		8846587F246C2FA4008DAE9D /* MgEditTraining.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MgEditTraining.storyboard; sourceTree = "<group>"; };
 		884A35492470449200D8A252 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		88E77182247009B8007D9E59 /* ManagementEmployeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementEmployeeVC.swift; sourceTree = "<group>"; };
+		8D6F21EB2476645C00561B38 /* ProsedurModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProsedurModel.swift; sourceTree = "<group>"; };
 		8D78988524722CCA00CB164C /* MgMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MgMainTableViewCell.swift; sourceTree = "<group>"; };
 		8DAA50D02474C1D0005D0DDC /* ProsedurTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProsedurTableViewCell.swift; sourceTree = "<group>"; };
 		8DAA50D22474D330005D0DDC /* AssigneeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssigneeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -159,7 +159,6 @@
 				88465871246C1DDE008DAE9D /* MgEmployees.storyboard */,
 				8846586F246C1DB2008DAE9D /* MgTrain.storyboard */,
 				8846586D246C1D7C008DAE9D /* MgMain.storyboard */,
-				8846587F246C2FA4008DAE9D /* MgEditTraining.storyboard */,
 			);
 			path = Management;
 			sourceTree = "<group>";
@@ -168,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				8DFCED4F2473F52500EA1564 /* MgEditViewController.swift */,
+				8D6F21EB2476645C00561B38 /* ProsedurModel.swift */,
 				8DFCED5B2473FF2C00EA1564 /* PersiapanModel.swift */,
 				88465876246C278B008DAE9D /* ManagementVC.swift */,
 				8DF16E992473836600974F0D /* HomeAdminModel.swift */,
@@ -241,7 +241,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88465880246C2FA4008DAE9D /* MgEditTraining.storyboard in Resources */,
 				88465870246C1DB2008DAE9D /* MgTrain.storyboard in Resources */,
 				8846586E246C1D7C008DAE9D /* MgMain.storyboard in Resources */,
 				88465879246C297D008DAE9D /* Employee.storyboard in Resources */,
@@ -275,6 +274,7 @@
 				8D78988624722CCA00CB164C /* MgMainTableViewCell.swift in Sources */,
 				88465877246C278B008DAE9D /* ManagementVC.swift in Sources */,
 				8DAA50D12474C1D1005D0DDC /* ProsedurTableViewCell.swift in Sources */,
+				8D6F21EC2476645C00561B38 /* ProsedurModel.swift in Sources */,
 				8811F5812471881800C142ED /* EmployeeCollectionView.swift in Sources */,
 				8811F57F247187EF00C142ED /* EmployeeTable.swift in Sources */,
 			);

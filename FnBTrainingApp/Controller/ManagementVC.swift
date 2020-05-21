@@ -103,8 +103,10 @@ class ManagementVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         cookTableView.separatorStyle = .none
         cookTableView.separatorColor = .white
         
+        self.tabBarController?.tabBar.isHidden = false
         cookTableView.dataSource = self
         cookTableView.delegate = self
+        
     }
     
 }

@@ -16,27 +16,38 @@ class MgEditViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var title2 = "Prosedur"
     var title1 = "Persiapan"
     
-    /*var dataType1 = [
-        persiapanModel(bahanModel: "Telur Ayam", jumlahModel: "3 butir"),
-        persiapanModel(bahanModel: "Margarin", jumlahModel: "2 sendok teh"),
-        //persiapanModel(bahanModel: "Susu", jumlahModel: "2 sendok makan") ] g tau kenapa masih belum bisa melakai cara ini*/
+    var dataType1 = [
+                        persiapanModel(bahanModel: "Telur Ayam", jumlahModel: "3 butir"),
+                        persiapanModel(bahanModel: "Margarin", jumlahModel: "2 sendok teh"),
+                        persiapanModel(bahanModel: "Susu", jumlahModel: "2 sendok makan"),
+                        persiapanModel(bahanModel: "Keju", jumlahModel: "2 sendok makan"),
+                        persiapanModel(bahanModel: "Garam", jumlahModel: "2 sendok teh"),
+                        persiapanModel(bahanModel: "Lada", jumlahModel: "1 sendok teh"),
+                        persiapanModel(bahanModel: "Wajan", jumlahModel: "ukuran sedang"),
+                        persiapanModel(bahanModel: "Sendok masak", jumlahModel: "ukuran sedang")
+                    ]
     
-    var bahan = ["Telur Ayam","Margarin","Susu","Keju","Garam","Lada","Wajan","Sendok masak"]
-    var jumlah = ["3 butir","2 sendok teh","2 sendok makan","2 sendok makan","2 sendok teh","1 sendok teh","ukuran sedang","ukuran sedang"]
-    
-    var prosedurImageArray = ["prosedur 1.png","prosedur 2.png","prosedur 3.png","prosedur 4.png","prosedur 5.png","prosedur 6.png","prosedur 7.png","prosedur 8.png"]
-    
-    var prosedurLabelArray = ["Pecahkan Telur dan masukkan ke dalam mangkok","Kocok telur sampai tercampur lalu masukan garam dan merica lalu aduk lagi.","Masukan keju dan susu kemudian aduk lagi hingga tercampur.","Masukan margarin kedalam wajan dan panaskan wajan hingga margarin meleleh.","Gunakan api kecil setelah margarin meleleh lalu masukan telur kedalam wajan.","Biarkan telur di dalam wajan selama 30 detik tanpa menyentuh telur sama sekali.","Gunakan api sedang kemudian mulai aduk telur tersebut secara merata selama 20 detik","Matikan api dan tetap aduk telur selama 7 detik kemudian sajikan ke dalam piring"]
+    var dataType2 =
+    [
+        ProsedurModel(prosedurImage: "prosedur 1.png", prosedurExplanation: "Pecahkan Telur dan masukkan ke dalam mangkok"),
+        ProsedurModel(prosedurImage: "prosedur 2.png", prosedurExplanation: "Kocok telur sampai tercampur lalu masukan garam dan merica lalu aduk lagi."),
+        ProsedurModel(prosedurImage: "prosedur 3.png", prosedurExplanation: "Masukan keju dan susu kemudian aduk lagi hingga tercampur."),
+        ProsedurModel(prosedurImage: "prosedur 4.png", prosedurExplanation: "Masukan margarin kedalam wajan dan panaskan wajan hingga margarin meleleh."),
+        ProsedurModel(prosedurImage: "prosedur 5.png", prosedurExplanation: "Gunakan api kecil setelah margarin meleleh lalu masukan telur kedalam wajan."),
+        ProsedurModel(prosedurImage: "prosedur 6.png", prosedurExplanation: "Biarkan telur di dalam wajan selama 30 detik tanpa menyentuh telur sama sekali."),
+        ProsedurModel(prosedurImage: "prosedur 7.png", prosedurExplanation: "Gunakan api sedang kemudian mulai aduk telur tersebut secara merata selama 20 detik"),
+        ProsedurModel(prosedurImage: "prosedur 8.png", prosedurExplanation: "Matikan api dan tetap aduk telur selama 7 detik kemudian sajikan ke dalam piring")
+    ]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if tableView == persiapanTabel
         {
-            return bahan.count
+            return dataType1.count
         }
         else
         {
-            return prosedurImageArray.count
+            return dataType2.count
         }
     }
     
@@ -46,8 +57,8 @@ class MgEditViewController: UIViewController, UITableViewDelegate, UITableViewDa
         {
             let cell = persiapanTabel.dequeueReusableCell(withIdentifier: "persiapanCell", for: indexPath) as! PersiapanTableViewCell
             
-            cell.bahanLabel.text = bahan[indexPath.row]
-            cell.jumlahLabel.text = jumlah[indexPath.row]
+            cell.bahanLabel.text = dataType1[indexPath.row].bahanModel
+            cell.jumlahLabel.text = dataType1[indexPath.row].jumlahModel
             
             return cell
         }
@@ -55,9 +66,9 @@ class MgEditViewController: UIViewController, UITableViewDelegate, UITableViewDa
         {
             let cell = prosedurTabel.dequeueReusableCell(withIdentifier: "prosedurCell", for: indexPath) as! ProsedurTableViewCell
             
-            cell.prosedurImage.image = UIImage(named: prosedurImageArray[indexPath.row])
+            cell.prosedurImage.image = UIImage(named: dataType2[indexPath.row].prosedurImage)
             
-            cell.prosedurLabel.text = prosedurLabelArray[indexPath.row]
+            cell.prosedurLabel.text = dataType2[indexPath.row].prosedurExplanation
             
             return cell
         }
@@ -131,13 +142,13 @@ class MgEditViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return 1
     }
     
-    @IBOutlet weak var titleEditLabel: UILabel!
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         // Do any additional setup after loading the view.
+       self.tabBarController?.tabBar.isHidden = true
         
         persiapanTabel.dataSource = self
         persiapanTabel.delegate = self
