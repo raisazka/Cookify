@@ -26,6 +26,8 @@
 		88465880246C2FA4008DAE9D /* MgEditTraining.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8846587F246C2FA4008DAE9D /* MgEditTraining.storyboard */; };
 		884A354A2470449200D8A252 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884A35492470449200D8A252 /* Employee.swift */; };
 		88E77183247009B8007D9E59 /* ManagementEmployeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E77182247009B8007D9E59 /* ManagementEmployeeVC.swift */; };
+		B710B52C247646DD0060B193 /* TrainingCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B710B52B247646DD0060B193 /* TrainingCollectionView.swift */; };
+		B710B52E247646EE0060B193 /* TrainingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B710B52D247646EE0060B193 /* TrainingCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		8846587F246C2FA4008DAE9D /* MgEditTraining.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MgEditTraining.storyboard; sourceTree = "<group>"; };
 		884A35492470449200D8A252 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		88E77182247009B8007D9E59 /* ManagementEmployeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementEmployeeVC.swift; sourceTree = "<group>"; };
+		B710B52B247646DD0060B193 /* TrainingCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCollectionView.swift; sourceTree = "<group>"; };
+		B710B52D247646EE0060B193 /* TrainingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 			children = (
 				8811F5802471881800C142ED /* EmployeeCollectionView.swift */,
 				8811F5842471896E00C142ED /* EmployeeCollectionCell.swift */,
+				B710B52B247646DD0060B193 /* TrainingCollectionView.swift */,
+				B710B52D247646EE0060B193 /* TrainingCollectionViewCell.swift */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -239,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B710B52E247646EE0060B193 /* TrainingCollectionViewCell.swift in Sources */,
 				88465858246BAC61008DAE9D /* ViewController.swift in Sources */,
 				8811F5852471896E00C142ED /* EmployeeCollectionCell.swift in Sources */,
 				884A354A2470449200D8A252 /* Employee.swift in Sources */,
@@ -249,6 +256,7 @@
 				88465877246C278B008DAE9D /* ManagementVC.swift in Sources */,
 				8811F5812471881800C142ED /* EmployeeCollectionView.swift in Sources */,
 				8811F57F247187EF00C142ED /* EmployeeTable.swift in Sources */,
+				B710B52C247646DD0060B193 /* TrainingCollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
