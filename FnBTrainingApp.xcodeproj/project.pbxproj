@@ -28,6 +28,8 @@
 		88E77183247009B8007D9E59 /* ManagementEmployeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E77182247009B8007D9E59 /* ManagementEmployeeVC.swift */; };
 		B710B52C247646DD0060B193 /* TrainingCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B710B52B247646DD0060B193 /* TrainingCollectionView.swift */; };
 		B710B52E247646EE0060B193 /* TrainingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B710B52D247646EE0060B193 /* TrainingCollectionViewCell.swift */; };
+		B710B53024764FFF0060B193 /* PersiapanTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B710B52F24764FFF0060B193 /* PersiapanTableViewController.swift */; };
+		B710B532247650150060B193 /* PersiapanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B710B531247650150060B193 /* PersiapanTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		88E77182247009B8007D9E59 /* ManagementEmployeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementEmployeeVC.swift; sourceTree = "<group>"; };
 		B710B52B247646DD0060B193 /* TrainingCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCollectionView.swift; sourceTree = "<group>"; };
 		B710B52D247646EE0060B193 /* TrainingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCollectionViewCell.swift; sourceTree = "<group>"; };
+		B710B52F24764FFF0060B193 /* PersiapanTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersiapanTableViewController.swift; sourceTree = "<group>"; };
+		B710B531247650150060B193 /* PersiapanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersiapanTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 			children = (
 				8811F57E247187EF00C142ED /* EmployeeTable.swift */,
 				8811F5822471892000C142ED /* EmployeeTableCell.swift */,
+				B710B52F24764FFF0060B193 /* PersiapanTableViewController.swift */,
+				B710B531247650150060B193 /* PersiapanTableViewCell.swift */,
 			);
 			path = Table;
 			sourceTree = "<group>";
@@ -246,7 +252,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B710B52E247646EE0060B193 /* TrainingCollectionViewCell.swift in Sources */,
+				B710B532247650150060B193 /* PersiapanTableViewCell.swift in Sources */,
 				88465858246BAC61008DAE9D /* ViewController.swift in Sources */,
+				B710B53024764FFF0060B193 /* PersiapanTableViewController.swift in Sources */,
 				8811F5852471896E00C142ED /* EmployeeCollectionCell.swift in Sources */,
 				884A354A2470449200D8A252 /* Employee.swift in Sources */,
 				88465854246BAC61008DAE9D /* AppDelegate.swift in Sources */,
