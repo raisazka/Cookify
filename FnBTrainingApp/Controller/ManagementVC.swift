@@ -10,6 +10,8 @@ import UIKit
 
 class ManagementVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate
 {
+    var chosenTitle: String = ""
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return imageItem.count
     }
@@ -81,7 +83,9 @@ class ManagementVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let edit = UIContextualAction(style: .normal, title: "Edit") { (contextualAction, view, actionPerformed: (Bool)-> ()) in
+            
             //perform segue
+            self.chosenTitle = self.dataType[indexPath.row].recipe
             self.performSegue(withIdentifier: "toEditTrainingSegue", sender:nil)
             actionPerformed(true)
         }
@@ -91,18 +95,21 @@ class ManagementVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toEditTrainingSegue"
+      
+        if let destination = segue.destination as? MgEditViewController
         {
-            //siapin data sebelum pindah
+            destination.navigationBarTitle = chosenTitle
         }
     }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("test")
         
         cookTableView.separatorStyle = .none
         cookTableView.separatorColor = .white
-        
+       
         self.tabBarController?.tabBar.isHidden = false
         cookTableView.dataSource = self
         cookTableView.delegate = self

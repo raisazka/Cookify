@@ -16,6 +16,8 @@ class MgEditViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var title2 = "Prosedur"
     var title1 = "Persiapan"
     
+    var navigationBarTitle: String = ""
+    
     var dataType1 = [
                         persiapanModel(bahanModel: "Telur Ayam", jumlahModel: "3 butir"),
                         persiapanModel(bahanModel: "Margarin", jumlahModel: "2 sendok teh"),
@@ -149,6 +151,9 @@ class MgEditViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         // Do any additional setup after loading the view.
        self.tabBarController?.tabBar.isHidden = true
+        self.title = "\(navigationBarTitle)"
+        print(navigationBarTitle)
+
         
         persiapanTabel.dataSource = self
         persiapanTabel.delegate = self
