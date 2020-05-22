@@ -13,6 +13,11 @@ class MgEditViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var persiapanTabel: UITableView!
     @IBOutlet weak var prosedurTabel: UITableView!
     
+    var upcomingTasks: [persiapanModel] = []
+        
+    var dataReceived: [persiapanModel] = []
+
+    
     var title2 = "Prosedur"
     var title1 = "Persiapan"
     
@@ -156,6 +161,16 @@ class MgEditViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return 1
     }
     
+    @IBAction func unwindToTable(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? MgEditTable {
+            
+            dataReceived.insert(sourceViewController.products[0], at:0)
+            upcomingTasks.insert(dataReceived[0], at: 0)
+            dataReceived.removeAll()
+            persiapanTabel.reloadData()
+            
+        }
+    }
    
     
     override func viewDidLoad() {

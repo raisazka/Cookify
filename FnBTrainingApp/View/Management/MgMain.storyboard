@@ -278,21 +278,27 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Zd-DB-gto">
                                 <rect key="frame" x="39" y="281" width="336" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" backgroundImage="rectangle.fill" catalog="system">
+                                <state key="normal" title="Edit" backgroundImage="rectangle.fill" catalog="system">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="editBtn:" destination="Ivi-23-Wi0" eventType="touchUpInside" id="Ef7-0y-0Yl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Pwf-kq-9Hc"/>
                     </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="414" height="400"/>
                     <size key="freeformSize" width="414" height="400"/>
                     <connections>
                         <outlet property="keteranganTF" destination="yIz-TA-8gc" id="bii-WH-jTj"/>
                         <outlet property="namaPersiapanTF" destination="ngq-os-doX" id="GcR-YV-b8Z"/>
+                        <segue destination="4be-PC-IUw" kind="unwind" identifier="unwindToTable" unwindAction="unwindToTableWithSender:" id="kM6-Bm-5uW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JaI-8k-hkF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="4be-PC-IUw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3695.652173913044" y="-466.07142857142856"/>
         </scene>
