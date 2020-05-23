@@ -14,9 +14,9 @@ class MgEditViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var prosedurTabel: UITableView!
     
     var upcomingTasks: [persiapanModel] = []
-        
     var dataReceived: [persiapanModel] = []
 
+    var choosenIndex: Int = 0
     
     var title2 = "Prosedur"
     var title1 = "Persiapan"
@@ -84,11 +84,13 @@ class MgEditViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let persiapanEdit = dataType1[indexPath.row]
+        choosenIndex = indexPath.row
         performSegue(withIdentifier: "persiapanEditVC", sender: persiapanEdit)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let persiapanEditVC = segue.destination as? MgEditTable{
+            persiapanEditVC.saveChoosenIndex = choosenIndex
             persiapanEditVC.initProduct(category: sender as! persiapanModel)
         }
 
@@ -165,6 +167,7 @@ class MgEditViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if let sourceViewController = sender.source as? MgEditTable {
             
             dataReceived.insert(sourceViewController.products[0], at:0)
+            print(dataReceived[0].bahanModel)
             upcomingTasks.insert(dataReceived[0], at: 0)
             dataReceived.removeAll()
             persiapanTabel.reloadData()
@@ -179,9 +182,7 @@ class MgEditViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // Do any additional setup after loading the view.
        self.tabBarController?.tabBar.isHidden = true
         self.title = "\(navigationBarTitle)"
-        print(navigationBarTitle)
-
-        
+    
         persiapanTabel.dataSource = self
         persiapanTabel.delegate = self
         
