@@ -102,6 +102,13 @@ class ManagementVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+          self.tabBarController?.tabBar.isHidden = true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,7 +117,6 @@ class ManagementVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         cookTableView.separatorStyle = .none
         cookTableView.separatorColor = .white
        
-        self.tabBarController?.tabBar.isHidden = false
         cookTableView.dataSource = self
         cookTableView.delegate = self
         

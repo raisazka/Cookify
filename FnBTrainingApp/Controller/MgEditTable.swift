@@ -14,6 +14,8 @@ class MgEditTable: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var namaPersiapanTF: UITextField!
     @IBOutlet weak var keteranganTF: UITextField!
     
+    var saveChoosenIndex: Int = 0
+    
     var alert: UIAlertController!
     var namaPersiapan: String = ""
     var keterangan: String = ""
@@ -25,6 +27,8 @@ class MgEditTable: UIViewController, UITextFieldDelegate{
         super.viewDidLoad()
         namaPersiapanTF.placeholder = namaPersiapan
         keteranganTF.placeholder = keterangan
+        
+        print(saveChoosenIndex)
     }
     
     func initProduct(category: persiapanModel){
@@ -36,10 +40,20 @@ class MgEditTable: UIViewController, UITextFieldDelegate{
         if (namaPersiapanTF.text == "") || (keteranganTF.text == ""){
            showAlert()
         }else{
-            namaPersiapanTF.text = namaPersiapan1
-            keteranganTF.text = keterangan1
+            namaPersiapan1 = namaPersiapanTF.text!
+            keterangan1 = keteranganTF.text!
             self.products.append(persiapanModel(bahanModel: namaPersiapan1, jumlahModel: keterangan1))
-            performSegue(withIdentifier: "unwindToTable" , sender: self)        }
+            performSegue(withIdentifier: "unwindToTable" , sender: self)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let previousVC = segue.destination as? MgEditViewController
+        {
+            previousVC.choosenIndex = saveChoosenIndex
+            previousVC.tempBahanModel = namaPersiapan1
+            previousVC.tempJumlahModel = keterangan1
+        }
     }
     
     func showAlert() {
@@ -48,4 +62,6 @@ class MgEditTable: UIViewController, UITextFieldDelegate{
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
     }
+    
+    
 }

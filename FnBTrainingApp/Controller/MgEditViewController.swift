@@ -14,14 +14,17 @@ class MgEditViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var prosedurTabel: UITableView!
     
     var upcomingTasks: [persiapanModel] = []
-        
     var dataReceived: [persiapanModel] = []
 
+    var choosenIndex: Int = -1
     
     var title2 = "Prosedur"
     var title1 = "Persiapan"
     
     var navigationBarTitle: String = ""
+    
+    var tempBahanModel: String = ""
+    var tempJumlahModel: String = ""
     
     var dataType1 = [
                         persiapanModel(bahanModel: "Telur Ayam", jumlahModel: "3 butir"),
@@ -84,11 +87,13 @@ class MgEditViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let persiapanEdit = dataType1[indexPath.row]
+        choosenIndex = indexPath.row
         performSegue(withIdentifier: "persiapanEditVC", sender: persiapanEdit)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let persiapanEditVC = segue.destination as? MgEditTable{
+            persiapanEditVC.saveChoosenIndex = choosenIndex
             persiapanEditVC.initProduct(category: sender as! persiapanModel)
         }
 
@@ -162,32 +167,29 @@ class MgEditViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     @IBAction func unwindToTable(sender: UIStoryboardSegue) {
-        if let sourceViewController = sender.source as? MgEditTable {
+           if let sourceViewController = sender.source as? MgEditTable {
+               
+            dataType1[choosenIndex].bahanModel = tempBahanModel
+            dataType1[choosenIndex].jumlahModel = tempJumlahModel
             
-            dataReceived.insert(sourceViewController.products[0], at:0)
-            upcomingTasks.insert(dataReceived[0], at: 0)
-            dataReceived.removeAll()
             persiapanTabel.reloadData()
-            
-        }
-    }
-   
+           }
+       }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+      
         // Do any additional setup after loading the view.
        self.tabBarController?.tabBar.isHidden = true
         self.title = "\(navigationBarTitle)"
-        print(navigationBarTitle)
-
-        
+    
         persiapanTabel.dataSource = self
         persiapanTabel.delegate = self
         
         prosedurTabel.dataSource = self
         prosedurTabel.delegate = self
     }
+    
     
 
     /*
