@@ -10,5 +10,7 @@ import UIKit
 
 class TrainingCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet var employeeCategoryImageView: UIImageView!
+    @IBOutlet var employeeCategoryLabel: UILabel!
     
 }
