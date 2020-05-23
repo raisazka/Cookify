@@ -49,7 +49,7 @@
                                                         <constraint firstAttribute="height" constant="48" id="z6T-C5-UGC"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -67,6 +67,7 @@
                                         <connections>
                                             <outlet property="employeeCategoryImageView" destination="fcM-8c-D2a" id="1SL-CF-Oah"/>
                                             <outlet property="employeeCategoryLabel" destination="u3f-qj-65R" id="CrF-Md-kSY"/>
+                                            <segue destination="auw-Ak-nNT" kind="show" identifier="categoryItemSegue" id="EkC-Fb-37X"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -148,25 +149,28 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="ToU-Vt-YP7" kind="presentation" id="GDg-0i-Sco"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HHR-3j-LxD">
-                                <rect key="frame" x="30" y="814" width="354" height="48"/>
+                                <rect key="frame" x="30" y="761" width="354" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.24313725489999999" green="0.80392156859999997" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="fAv-kE-Ibn" kind="show" identifier="persiapanSetSegue" id="RR3-W5-FWA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="EfW-hR-35a"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" title="Masak" id="rOl-MX-h9h"/>
-                    <connections>
-                        <segue destination="ToU-Vt-YP7" kind="presentation" identifier="inputNamaBahan" modalPresentationStyle="automatic" id="Mbj-D8-Dg1"/>
-                        <segue destination="fAv-kE-Ibn" kind="show" identifier="editProsedur" id="cpt-la-GoU"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GgR-wT-fB6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -329,4 +333,7 @@
             <point key="canvasLocation" x="730.43478260869574" y="213.61607142857142"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="EkC-Fb-37X"/>
+    </inferredMetricsTieBreakers>
 </document>
