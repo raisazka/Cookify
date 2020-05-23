@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DG1-Os-Sz1" customClass="TrainingCollectionView" customModule="FnBTrainingApp" customModuleProvider="target">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DG1-Os-Sz1">
                                 <rect key="frame" x="0.0" y="121" width="414" height="775"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -77,6 +77,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Pilih Kategori" id="TRd-N3-wkz"/>
                     <connections>
+                        <outlet property="categoryCollectionView" destination="DG1-Os-Sz1" id="uTI-UU-2q5"/>
                         <segue destination="auw-Ak-nNT" kind="show" identifier="editPersiapan" id="CTz-yh-LJs"/>
                     </connections>
                 </viewController>
