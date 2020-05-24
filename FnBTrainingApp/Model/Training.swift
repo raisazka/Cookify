@@ -12,9 +12,11 @@ import UIKit
 class Training {
     var name: String
     var image: UIImage
+    var minute: Int
     
-    init(name: String, image: UIImage) {
+    init(name: String, image: UIImage, minute: Int) {
         self.name = name
         self.image = image
+        self.minute = minute
     }
 }

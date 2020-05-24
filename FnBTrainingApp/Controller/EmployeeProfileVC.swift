@@ -16,9 +16,6 @@ class EmployeeProfileVC: UIViewController, UICollectionViewDelegate, UICollectio
     @IBOutlet weak var empRoleLabel: UILabel!
     @IBOutlet weak var empImage: UIImageView!
     
-    var trainings : [Training] = [Training(name:"Kebab", image: #imageLiteral(resourceName: "kebab")), Training(name: "Pancake", image: #imageLiteral(resourceName: "pancake"))
-                                , Training(name: "Steak", image: #imageLiteral(resourceName: "steak"))]
-    
     @IBOutlet weak var trainingCollection: UICollectionView!
     
     override func viewDidLoad() {
@@ -44,12 +41,12 @@ class EmployeeProfileVC: UIViewController, UICollectionViewDelegate, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return trainings.count
+        return (employee?.trainings.count)!
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = trainingCollection.dequeueReusableCell(withReuseIdentifier: "empTrainingCell", for: indexPath) as! EmployeeTrainingCollectionCell
-        let training = trainings[indexPath.row]
+        let training = employee!.trainings[indexPath.row]
         cell.configure(training: training)
         return cell
     }

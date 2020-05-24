@@ -247,8 +247,15 @@
                                 <rect key="frame" x="51" y="135" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Training" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUb-XS-Ewh">
+                                <rect key="frame" x="20" y="336" width="102" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OFb-2q-teN">
-                                <rect key="frame" x="20" y="387" width="374" height="475"/>
+                                <rect key="frame" x="20" y="383" width="374" height="475"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="2" id="34g-1b-367">
@@ -276,39 +283,40 @@
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scrambled Egg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3q-Mg-uya">
-                                                    <rect key="frame" x="12" y="96" width="90" height="38"/>
+                                                    <rect key="frame" x="8" y="98" width="47" height="36"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="38" id="Bec-Qu-mne"/>
+                                                        <constraint firstAttribute="height" constant="36" id="cb7-6S-IBu"/>
+                                                        <constraint firstAttribute="width" constant="47" id="rW8-fK-3Ae"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.5m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bX3-Yd-aSE">
+                                                    <rect key="frame" x="63" y="105" width="44" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                    <color key="textColor" red="0.43137254899999999" green="0.7843137255" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="p3z-Uf-h1D" firstAttribute="leading" secondItem="GZo-aE-Kqn" secondAttribute="leading" id="8cf-lw-JBp"/>
+                                                <constraint firstItem="l3q-Mg-uya" firstAttribute="top" secondItem="p3z-Uf-h1D" secondAttribute="bottom" id="GMP-X4-UmZ"/>
+                                                <constraint firstItem="l3q-Mg-uya" firstAttribute="leading" secondItem="GZo-aE-Kqn" secondAttribute="leading" constant="8" id="H9v-wV-646"/>
                                                 <constraint firstAttribute="trailing" secondItem="p3z-Uf-h1D" secondAttribute="trailing" id="LeL-VR-bkw"/>
                                                 <constraint firstItem="p3z-Uf-h1D" firstAttribute="top" secondItem="GZo-aE-Kqn" secondAttribute="top" id="VFy-yw-2zD"/>
-                                                <constraint firstItem="l3q-Mg-uya" firstAttribute="top" secondItem="p3z-Uf-h1D" secondAttribute="bottom" constant="-2" id="gxy-6v-55l"/>
-                                                <constraint firstAttribute="trailing" secondItem="l3q-Mg-uya" secondAttribute="trailing" constant="8" id="hd1-2B-W0c"/>
-                                                <constraint firstItem="l3q-Mg-uya" firstAttribute="leading" secondItem="GZo-aE-Kqn" secondAttribute="leading" constant="12" id="oiW-c7-3Jj"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="110" height="134"/>
                                         <connections>
                                             <outlet property="trainingImage" destination="p3z-Uf-h1D" id="Yol-nE-cC9"/>
+                                            <outlet property="trainingMinute" destination="bX3-Yd-aSE" id="Ird-Hb-bcB"/>
                                             <outlet property="trainingName" destination="l3q-Mg-uya" id="6wb-jB-9GS"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Training" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUb-XS-Ewh">
-                                <rect key="frame" x="20" y="336" width="102" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="V9H-o1-YyS"/>

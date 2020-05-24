@@ -12,7 +12,14 @@ class ManagementEmployeeVC: UIViewController, UITableViewDelegate,
 UITableViewDataSource,EmpTableDelegate {
     
     
-    var employees : [Employee] = [Employee(name: "Henrdi",image: #imageLiteral(resourceName: "logo") , role: "Cook"), Employee(name: "Edward", image: #imageLiteral(resourceName: "logo"), role: "Cook"),Employee(name: "Rei", image: #imageLiteral(resourceName: "logo"), role: "Cashier")]
+    var employees : [Employee] = [
+        Employee(name: "Henrdi",image: #imageLiteral(resourceName: "logo") , role: "Cook", training: [Training(name:"Kebab", image: #imageLiteral(resourceName: "kebab"), minute: 4), Training(name: "Pancake", image: #imageLiteral(resourceName: "pancake"), minute: 10),Training(name: "Steak", image: #imageLiteral(resourceName: "steak"), minute: 22)]),
+        
+        Employee(name: "Edward", image: #imageLiteral(resourceName: "logo"), role: "Cook", training: [Training(name: "Pancake", image: #imageLiteral(resourceName: "pancake"), minute: 10),Training(name: "Steak", image: #imageLiteral(resourceName: "steak"), minute: 22)]),
+        
+        Employee(name: "Rei", image: #imageLiteral(resourceName: "logo"), role: "Cashier", training: [Training(name:"Kebab", image: #imageLiteral(resourceName: "kebab"), minute: 4), Training(name: "Pancake", image: #imageLiteral(resourceName: "pancake"), minute: 10),Training(name: "Steak", image: #imageLiteral(resourceName: "steak"), minute: 22), Training(name:"Scrambled Egg", image: #imageLiteral(resourceName: "kebab"), minute: 15)])
+    ]
+    
     
     @IBOutlet weak var searchBar: UISearchBar!
     
