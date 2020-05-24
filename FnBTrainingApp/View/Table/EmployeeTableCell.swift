@@ -10,6 +10,7 @@ import UIKit
 
 protocol EmpTableDelegate {
     func cellPressed(data: Employee)
+    func viewAllEmployee(data: [Employee])
 }
 
 class EmployeeTableCell: UITableViewCell, UICollectionViewDelegate,
@@ -18,6 +19,7 @@ class EmployeeTableCell: UITableViewCell, UICollectionViewDelegate,
     @IBOutlet weak var sectionLabel: UILabel!
     
     @IBOutlet weak var empCollectionView: UICollectionView!
+    @IBOutlet weak var view: UIView!
     
     var empArray = [Employee]()
     var delegate: EmpTableDelegate?
@@ -25,12 +27,17 @@ class EmployeeTableCell: UITableViewCell, UICollectionViewDelegate,
     override func awakeFromNib() {
         empCollectionView.delegate = self
         empCollectionView.dataSource = self
+        view.layer.borderWidth = 1
+        view.layer.borderColor = UIColor.lightGray.cgColor
     }
     
     func theSegue(data: Employee) {
         delegate?.cellPressed(data: data)
     }
 
+    @IBAction func viewAllTapped(_ sender: Any) {
+        delegate?.viewAllEmployee(data: empArray)
+    }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1

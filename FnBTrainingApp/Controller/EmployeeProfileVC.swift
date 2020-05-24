@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EmployeeProfileVC: UIViewController {
+class EmployeeProfileVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     var employee : Employee?
     
@@ -16,12 +16,23 @@ class EmployeeProfileVC: UIViewController {
     @IBOutlet weak var empRoleLabel: UILabel!
     @IBOutlet weak var empImage: UIImageView!
     
+    var trainings : [Training] = [Training(name:"Kebab", image: #imageLiteral(resourceName: "kebab")), Training(name: "Pancake", image: #imageLiteral(resourceName: "pancake"))
+                                , Training(name: "Steak", image: #imageLiteral(resourceName: "steak"))]
+    
+    @IBOutlet weak var trainingCollection: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         empImage.image = employee?.image
         empNameLabel.text = employee?.name
         empRoleLabel.text = employee?.role
+        setupCollectionView()
         setupImage()
+    }
+    
+    private func setupCollectionView() {
+        trainingCollection.delegate = self
+        trainingCollection.dataSource = self
     }
     
     private func setupImage() {
@@ -32,15 +43,24 @@ class EmployeeProfileVC: UIViewController {
         empImage.clipsToBounds = true
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return trainings.count
     }
-    */
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = trainingCollection.dequeueReusableCell(withReuseIdentifier: "empTrainingCell", for: indexPath) as! EmployeeTrainingCollectionCell
+        let training = trainings[indexPath.row]
+        cell.configure(training: training)
+        return cell
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+       self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+    }
+
 
 }

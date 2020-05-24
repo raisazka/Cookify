@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8811F5832471892000C142ED /* EmployeeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8811F5822471892000C142ED /* EmployeeTableCell.swift */; };
 		8811F5852471896E00C142ED /* EmployeeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8811F5842471896E00C142ED /* EmployeeCollectionCell.swift */; };
+		881BA83E2474F9F0003311D4 /* EmployeeTrainingCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881BA83D2474F9F0003311D4 /* EmployeeTrainingCollectionCell.swift */; };
+		881BA8402474FAD6003311D4 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881BA83F2474FAD6003311D4 /* Training.swift */; };
 		88465854246BAC61008DAE9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88465853246BAC61008DAE9D /* AppDelegate.swift */; };
 		88465856246BAC61008DAE9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88465855246BAC61008DAE9D /* SceneDelegate.swift */; };
 		88465858246BAC61008DAE9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88465857246BAC61008DAE9D /* ViewController.swift */; };
@@ -24,12 +26,16 @@
 		88465880246C2FA4008DAE9D /* MgEditTraining.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8846587F246C2FA4008DAE9D /* MgEditTraining.storyboard */; };
 		884A354A2470449200D8A252 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884A35492470449200D8A252 /* Employee.swift */; };
 		88B692CC24740B560051F6A4 /* EmployeeProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B692CB24740B560051F6A4 /* EmployeeProfileVC.swift */; };
+		88D5DC522477AB0600B8BB41 /* EmployeeDetailTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D5DC512477AB0600B8BB41 /* EmployeeDetailTableCell.swift */; };
+		88D5DC542477B31600B8BB41 /* EmployeeTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D5DC532477B31600B8BB41 /* EmployeeTableVC.swift */; };
 		88E77183247009B8007D9E59 /* ManagementEmployeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E77182247009B8007D9E59 /* ManagementEmployeeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8811F5822471892000C142ED /* EmployeeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableCell.swift; sourceTree = "<group>"; };
 		8811F5842471896E00C142ED /* EmployeeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCollectionCell.swift; sourceTree = "<group>"; };
+		881BA83D2474F9F0003311D4 /* EmployeeTrainingCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTrainingCollectionCell.swift; sourceTree = "<group>"; };
+		881BA83F2474FAD6003311D4 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
 		88465850246BAC61008DAE9D /* FnBTrainingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FnBTrainingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88465853246BAC61008DAE9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88465855246BAC61008DAE9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +53,8 @@
 		8846587F246C2FA4008DAE9D /* MgEditTraining.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MgEditTraining.storyboard; sourceTree = "<group>"; };
 		884A35492470449200D8A252 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		88B692CB24740B560051F6A4 /* EmployeeProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeProfileVC.swift; sourceTree = "<group>"; };
+		88D5DC512477AB0600B8BB41 /* EmployeeDetailTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailTableCell.swift; sourceTree = "<group>"; };
+		88D5DC532477B31600B8BB41 /* EmployeeTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableVC.swift; sourceTree = "<group>"; };
 		88E77182247009B8007D9E59 /* ManagementEmployeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementEmployeeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				8811F5822471892000C142ED /* EmployeeTableCell.swift */,
+				88D5DC512477AB0600B8BB41 /* EmployeeDetailTableCell.swift */,
 			);
 			path = Table;
 			sourceTree = "<group>";
@@ -73,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				8811F5842471896E00C142ED /* EmployeeCollectionCell.swift */,
+				881BA83D2474F9F0003311D4 /* EmployeeTrainingCollectionCell.swift */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -113,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				884A35492470449200D8A252 /* Employee.swift */,
+				881BA83F2474FAD6003311D4 /* Training.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -148,6 +159,7 @@
 				88465876246C278B008DAE9D /* ManagementVC.swift */,
 				88E77182247009B8007D9E59 /* ManagementEmployeeVC.swift */,
 				88B692CB24740B560051F6A4 /* EmployeeProfileVC.swift */,
+				88D5DC532477B31600B8BB41 /* EmployeeTableVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -236,11 +248,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				881BA8402474FAD6003311D4 /* Training.swift in Sources */,
 				88465858246BAC61008DAE9D /* ViewController.swift in Sources */,
 				8811F5852471896E00C142ED /* EmployeeCollectionCell.swift in Sources */,
 				884A354A2470449200D8A252 /* Employee.swift in Sources */,
+				88D5DC542477B31600B8BB41 /* EmployeeTableVC.swift in Sources */,
+				881BA83E2474F9F0003311D4 /* EmployeeTrainingCollectionCell.swift in Sources */,
 				88465854246BAC61008DAE9D /* AppDelegate.swift in Sources */,
 				8811F5832471892000C142ED /* EmployeeTableCell.swift in Sources */,
+				88D5DC522477AB0600B8BB41 /* EmployeeDetailTableCell.swift in Sources */,
 				88E77183247009B8007D9E59 /* ManagementEmployeeVC.swift in Sources */,
 				88465856246BAC61008DAE9D /* SceneDelegate.swift in Sources */,
 				88465877246C278B008DAE9D /* ManagementVC.swift in Sources */,
