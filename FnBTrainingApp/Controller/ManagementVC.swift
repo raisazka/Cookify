@@ -8,31 +8,25 @@
 
 import UIKit
 
-class ManagementVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate
+class ManagementVC: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
-    var chosenTitle: String = ""
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imageItem.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "personImageCell", for: indexPath) as! AssigneeCollectionViewCell
-            
-        cell.personImage.image = UIImage(named: imageItem[indexPath.row])
-        
-            return cell
-    }
-    
-    let titleCell = ["Cook"]
-    
-    var dataType = [homeAdminModel(recipe: "Telor orak arik", imageModel: "TelorAssignee.png"),
-                    homeAdminModel(recipe: "Wafflee", imageModel: "Waffle Assignee.png")
-                    ]
-    
-    let imageItem = ["Telor Person 1.png","Telor Person 2.png","Telor Person 3.png","Telor Person 4.png"]
-    
     @IBOutlet weak var cookTableView: UITableView!
+
+    var chosenTitle: String = ""
+    let titleCell :[String] = ["Cook"]
+    var dataType = [homeAdminModel]()
+ 
+    override func viewDidLoad() {
+       
+        cookTableView.dataSource = self
+        cookTableView.delegate = self
+        cookTableView.separatorStyle = .none
+        cookTableView.separatorColor = .white
+        
+        self.dataType = [homeAdminModel(recipe: "Telor orak arik", imageModel: "TelorAssignee.png", peoples:["Telor Person 1.png","Telor Person 2.png","Telor Person 3.png","Telor Person 4.png"]),
+                             homeAdminModel(recipe: "Wafflee", imageModel: "Waffle Assignee.png", peoples:["Telor Person 1.png","Telor Person 4.png"])
+                             ]
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -74,9 +68,14 @@ class ManagementVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cookCell", for: indexPath) as! MgMainTableViewCell
-        
         cell.titleCell.text = dataType[indexPath.row].recipe
         cell.backImage.image = #imageLiteral(resourceName: "back logo")
+        var images = dataType[indexPath.row].imagePeople
+        print( dataType[indexPath.row])
+        if(dataType[indexPath.row].imagePeople.count > 0){
+            print("TEST", indexPath, dataType[indexPath.row].imagePeople )
+            cell.loadCollectionView(array: images)
+        }
         
         return cell
     }
@@ -101,25 +100,4 @@ class ManagementVC: UIViewController, UITableViewDataSource, UITableViewDelegate
             destination.navigationBarTitle = chosenTitle
         }
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.tabBarController?.tabBar.isHidden = false
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-          self.tabBarController?.tabBar.isHidden = true
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        print("test")
-        
-        cookTableView.separatorStyle = .none
-        cookTableView.separatorColor = .white
-       
-        cookTableView.dataSource = self
-        cookTableView.delegate = self
-        
-    }
-    
 }

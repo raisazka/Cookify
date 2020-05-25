@@ -176,11 +176,18 @@ class MgEditViewController: UIViewController, UITableViewDelegate, UITableViewDa
            }
        }
     
+   /* override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+          self.tabBarController?.tabBar.isHidden = false
+    }*/
+    
     override func viewDidLoad() {
         super.viewDidLoad()
       
         // Do any additional setup after loading the view.
-       self.tabBarController?.tabBar.isHidden = true
         self.title = "\(navigationBarTitle)"
     
         persiapanTabel.dataSource = self

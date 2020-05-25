@@ -14,6 +14,8 @@ class MgEditTable: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var namaPersiapanTF: UITextField!
     @IBOutlet weak var keteranganTF: UITextField!
     
+    @IBOutlet weak var editButton: UIButton!
+    
     var saveChoosenIndex: Int = 0
     
     var alert: UIAlertController!
@@ -28,7 +30,7 @@ class MgEditTable: UIViewController, UITextFieldDelegate{
         namaPersiapanTF.placeholder = namaPersiapan
         keteranganTF.placeholder = keterangan
         
-        print(saveChoosenIndex)
+        editButton.layer.cornerRadius = 10
     }
     
     func initProduct(category: persiapanModel){

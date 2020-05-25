@@ -11,12 +11,14 @@ import UIKit
 
 class homeAdminModel {
     
-    var imageModel: String
-    var recipe: String
+    var imageModel: String!
+    var recipe: String!
+    var imagePeople = [String]()
     
-    init(recipe: String, imageModel: String) {
+    init(recipe: String, imageModel: String, peoples:[String]) {
         self.recipe = recipe
         self.imageModel = imageModel
+        self.imagePeople = peoples
     }
     
 }
