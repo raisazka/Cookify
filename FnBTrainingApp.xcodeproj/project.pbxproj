@@ -29,6 +29,7 @@
 		B710B52E247646EE0060B193 /* TrainingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B710B52D247646EE0060B193 /* TrainingCollectionViewCell.swift */; };
 		B710B53024764FFF0060B193 /* PersiapanTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B710B52F24764FFF0060B193 /* PersiapanTableViewController.swift */; };
 		B710B532247650150060B193 /* PersiapanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B710B531247650150060B193 /* PersiapanTableViewCell.swift */; };
+		B7B188C8247BB28500441A63 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B188C7247BB28500441A63 /* Training.swift */; };
 		B7D64BB52479247700CAE905 /* TrainingCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D64BB42479247700CAE905 /* TrainingCategoryVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		B710B52D247646EE0060B193 /* TrainingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCollectionViewCell.swift; sourceTree = "<group>"; };
 		B710B52F24764FFF0060B193 /* PersiapanTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersiapanTableViewController.swift; sourceTree = "<group>"; };
 		B710B531247650150060B193 /* PersiapanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersiapanTableViewCell.swift; sourceTree = "<group>"; };
+		B7B188C7247BB28500441A63 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
 		B7D64BB42479247700CAE905 /* TrainingCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrainingCategoryVC.swift; path = FnBTrainingApp/Controller/TrainingCategoryVC.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				884A35492470449200D8A252 /* Employee.swift */,
+				B7B188C7247BB28500441A63 /* Training.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				B710B532247650150060B193 /* PersiapanTableViewCell.swift in Sources */,
 				88465858246BAC61008DAE9D /* ViewController.swift in Sources */,
 				B710B53024764FFF0060B193 /* PersiapanTableViewController.swift in Sources */,
+				B7B188C8247BB28500441A63 /* Training.swift in Sources */,
 				8811F5852471896E00C142ED /* EmployeeCollectionCell.swift in Sources */,
 				884A354A2470449200D8A252 /* Employee.swift in Sources */,
 				88465854246BAC61008DAE9D /* AppDelegate.swift in Sources */,

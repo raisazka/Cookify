@@ -12,8 +12,13 @@ class TrainingCategoryVC: UIViewController, UICollectionViewDelegate, UICollecti
     
     @IBOutlet var categoryCollectionView: UICollectionView!
     
-    let categoryImage: [UIImage] = [#imageLiteral(resourceName: "masak"),#imageLiteral(resourceName: "kasir"),#imageLiteral(resourceName: "inventaris"),#imageLiteral(resourceName: "pelayan")]
-    let categoryLabel = ["Masak", "Kasir", "Inventaris", "Pelayan"]
+    let trainingArray: [Training] = [
+        Training(name: "Masak", image: #imageLiteral(resourceName: "masak")),
+        Training(name: "Kasir", image: #imageLiteral(resourceName: "kasir")),
+        Training(name: "Inventaris", image: #imageLiteral(resourceName: "inventaris")),
+        Training(name: "Pelayan", image: #imageLiteral(resourceName: "pelayan"))
+    ]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,14 +35,14 @@ class TrainingCategoryVC: UIViewController, UICollectionViewDelegate, UICollecti
     }
         
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categoryLabel.count
+        return trainingArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "employeeCategoryCell", for: indexPath) as! TrainingCollectionViewCell
-        
-        cell.employeeCategoryImageView.image = categoryImage[indexPath.item]
-        cell.employeeCategoryLabel.text = categoryLabel[indexPath.item]
+        let category = trainingArray[indexPath.item]
+        cell.employeeCategoryImageView.image = category.image
+        cell.employeeCategoryLabel.text = category.name
         
         return cell
     }

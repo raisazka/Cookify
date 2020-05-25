@@ -10,7 +10,11 @@ import UIKit
 
 class ManagementEmployeeVC: UIViewController {
     
-    let employees : [Employee] = [Employee(name: "Henrdi",image: #imageLiteral(resourceName: "logo") , role: "Cook"), Employee(name: "Edward", image: #imageLiteral(resourceName: "logo"), role: "Cook"),Employee(name: "Rei", image: #imageLiteral(resourceName: "logo"), role: "Cashier")]
+    let employees : [Employee] = [
+        Employee(name: "Herdi", image: #imageLiteral(resourceName: "logo"), role: "Cook"),
+        Employee(name: "Edward", image: #imageLiteral(resourceName: "logo"), role: "Cook"),
+        Employee(name: "Rei", image: #imageLiteral(resourceName: "logo"), role: "Cashier")
+    ]
     
     let roles = ["Cook", "Cashier", "Cs"]
     
