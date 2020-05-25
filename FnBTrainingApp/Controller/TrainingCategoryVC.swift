@@ -25,6 +25,10 @@ class TrainingCategoryVC: UIViewController, UICollectionViewDelegate, UICollecti
            super.didReceiveMemoryWarning()
        }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+    }
+        
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categoryLabel.count
     }
