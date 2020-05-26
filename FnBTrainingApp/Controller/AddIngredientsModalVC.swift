@@ -12,21 +12,21 @@ class AddIngredientsModalVC: UIViewController {
 
     @IBOutlet weak var tambahBahan: UITextField!
     @IBOutlet weak var tambahKeterangan: UITextField!
+    @IBOutlet weak var tambahDataButton: UIButton!
+    
+    var namaBahan = ""
+    var keterangan = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let destVC = segue.destination as! PersiapanEditVC
+        destVC.tambahBahan = tambahBahan.text!
+        destVC.tambahKeterangan = tambahKeterangan.text!
     }
-    */
-
+    
 }

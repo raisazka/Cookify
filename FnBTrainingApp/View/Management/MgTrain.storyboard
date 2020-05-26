@@ -227,10 +227,10 @@
             </objects>
             <point key="canvasLocation" x="2386.9565217391305" y="928.79464285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Procedure View Controller-->
         <scene sceneID="JTT-c9-zkL">
             <objects>
-                <viewController id="1PE-Ck-gPJ" sceneMemberID="viewController">
+                <viewController id="1PE-Ck-gPJ" customClass="AddProcedureViewController" customModule="FnBTrainingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P2W-eM-yNb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -381,6 +381,7 @@
                     <size key="freeformSize" width="414" height="500"/>
                     <connections>
                         <outlet property="tambahBahan" destination="NCi-Do-Jgn" id="mBh-9d-dUP"/>
+                        <outlet property="tambahDataButton" destination="wLk-HE-Olh" id="axu-6d-zvh"/>
                         <outlet property="tambahKeterangan" destination="stV-WR-2qO" id="tQl-Zr-FVn"/>
                     </connections>
                 </viewController>

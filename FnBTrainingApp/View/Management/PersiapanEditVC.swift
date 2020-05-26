@@ -16,10 +16,13 @@ class PersiapanEditVC: UIViewController, UITextFieldDelegate {
     
     var myModel = [Preparation]()
     
+    var tambahBahan = ""
+    var tambahKeterangan = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableViewUI()
-        setupModel()
+//        setupModel()
     }
     
     func setupTableViewUI() {
@@ -27,14 +30,15 @@ class PersiapanEditVC: UIViewController, UITextFieldDelegate {
         persiapanTableView.tableFooterView = UIView(frame: CGRect.zero)
     }
     
-    func setupModel(){
-        myModel.append(Preparation(name: "Telor ayam", amount: "2 butir"))
-        myModel.append(Preparation(name: "Minyak goreng", amount: "3 sendok makan"))
-        myModel.append(Preparation(name: "Gula pasir", amount: "100 gram"))
-    }
+//    func setupModel(){
+//        myModel.append(Preparation(name: "Telor ayam", amount: "2 butir"))
+//        myModel.append(Preparation(name: "Minyak goreng", amount: "3 sendok makan"))
+//        myModel.append(Preparation(name: "Gula pasir", amount: "100 gram"))
+//    }
     
     func insertNewCell(){
-        myModel.append(Preparation(name: "Garam", amount: "2 sendok teh"))
+        
+        myModel.append(Preparation(name: tambahBahan, amount: tambahKeterangan))
         
         let indexPath = IndexPath(row: myModel.count - 1, section: 0)
         
