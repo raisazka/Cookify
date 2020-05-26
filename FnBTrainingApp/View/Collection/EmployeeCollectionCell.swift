@@ -39,4 +39,7 @@ class EmployeeCollectionCell: UICollectionViewCell {
         empImage.image = employee.image
         empLabel.text = employee.name
     }
+
+    
+
 }

@@ -10,8 +10,7 @@ import UIKit
 
 class ManagementEmployeeVC: UIViewController, UITableViewDelegate,
 UITableViewDataSource,EmpTableDelegate {
-    
-    
+        
     var employees : [Employee] = [
         Employee(name: "Henrdi",image: #imageLiteral(resourceName: "logo") , role: "Cook", training: [TrainingModel(name:"Kebab", image: #imageLiteral(resourceName: "kebab"), minute: 4), TrainingModel(name: "Pancake", image: #imageLiteral(resourceName: "pancake"), minute: 10),TrainingModel(name: "Steak", image: #imageLiteral(resourceName: "steak"), minute: 22)]),
         
