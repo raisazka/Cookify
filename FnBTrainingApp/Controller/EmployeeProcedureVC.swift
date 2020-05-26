@@ -10,32 +10,155 @@ import UIKit
 
 class EmployeeProcedureVC: UIViewController {
     
-    var seconds = 30
+    let procedureArr =
+        [LatihanEmployee(id:1, menu:"Pecahkan telur dan masukan kedalam mangkok.", menuImage:#imageLiteral(resourceName: "crack-eggs-into-bowl") ),
+         LatihanEmployee(id:2,menu:"Kocok telur sampai tercampur lalu masukan garam dan merica lalu aduk lagi.", menuImage: #imageLiteral(resourceName: "images-2")),
+         LatihanEmployee(id:3,menu: "Langkah 3", menuImage :#imageLiteral(resourceName: "custard-pudding-7")),
+         LatihanEmployee(id:4,menu: "Langkah 4", menuImage: #imageLiteral(resourceName: "10") ),
+         LatihanEmployee(id:12,menu: "Langkah 5", menuImage : #imageLiteral(resourceName: "images")),
+         LatihanEmployee(id:99,menu: "Langkah 6", menuImage : #imageLiteral(resourceName: "640x960")),
+         LatihanEmployee(id:102,menu: "Langkah 7", menuImage: #imageLiteral(resourceName: "IMG_0162")),
+         LatihanEmployee(id:10,menu: "Langkah 8", menuImage: #imageLiteral(resourceName: "20150511-scrambled-eggs-vicky-wasik-9")),
+         LatihanEmployee(id:88,menu: "Langkah 9", menuImage: #imageLiteral(resourceName: "image"))
+        
+        ]
+    let procedureDescOrakArikArray = ["Pecahkan telur dan masukan kedalam mangkok.","Kocok telur sampai tercampur lalu masukan garam dan merica lalu aduk lagi.","Langkah 3", "Langkah 4", "Langkah 5", "Langkah 6", "Langkah 7", "Langkah 8", "Langkah 9"]
+    let procedureImgOrakArikArray = [#imageLiteral(resourceName: "crack-eggs-into-bowl"),#imageLiteral(resourceName: "images-2"),#imageLiteral(resourceName: "custard-pudding-7"),#imageLiteral(resourceName: "10"),#imageLiteral(resourceName: "images"),#imageLiteral(resourceName: "640x960"),#imageLiteral(resourceName: "IMG_0162"),#imageLiteral(resourceName: "20150511-scrambled-eggs-vicky-wasik-9"),#imageLiteral(resourceName: "image")]
+    
+    @IBOutlet weak var imageProcedure: UIImageView!
+    
+    
+    
+    @IBOutlet weak var labelProcedure: UILabel!
+    
+    
+    
+    
+    
+    
+    var secondsA = 5
+    var secondsB = 5
+    var buttonState : Int = 1
+    var pageState : Int = 0
     var timer = Timer()
     
     @IBOutlet weak var waktu: UILabel!
-        
+    
         
     
     @IBOutlet weak var tombolMulaiButton: UIButton!
     
     
     @IBAction func TombolMulai(_ sender: Any) {
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(EmployeeProcedureVC.counter), userInfo: nil, repeats: true)
+        switch buttonState {
+        case 1:
+            SecondA()
+            break
+        case 2:
+            let condition = procedureDescOrakArikArray.count - 2
+            if pageState >= condition {
+                buttonState = 3
+                tombolMulaiButton.setTitle("Selesai", for: .normal)
+                self.imageProcedure.image = procedureArr[pageState + 1].gambarEmployee
+                self.labelProcedure.text = procedureArr[pageState + 1].menuEmployee
+                print(buttonState)
+                break
+            }
+                else{
+                pageState += 1
+                self.imageProcedure.image = procedureImgOrakArikArray[pageState]
+                self.labelProcedure.text = procedureDescOrakArikArray[pageState]
+                }
+            
+        case 3 :
+            let condition2 = procedureDescOrakArikArray.count - 2
+            print(buttonState, condition2, pageState)
+            for controller in self.navigationController!.viewControllers as Array {
+                if controller.isKind(of: EmployeeVC.self){
+                    self.navigationController!.popToViewController(controller, animated: true)
+                    break
+                }
+                
+            }
+//            let storyboard = UIStoryboard(name: "Employee", bundle: nil)
+//            let vc = storyboard.instantiateViewController(withIdentifier: "EmpSB")
+//            self.navigationController?.popToViewController(ViewController : vc, animated: true)
+                      
+            
+                break
+            
+            
+        
+                
+            
+        
+            
+                
+        
+            
+            
+        default:
+            break
+        }
+        
+    
     }
     
     @objc func counter(){
-        seconds -= 1
-        waktu.text = String(seconds) + " Detik"
+        secondsA -= 1
+        waktu.text = String(secondsA) + " Detik"
         
-        if (seconds == 0){
+        if (secondsA < 1){
             timer.invalidate()
+            waktuHabis()
         }
+        
+        
     }
+    func SecondA()  {
+    
+        self.buttonState = 2
+         tombolMulaiButton.setTitle("Berikutnya", for: .normal)
+        
+    if secondsA > 0 {
+               timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(EmployeeProcedureVC.counter), userInfo: nil, repeats: true)
+               
+           }
+    }
+    
+  func waktuHabis() {
+      let habis = UIAlertController(title: "Waktu Anda Habis", message: nil, preferredStyle: UIAlertController.Style.alert)
+    habis.addAction(UIAlertAction(title: "Ulangi Latihan", style: .destructive, handler: {action in
+        self.secondsA = self.secondsB
+        self.waktu.text = String(self.secondsA) + " Detik"
+        print(self.secondsA)
+        print(self.secondsB)
+        self.imageProcedure.image = self.procedureImgOrakArikArray[0]
+        self.labelProcedure.text = self.procedureDescOrakArikArray[0]
+        self.tombolMulaiButton.setTitle("Mulai", for: .normal)
+        self.buttonState = 1
+      }))
+      
+      present(habis, animated: true)
+      
+      
+  }
+    
+//     cooktify
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tombolMulaiButton.layer.cornerRadius = 10.0
+        imageProcedure.layer.cornerRadius = 10.0
+        
+       tombolMulaiButton.setTitle("Mulai", for: .normal)
+        
+        self.imageProcedure.image = procedureImgOrakArikArray[0]
+        self.labelProcedure.text = procedureDescOrakArikArray[0]
+        
+        waktu.text = String(secondsA) + " Detik"
+        
 
         // Do any additional setup after loading the view.
     }

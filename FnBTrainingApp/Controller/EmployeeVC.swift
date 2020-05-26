@@ -15,9 +15,10 @@ class EmployeeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
 
     @IBOutlet weak var BelumColView: UICollectionView!
     
-    let menuBelum = ["Telur Orak Arik"]
+    
+    let menuBelum = ["Telur Orak Arik","Nasi Goreng","Mie Goreng"]
        
-    let gambarBelum = ["image.png"]
+    let gambarBelum = ["image.png","image.png","image.png"]
        
        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
            return menuBelum.count
@@ -31,6 +32,7 @@ class EmployeeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
     }
 
     
+    @IBOutlet weak var gambarHome: UIImageView!
     
     
     
@@ -38,6 +40,15 @@ class EmployeeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
         super.viewDidLoad()
         BelumColView.delegate = self
         BelumColView.dataSource = self
+        
+        APIManager.sharedInstance.getRecipeWithId(recipeId: 1, onSuccess: { json in
+        DispatchQueue.main.async {
+        print("dapet")
+        }
+        }, onFailure: { error in
+           let alert = UIAlertController(title: "Error", message:error.localizedDescription, preferredStyle: .alert)
+        })
+        
         // Do any additional setup after loading the view.
     }
     

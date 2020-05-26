@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,6 +26,9 @@
 		88465880246C2FA4008DAE9D /* MgEditTraining.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8846587F246C2FA4008DAE9D /* MgEditTraining.storyboard */; };
 		884A354A2470449200D8A252 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884A35492470449200D8A252 /* Employee.swift */; };
 		88E77183247009B8007D9E59 /* ManagementEmployeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E77182247009B8007D9E59 /* ManagementEmployeeVC.swift */; };
+		CE78F4926305CA02558CD5B0 /* Pods_FnBTrainingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B8933B4C13E9D1D89F899B /* Pods_FnBTrainingApp.framework */; };
+		EA19C388247BB40E00987951 /* LatihanEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19C387247BB40E00987951 /* LatihanEmployee.swift */; };
+		EA19C38A247BD2FE00987951 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19C389247BD2FE00987951 /* APIManager.swift */; };
 		EA3CD9E8247376E20087A575 /* EmployeeProcedureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CD9E7247376E20087A575 /* EmployeeProcedureVC.swift */; };
 		EA3CD9EA247398E10087A575 /* EmployeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CD9E9247398E10087A575 /* EmployeeVC.swift */; };
 		EA3CD9F02474BE7B0087A575 /* EmployeePreparationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CD9EF2474BE7B0087A575 /* EmployeePreparationVC.swift */; };
@@ -54,10 +57,15 @@
 		8846587F246C2FA4008DAE9D /* MgEditTraining.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MgEditTraining.storyboard; sourceTree = "<group>"; };
 		884A35492470449200D8A252 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		88E77182247009B8007D9E59 /* ManagementEmployeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementEmployeeVC.swift; sourceTree = "<group>"; };
+		930298DB93CB0F3035BDD093 /* Pods-FnBTrainingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FnBTrainingApp.release.xcconfig"; path = "Target Support Files/Pods-FnBTrainingApp/Pods-FnBTrainingApp.release.xcconfig"; sourceTree = "<group>"; };
+		A4B8933B4C13E9D1D89F899B /* Pods_FnBTrainingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FnBTrainingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA19C387247BB40E00987951 /* LatihanEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatihanEmployee.swift; sourceTree = "<group>"; };
+		EA19C389247BD2FE00987951 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		EA3CD9E7247376E20087A575 /* EmployeeProcedureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeProcedureVC.swift; sourceTree = "<group>"; };
 		EA3CD9E9247398E10087A575 /* EmployeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeVC.swift; sourceTree = "<group>"; };
 		EA3CD9EF2474BE7B0087A575 /* EmployeePreparationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeePreparationVC.swift; sourceTree = "<group>"; };
 		EA3CD9F32474C92E0087A575 /* BelumLatihanCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BelumLatihanCollectionViewCell.swift; sourceTree = "<group>"; };
+		F23BA4F646FBEC462C2235BD /* Pods-FnBTrainingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FnBTrainingApp.debug.xcconfig"; path = "Target Support Files/Pods-FnBTrainingApp/Pods-FnBTrainingApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,12 +73,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE78F4926305CA02558CD5B0 /* Pods_FnBTrainingApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43EBA1B9FCE85FBB29F99B2D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F23BA4F646FBEC462C2235BD /* Pods-FnBTrainingApp.debug.xcconfig */,
+				930298DB93CB0F3035BDD093 /* Pods-FnBTrainingApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8811F586247197D700C142ED /* Table */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +112,8 @@
 			children = (
 				88465852246BAC61008DAE9D /* FnBTrainingApp */,
 				88465851246BAC61008DAE9D /* Products */,
+				43EBA1B9FCE85FBB29F99B2D /* Pods */,
+				931D4239833C711A9C2EC0E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				884A35492470449200D8A252 /* Employee.swift */,
+				EA19C387247BB40E00987951 /* LatihanEmployee.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -163,6 +184,7 @@
 				EA3CD9E9247398E10087A575 /* EmployeeVC.swift */,
 				EA3CD9EF2474BE7B0087A575 /* EmployeePreparationVC.swift */,
 				EA3CD9F32474C92E0087A575 /* BelumLatihanCollectionViewCell.swift */,
+				EA19C389247BD2FE00987951 /* APIManager.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -174,6 +196,14 @@
 			path = Employee;
 			sourceTree = "<group>";
 		};
+		931D4239833C711A9C2EC0E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4B8933B4C13E9D1D89F899B /* Pods_FnBTrainingApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -181,9 +211,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88465864246BAC63008DAE9D /* Build configuration list for PBXNativeTarget "FnBTrainingApp" */;
 			buildPhases = (
+				E65D2C1F04C2DA8012627DC4 /* [CP] Check Pods Manifest.lock */,
 				8846584C246BAC61008DAE9D /* Sources */,
 				8846584D246BAC61008DAE9D /* Frameworks */,
 				8846584E246BAC61008DAE9D /* Resources */,
+				854477006572A91E54FA73A4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -246,14 +278,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		854477006572A91E54FA73A4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FnBTrainingApp/Pods-FnBTrainingApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FnBTrainingApp/Pods-FnBTrainingApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FnBTrainingApp/Pods-FnBTrainingApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E65D2C1F04C2DA8012627DC4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FnBTrainingApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8846584C246BAC61008DAE9D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA19C38A247BD2FE00987951 /* APIManager.swift in Sources */,
 				EA3CD9EA247398E10087A575 /* EmployeeVC.swift in Sources */,
 				88465858246BAC61008DAE9D /* ViewController.swift in Sources */,
 				8811F5852471896E00C142ED /* EmployeeCollectionCell.swift in Sources */,
+				EA19C388247BB40E00987951 /* LatihanEmployee.swift in Sources */,
 				884A354A2470449200D8A252 /* Employee.swift in Sources */,
 				88465854246BAC61008DAE9D /* AppDelegate.swift in Sources */,
 				8811F5832471892000C142ED /* EmployeeTableCell.swift in Sources */,
@@ -406,10 +482,12 @@
 		};
 		88465865246BAC63008DAE9D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F23BA4F646FBEC462C2235BD /* Pods-FnBTrainingApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FnBTrainingApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -423,10 +501,12 @@
 		};
 		88465866246BAC63008DAE9D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 930298DB93CB0F3035BDD093 /* Pods-FnBTrainingApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FnBTrainingApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
