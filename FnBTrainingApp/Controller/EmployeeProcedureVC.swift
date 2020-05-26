@@ -11,15 +11,15 @@ import UIKit
 class EmployeeProcedureVC: UIViewController {
     
     let procedureArr =
-        [LatihanEmployee(id:1, menu:"Pecahkan telur dan masukan kedalam mangkok.", menuImage:#imageLiteral(resourceName: "crack-eggs-into-bowl") ),
-         LatihanEmployee(id:2,menu:"Kocok telur sampai tercampur lalu masukan garam dan merica lalu aduk lagi.", menuImage: #imageLiteral(resourceName: "images-2")),
-         LatihanEmployee(id:3,menu: "Masukan keju dan susu kemudian aduk lagi hingga tercampur.", menuImage :#imageLiteral(resourceName: "custard-pudding-7")),
-         LatihanEmployee(id:4,menu: "Masukan margarin kedalam wajan dan panaskan wajan hingga margarin meleleh.", menuImage: #imageLiteral(resourceName: "10") ),
-         LatihanEmployee(id:12,menu: "Gunakan api kecil setelah margarin meleleh lalu masukan telur kedalam wajan.", menuImage : #imageLiteral(resourceName: "images")),
-         LatihanEmployee(id:99,menu: "Biarkan telur di dalam wajan selama 30 detik tanpa menyentuh telur sama sekali.", menuImage : #imageLiteral(resourceName: "640x960")),
-         LatihanEmployee(id:102,menu: "Gunakan api sedang kemudian mulai aduk telur tersebut secara merata selama 20 detik", menuImage: #imageLiteral(resourceName: "IMG_0162")),
-         LatihanEmployee(id:10,menu: "Matikan api dan tetap aduk telur selama 7 detik kemudian sajikan ke dalam piring", menuImage: #imageLiteral(resourceName: "20150511-scrambled-eggs-vicky-wasik-9")),
-         LatihanEmployee(id:88,menu: "Anda telah menyelesaikan training.", menuImage: #imageLiteral(resourceName: "image"))
+        [ProcedureModel(id:1, menu:"Pecahkan telur dan masukan kedalam mangkok.", menuImage:#imageLiteral(resourceName: "crack-eggs-into-bowl") ),
+         ProcedureModel(id:2,menu:"Kocok telur sampai tercampur lalu masukan garam dan merica lalu aduk lagi.", menuImage: #imageLiteral(resourceName: "images-2")),
+         ProcedureModel(id:3,menu: "Masukan keju dan susu kemudian aduk lagi hingga tercampur.", menuImage :#imageLiteral(resourceName: "custard-pudding-7")),
+         ProcedureModel(id:4,menu: "Masukan margarin kedalam wajan dan panaskan wajan hingga margarin meleleh.", menuImage: #imageLiteral(resourceName: "10") ),
+         ProcedureModel(id:12,menu: "Gunakan api kecil setelah margarin meleleh lalu masukan telur kedalam wajan.", menuImage : #imageLiteral(resourceName: "images")),
+         ProcedureModel(id:99,menu: "Biarkan telur di dalam wajan selama 30 detik tanpa menyentuh telur sama sekali.", menuImage : #imageLiteral(resourceName: "640x960")),
+         ProcedureModel(id:102,menu: "Gunakan api sedang kemudian mulai aduk telur tersebut secara merata selama 20 detik", menuImage: #imageLiteral(resourceName: "IMG_0162")),
+         ProcedureModel(id:10,menu: "Matikan api dan tetap aduk telur selama 7 detik kemudian sajikan ke dalam piring", menuImage: #imageLiteral(resourceName: "20150511-scrambled-eggs-vicky-wasik-9")),
+         ProcedureModel(id:88,menu: "Anda telah menyelesaikan training.", menuImage: #imageLiteral(resourceName: "image"))
         
         ]
     let procedureDescOrakArikArray = ["Pecahkan telur dan masukan kedalam mangkok.","Kocok telur sampai tercampur lalu masukan garam dan merica lalu aduk lagi.","Masukan keju dan susu kemudian aduk lagi hingga tercampur.", "Masukan margarin kedalam wajan dan panaskan wajan hingga margarin meleleh.", "Gunakan api kecil setelah margarin meleleh lalu masukan telur kedalam wajan.", "Biarkan telur di dalam wajan selama 30 detik tanpa menyentuh telur sama sekali.", "Gunakan api sedang kemudian mulai aduk telur tersebut secara merata selama 20 detik", "Matikan api dan tetap aduk telur selama 7 detik kemudian sajikan ke dalam piring", "Anda telah menyelesaikan training."]

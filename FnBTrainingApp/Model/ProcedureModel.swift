@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LatihanEmployee {
+class ProcedureModel {
     var menuEmployee : String
     var gambarEmployee : UIImage?
     var id : Int?

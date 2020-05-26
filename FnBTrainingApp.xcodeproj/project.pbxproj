@@ -27,8 +27,9 @@
 		884A354A2470449200D8A252 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884A35492470449200D8A252 /* Employee.swift */; };
 		88E77183247009B8007D9E59 /* ManagementEmployeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E77182247009B8007D9E59 /* ManagementEmployeeVC.swift */; };
 		CE78F4926305CA02558CD5B0 /* Pods_FnBTrainingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B8933B4C13E9D1D89F899B /* Pods_FnBTrainingApp.framework */; };
-		EA19C388247BB40E00987951 /* LatihanEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19C387247BB40E00987951 /* LatihanEmployee.swift */; };
+		EA19C388247BB40E00987951 /* ProcedureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19C387247BB40E00987951 /* ProcedureModel.swift */; };
 		EA19C38A247BD2FE00987951 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19C389247BD2FE00987951 /* APIManager.swift */; };
+		EA19C393247D489100987951 /* EmployeeHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19C392247D489100987951 /* EmployeeHome.swift */; };
 		EA3CD9E8247376E20087A575 /* EmployeeProcedureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CD9E7247376E20087A575 /* EmployeeProcedureVC.swift */; };
 		EA3CD9EA247398E10087A575 /* EmployeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CD9E9247398E10087A575 /* EmployeeVC.swift */; };
 		EA3CD9F02474BE7B0087A575 /* EmployeePreparationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CD9EF2474BE7B0087A575 /* EmployeePreparationVC.swift */; };
@@ -59,8 +60,9 @@
 		88E77182247009B8007D9E59 /* ManagementEmployeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementEmployeeVC.swift; sourceTree = "<group>"; };
 		930298DB93CB0F3035BDD093 /* Pods-FnBTrainingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FnBTrainingApp.release.xcconfig"; path = "Target Support Files/Pods-FnBTrainingApp/Pods-FnBTrainingApp.release.xcconfig"; sourceTree = "<group>"; };
 		A4B8933B4C13E9D1D89F899B /* Pods_FnBTrainingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FnBTrainingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA19C387247BB40E00987951 /* LatihanEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatihanEmployee.swift; sourceTree = "<group>"; };
+		EA19C387247BB40E00987951 /* ProcedureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcedureModel.swift; sourceTree = "<group>"; };
 		EA19C389247BD2FE00987951 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		EA19C392247D489100987951 /* EmployeeHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeHome.swift; sourceTree = "<group>"; };
 		EA3CD9E7247376E20087A575 /* EmployeeProcedureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeProcedureVC.swift; sourceTree = "<group>"; };
 		EA3CD9E9247398E10087A575 /* EmployeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeVC.swift; sourceTree = "<group>"; };
 		EA3CD9EF2474BE7B0087A575 /* EmployeePreparationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeePreparationVC.swift; sourceTree = "<group>"; };
@@ -145,7 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				884A35492470449200D8A252 /* Employee.swift */,
-				EA19C387247BB40E00987951 /* LatihanEmployee.swift */,
+				EA19C387247BB40E00987951 /* ProcedureModel.swift */,
+				EA19C392247D489100987951 /* EmployeeHome.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -327,9 +330,10 @@
 			files = (
 				EA19C38A247BD2FE00987951 /* APIManager.swift in Sources */,
 				EA3CD9EA247398E10087A575 /* EmployeeVC.swift in Sources */,
+				EA19C393247D489100987951 /* EmployeeHome.swift in Sources */,
 				88465858246BAC61008DAE9D /* ViewController.swift in Sources */,
 				8811F5852471896E00C142ED /* EmployeeCollectionCell.swift in Sources */,
-				EA19C388247BB40E00987951 /* LatihanEmployee.swift in Sources */,
+				EA19C388247BB40E00987951 /* ProcedureModel.swift in Sources */,
 				884A354A2470449200D8A252 /* Employee.swift in Sources */,
 				88465854246BAC61008DAE9D /* AppDelegate.swift in Sources */,
 				8811F5832471892000C142ED /* EmployeeTableCell.swift in Sources */,
@@ -486,6 +490,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FnBTrainingApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -505,6 +510,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FnBTrainingApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

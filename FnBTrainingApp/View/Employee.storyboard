@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Rahmat Sutedja-->
+        <!--Alma Riyanti-->
         <scene sceneID="Cyc-Fr-AY9">
             <objects>
                 <viewController storyboardIdentifier="EmpSB" id="D8X-TJ-ora" customClass="EmployeeVC" customModule="FnBTrainingApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -150,7 +150,7 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="vbU-OJ-qmc"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Rahmat Sutedja" id="tCz-VF-pyb"/>
+                    <navigationItem key="navigationItem" title="Alma Riyanti" id="tCz-VF-pyb"/>
                     <connections>
                         <outlet property="BelumColView" destination="6Nb-bS-CGA" id="UB6-Ul-qU4"/>
                     </connections>

@@ -15,19 +15,20 @@ class EmployeeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
 
     @IBOutlet weak var BelumColView: UICollectionView!
     
+    var homeArr = [EmployeeHome]()
     
     let menuBelum = ["Telur Orak Arik","Roti Bakar","Ayam Goreng","Roti Bakar Telur","Nasi Goreng"]
        
     let gambarBelum = ["image.png","rotibakarr.png","Ayamgoreng.png","roti bakar telur.png","nasgor.png"]
        
        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-           return menuBelum.count
+        return homeArr.count
        }
        
        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "belumCell", for: indexPath) as! BelumLatihanCollectionViewCell
-        cell.belumLabel.text = menuBelum[indexPath.row]
-        cell.belumImage.image = UIImage(named: gambarBelum[indexPath.row])
+        cell.belumLabel.text = homeArr[indexPath.row].menuHome
+        cell.belumImage.image = homeArr[indexPath.row].gambarMenu
         return cell
     }
 
@@ -41,12 +42,23 @@ class EmployeeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
         BelumColView.delegate = self
         BelumColView.dataSource = self
         
-        APIManager.sharedInstance.getRecipeWithId(recipeId: 1, onSuccess: { json in
+        APIManager.sharedInstance.getRecipe( onSuccess: { json in
         DispatchQueue.main.async {
+            for i in 0 ..< json.count {
+                let newData = json[i]
+                let url = URL(string: newData["recipe_image"].string ?? "https://www.tiket.com/promo/wishes-from-heart")
+                if let data = try? Data(contentsOf: url!) {
+                    let image = UIImage(data: data)
+                    let defaultImage = #imageLiteral(resourceName: "nasgor")
+                    self.homeArr.append(EmployeeHome(id: newData["id"].int! , namaMenu: newData["recipe_name"].string!, gambarMenuHome: image ?? defaultImage))
+                    }
+//                self.homeArr.append(EmployeeHome(id: newData["id"].int! , namaMenu: newData["recipe_name"].string!, gambarMenuHome: UIImage(data: newData["recipe_image"].string!) ?? #imageLiteral(resourceName: "image"))
+            }
         print("dapet")
+            self.BelumColView.reloadData()
         }
         }, onFailure: { error in
-           let alert = UIAlertController(title: "Error", message:error.localizedDescription, preferredStyle: .alert)
+            print(error.localizedDescription)
         })
         
         // Do any additional setup after loading the view.
