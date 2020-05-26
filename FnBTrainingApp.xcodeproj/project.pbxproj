@@ -136,6 +136,7 @@
 		88465868246C1A03008DAE9D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8DF16E992473836600974F0D /* HomeAdminModel.swift */,
 				8D6F21EB2476645C00561B38 /* ProsedurModel.swift */,
 				8DFCED5B2473FF2C00EA1564 /* PersiapanModel.swift */,
 				884A35492470449200D8A252 /* Employee.swift */,
@@ -173,7 +174,6 @@
 				8DFCED4F2473F52500EA1564 /* MgEditViewController.swift */,
 				2C4836DE247706F1008C1636 /* MgEditTable.swift */,
 				88465876246C278B008DAE9D /* ManagementVC.swift */,
-				8DF16E992473836600974F0D /* HomeAdminModel.swift */,
 				88E77182247009B8007D9E59 /* ManagementEmployeeVC.swift */,
 			);
 			path = Controller;
