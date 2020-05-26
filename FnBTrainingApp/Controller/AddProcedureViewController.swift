@@ -16,7 +16,6 @@ class AddProcedureViewController: UIViewController, UIImagePickerControllerDeleg
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
@@ -33,7 +32,6 @@ class AddProcedureViewController: UIViewController, UIImagePickerControllerDeleg
         image.sourceType = UIImagePickerController.SourceType.photoLibrary
         image.allowsEditing = false
         self.present(image, animated: true){
-            //after it's complete
         }
     }
     

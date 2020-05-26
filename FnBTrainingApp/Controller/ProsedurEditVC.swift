@@ -21,7 +21,6 @@ class ProsedurEditVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableViewUI()
-        // Do any additional setup after loading the view.
     }
     
     func setupTableViewUI(){
@@ -30,8 +29,8 @@ class ProsedurEditVC: UIViewController {
     }
     
     func insertNewCell(){
-        let defaultImage = #imageLiteral(resourceName: "logo")
-        myModel.append(Prosedur(gambar: tambahGambarProsedur ?? defaultImage, deskripsi: tambahDeskripsi))
+//        let defaultImage = #imageLiteral(resourceName: "logo")
+        myModel.append(Prosedur(gambar: tambahGambarProsedur!, deskripsi: tambahDeskripsi))
         
         let indexPath = IndexPath(row: myModel.count - 1, section: 0)
         
