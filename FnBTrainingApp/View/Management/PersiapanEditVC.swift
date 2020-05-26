@@ -14,8 +14,7 @@ class PersiapanEditVC: UIViewController, UITextFieldDelegate {
     @IBOutlet var namaPelatihanTextField: UITextField!
     @IBOutlet var persiapanTableView: UITableView!
     
-    private var myModel = [Preparation]()
-    private var dataCount = 0
+    var myModel = [Preparation]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +24,17 @@ class PersiapanEditVC: UIViewController, UITextFieldDelegate {
     
     func setupTableViewUI() {
         persiapanTableView.register(UINib(nibName: "PreparationEditTableViewCell", bundle: nil), forCellReuseIdentifier: "preparationCell")
+        persiapanTableView.tableFooterView = UIView(frame: CGRect.zero)
     }
     
     func setupModel(){
         myModel.append(Preparation(name: "Telor ayam", amount: "2 butir"))
         myModel.append(Preparation(name: "Minyak goreng", amount: "3 sendok makan"))
         myModel.append(Preparation(name: "Gula pasir", amount: "100 gram"))
+    }
+    
+    func insertNewCell(){
+        
     }
 
 }
@@ -40,10 +44,7 @@ extension PersiapanEditVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return myModel.count
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 66
-    }
+
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
@@ -60,6 +61,13 @@ extension PersiapanEditVC: UITableViewDataSource, UITableViewDelegate {
         let cell = (tableView.dequeueReusableCell(withIdentifier: "preparationCell", for: indexPath) as? PreparationEditTableViewCell)!
         cell.myModel = myModel[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let alert = UIAlertController(title: "Message", message: "Clicked at index\(indexPath.row)", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
     }
     
 }
