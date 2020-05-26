@@ -1,19 +1,18 @@
 //
-//  PersiapanTableViewCell.swift
+//  ProsedurTableViewCell.swift
 //  FnBTrainingApp
 //
-//  Created by Nathanael Adolf Sukiman on 19/05/20.
-
+//  Created by Nathanael Adolf Sukiman on 20/05/20.
 //  Copyright © 2020 Apple Developer Academy. All rights reserved.
 //
 
 import UIKit
 
-class PersiapanTableViewCell: UITableViewCell {
+class ProsedurTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var bahanLabel: UILabel!
-    @IBOutlet weak var jumlahLabel: UILabel!
-   
+    @IBOutlet weak var prosedurImage: UIImageView!
+    @IBOutlet weak var prosedurLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

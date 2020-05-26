@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C4836DF247706F1008C1636 /* MgEditTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4836DE247706F1008C1636 /* MgEditTable.swift */; };
+		8811F57F247187EF00C142ED /* EmployeeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8811F57E247187EF00C142ED /* EmployeeTable.swift */; };
+		8811F5812471881800C142ED /* EmployeeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8811F5802471881800C142ED /* EmployeeCollectionView.swift */; };
+		88212644247CF3A100D7CC90 /* EditLatihanLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88212643247CF3A100D7CC90 /* EditLatihanLauncher.swift */; };
 		8811F5832471892000C142ED /* EmployeeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8811F5822471892000C142ED /* EmployeeTableCell.swift */; };
 		8811F5852471896E00C142ED /* EmployeeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8811F5842471896E00C142ED /* EmployeeCollectionCell.swift */; };
 		881BA83E2474F9F0003311D4 /* EmployeeTrainingCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881BA83D2474F9F0003311D4 /* EmployeeTrainingCollectionCell.swift */; };
@@ -23,7 +27,6 @@
 		88465874246C2319008DAE9D /* Management.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88465873246C2319008DAE9D /* Management.storyboard */; };
 		88465877246C278B008DAE9D /* ManagementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88465876246C278B008DAE9D /* ManagementVC.swift */; };
 		88465879246C297D008DAE9D /* Employee.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88465878246C297D008DAE9D /* Employee.storyboard */; };
-		88465880246C2FA4008DAE9D /* MgEditTraining.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8846587F246C2FA4008DAE9D /* MgEditTraining.storyboard */; };
 		884A354A2470449200D8A252 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884A35492470449200D8A252 /* Employee.swift */; };
 		888334F9247D7FC000F29D91 /* EmployeeCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888334F4247D7FC000F29D91 /* EmployeeCollectionVC.swift */; };
 		888334FA247D7FC000F29D91 /* ProsedurEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888334F5247D7FC000F29D91 /* ProsedurEditVC.swift */; };
@@ -44,6 +47,23 @@
 		88D5DC522477AB0600B8BB41 /* EmployeeDetailTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D5DC512477AB0600B8BB41 /* EmployeeDetailTableCell.swift */; };
 		88D5DC542477B31600B8BB41 /* EmployeeTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D5DC532477B31600B8BB41 /* EmployeeTableVC.swift */; };
 		88E77183247009B8007D9E59 /* ManagementEmployeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E77182247009B8007D9E59 /* ManagementEmployeeVC.swift */; };
+		8D6F21EC2476645C00561B38 /* Prosedur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F21EB2476645C00561B38 /* Prosedur.swift */; };
+		8D78988624722CCA00CB164C /* MgMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D78988524722CCA00CB164C /* MgMainTableViewCell.swift */; };
+		8DAA50D12474C1D1005D0DDC /* ProsedurTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAA50D02474C1D0005D0DDC /* ProsedurTableViewCell.swift */; };
+		8DAA50D32474D330005D0DDC /* AssigneeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAA50D22474D330005D0DDC /* AssigneeCollectionViewCell.swift */; };
+		8DF16E9A2473836600974F0D /* HomeAdminModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF16E992473836600974F0D /* HomeAdminModel.swift */; };
+		8DFCED502473F52500EA1564 /* MgEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFCED4F2473F52500EA1564 /* MgEditViewController.swift */; };
+		8DFCED542473F7DD00EA1564 /* PersiapanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFCED532473F7DC00EA1564 /* PersiapanTableViewCell.swift */; };
+		8DFCED5C2473FF2C00EA1564 /* Persiapan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFCED5B2473FF2C00EA1564 /* Persiapan.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2C4836DE247706F1008C1636 /* MgEditTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MgEditTable.swift; sourceTree = "<group>"; };
+		8811F57E247187EF00C142ED /* EmployeeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTable.swift; sourceTree = "<group>"; };
+		8811F5802471881800C142ED /* EmployeeCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCollectionView.swift; sourceTree = "<group>"; };
+		8811F5822471892000C142ED /* EmployeeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableCell.swift; sourceTree = "<group>"; };
+		8811F5842471896E00C142ED /* EmployeeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCollectionCell.swift; sourceTree = "<group>"; };
+		88212643247CF3A100D7CC90 /* EditLatihanLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLatihanLauncher.swift; sourceTree = "<group>"; };
 		CE78F4926305CA02558CD5B0 /* Pods_FnBTrainingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B8933B4C13E9D1D89F899B /* Pods_FnBTrainingApp.framework */; };
 		EA19C388247BB40E00987951 /* ProcedureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19C387247BB40E00987951 /* ProcedureModel.swift */; };
 		EA19C38A247BD2FE00987951 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19C389247BD2FE00987951 /* APIManager.swift */; };
@@ -73,7 +93,6 @@
 		88465873246C2319008DAE9D /* Management.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Management.storyboard; sourceTree = "<group>"; };
 		88465876246C278B008DAE9D /* ManagementVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementVC.swift; sourceTree = "<group>"; };
 		88465878246C297D008DAE9D /* Employee.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Employee.storyboard; sourceTree = "<group>"; };
-		8846587F246C2FA4008DAE9D /* MgEditTraining.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MgEditTraining.storyboard; sourceTree = "<group>"; };
 		884A35492470449200D8A252 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		888334F4247D7FC000F29D91 /* EmployeeCollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeCollectionVC.swift; sourceTree = "<group>"; };
 		888334F5247D7FC000F29D91 /* ProsedurEditVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProsedurEditVC.swift; sourceTree = "<group>"; };
@@ -94,6 +113,14 @@
 		88D5DC512477AB0600B8BB41 /* EmployeeDetailTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailTableCell.swift; sourceTree = "<group>"; };
 		88D5DC532477B31600B8BB41 /* EmployeeTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableVC.swift; sourceTree = "<group>"; };
 		88E77182247009B8007D9E59 /* ManagementEmployeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementEmployeeVC.swift; sourceTree = "<group>"; };
+		8D6F21EB2476645C00561B38 /* Prosedur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prosedur.swift; sourceTree = "<group>"; };
+		8D78988524722CCA00CB164C /* MgMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MgMainTableViewCell.swift; sourceTree = "<group>"; };
+		8DAA50D02474C1D0005D0DDC /* ProsedurTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProsedurTableViewCell.swift; sourceTree = "<group>"; };
+		8DAA50D22474D330005D0DDC /* AssigneeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssigneeCollectionViewCell.swift; sourceTree = "<group>"; };
+		8DF16E992473836600974F0D /* HomeAdminModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAdminModel.swift; sourceTree = "<group>"; };
+		8DFCED4F2473F52500EA1564 /* MgEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MgEditViewController.swift; sourceTree = "<group>"; };
+		8DFCED532473F7DC00EA1564 /* PersiapanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersiapanTableViewCell.swift; sourceTree = "<group>"; };
+		8DFCED5B2473FF2C00EA1564 /* Persiapan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persiapan.swift; sourceTree = "<group>"; };
 		930298DB93CB0F3035BDD093 /* Pods-FnBTrainingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FnBTrainingApp.release.xcconfig"; path = "Target Support Files/Pods-FnBTrainingApp/Pods-FnBTrainingApp.release.xcconfig"; sourceTree = "<group>"; };
 		A4B8933B4C13E9D1D89F899B /* Pods_FnBTrainingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FnBTrainingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA19C387247BB40E00987951 /* ProcedureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcedureModel.swift; sourceTree = "<group>"; };
@@ -130,6 +157,11 @@
 		8811F586247197D700C142ED /* Table */ = {
 			isa = PBXGroup;
 			children = (
+				8D78988524722CCA00CB164C /* MgMainTableViewCell.swift */,
+				8DAA50D02474C1D0005D0DDC /* ProsedurTableViewCell.swift */,
+				8811F57E247187EF00C142ED /* EmployeeTable.swift */,
+				8811F5822471892000C142ED /* EmployeeTableCell.swift */,
+				8DFCED532473F7DC00EA1564 /* PersiapanTableViewCell.swift */,
 				88833500247D800B00F29D91 /* PersiapanTableViewCell.swift */,
 				88833503247D800B00F29D91 /* PersiapanTableViewController.swift */,
 				88833501247D800B00F29D91 /* PreparationEditTableViewCell.swift */,
@@ -147,6 +179,7 @@
 			children = (
 				888334FE247D7FDB00F29D91 /* TrainingCollectionViewCell.swift */,
 				8811F5842471896E00C142ED /* EmployeeCollectionCell.swift */,
+				8DAA50D22474D330005D0DDC /* AssigneeCollectionViewCell.swift */,
 				881BA83D2474F9F0003311D4 /* EmployeeTrainingCollectionCell.swift */,
 			);
 			path = Collection;
@@ -189,6 +222,8 @@
 		88465868246C1A03008DAE9D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8D6F21EB2476645C00561B38 /* Prosedur.swift */,
+				8DFCED5B2473FF2C00EA1564 /* Persiapan.swift */,
 				8883350C247D806100F29D91 /* Preparation.swift */,
 				8883350D247D806100F29D91 /* Prosedur.swift */,
 				884A35492470449200D8A252 /* Employee.swift */,
@@ -219,7 +254,6 @@
 				88465871246C1DDE008DAE9D /* MgEmployees.storyboard */,
 				8846586F246C1DB2008DAE9D /* MgTrain.storyboard */,
 				8846586D246C1D7C008DAE9D /* MgMain.storyboard */,
-				8846587F246C2FA4008DAE9D /* MgEditTraining.storyboard */,
 			);
 			path = Management;
 			sourceTree = "<group>";
@@ -227,6 +261,8 @@
 		88465875246C2757008DAE9D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8DFCED4F2473F52500EA1564 /* MgEditViewController.swift */,
+				2C4836DE247706F1008C1636 /* MgEditTable.swift */,
 				88833510247D80BB00F29D91 /* PersiapanEditVC.swift */,
 				888334F7247D7FC000F29D91 /* AddIngredientsModalVC.swift */,
 				888334F6247D7FC000F29D91 /* AddProcedureViewController.swift */,
@@ -234,7 +270,9 @@
 				888334F5247D7FC000F29D91 /* ProsedurEditVC.swift */,
 				888334F8247D7FC000F29D91 /* TrainingCategoryVC.swift */,
 				88465876246C278B008DAE9D /* ManagementVC.swift */,
+				8DF16E992473836600974F0D /* HomeAdminModel.swift */,
 				88E77182247009B8007D9E59 /* ManagementEmployeeVC.swift */,
+				88212643247CF3A100D7CC90 /* EditLatihanLauncher.swift */,
 				88B692CB24740B560051F6A4 /* EmployeeProfileVC.swift */,
 				88D5DC532477B31600B8BB41 /* EmployeeTableVC.swift */,
 				EA3CD9E7247376E20087A575 /* EmployeeProcedureVC.swift */,
@@ -384,13 +422,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DFCED5C2473FF2C00EA1564 /* Persiapan.swift in Sources */,
+				88212644247CF3A100D7CC90 /* EditLatihanLauncher.swift in Sources */,
 				888334FA247D7FC000F29D91 /* ProsedurEditVC.swift in Sources */,
 				881BA8402474FAD6003311D4 /* TrainingModel.swift in Sources */,
 				EA19C38A247BD2FE00987951 /* APIManager.swift in Sources */,
 				EA3CD9EA247398E10087A575 /* EmployeeVC.swift in Sources */,
 				EA19C393247D489100987951 /* EmployeeHome.swift in Sources */,
 				88465858246BAC61008DAE9D /* ViewController.swift in Sources */,
+				8DFCED542473F7DD00EA1564 /* PersiapanTableViewCell.swift in Sources */,
 				8811F5852471896E00C142ED /* EmployeeCollectionCell.swift in Sources */,
+				8DAA50D32474D330005D0DDC /* AssigneeCollectionViewCell.swift in Sources */,
+				8DF16E9A2473836600974F0D /* HomeAdminModel.swift in Sources */,
 				EA19C388247BB40E00987951 /* ProcedureModel.swift in Sources */,
 				884A354A2470449200D8A252 /* Employee.swift in Sources */,
 				88D5DC542477B31600B8BB41 /* EmployeeTableVC.swift in Sources */,
@@ -402,6 +445,15 @@
 				8811F5832471892000C142ED /* EmployeeTableCell.swift in Sources */,
 				88D5DC522477AB0600B8BB41 /* EmployeeDetailTableCell.swift in Sources */,
 				88E77183247009B8007D9E59 /* ManagementEmployeeVC.swift in Sources */,
+				8DFCED502473F52500EA1564 /* MgEditViewController.swift in Sources */,
+				88465856246BAC61008DAE9D /* SceneDelegate.swift in Sources */,
+				8D78988624722CCA00CB164C /* MgMainTableViewCell.swift in Sources */,
+				88465877246C278B008DAE9D /* ManagementVC.swift in Sources */,
+				8DAA50D12474C1D1005D0DDC /* ProsedurTableViewCell.swift in Sources */,
+				8D6F21EC2476645C00561B38 /* Prosedur.swift in Sources */,
+				2C4836DF247706F1008C1636 /* MgEditTable.swift in Sources */,
+				8811F5812471881800C142ED /* EmployeeCollectionView.swift in Sources */,
+				8811F57F247187EF00C142ED /* EmployeeTable.swift in Sources */,
 				88833511247D80BB00F29D91 /* PersiapanEditVC.swift in Sources */,
 				EA3CD9E8247376E20087A575 /* EmployeeProcedureVC.swift in Sources */,
 				88465856246BAC61008DAE9D /* SceneDelegate.swift in Sources */,

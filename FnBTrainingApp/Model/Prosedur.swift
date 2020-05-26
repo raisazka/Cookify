@@ -13,7 +13,7 @@ class Prosedur: NSObject {
     var gambar: UIImage?
     var deskripsi: String
     
-    init(gambar: UIImage, deskripsi: String){
+    init(gambar: UIImage, deskripsi: String) {
         self.gambar = gambar
         self.deskripsi = deskripsi
     }
