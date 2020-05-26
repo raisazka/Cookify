@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8811F57F247187EF00C142ED /* EmployeeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8811F57E247187EF00C142ED /* EmployeeTable.swift */; };
-		8811F5812471881800C142ED /* EmployeeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8811F5802471881800C142ED /* EmployeeCollectionView.swift */; };
 		8811F5832471892000C142ED /* EmployeeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8811F5822471892000C142ED /* EmployeeTableCell.swift */; };
 		8811F5852471896E00C142ED /* EmployeeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8811F5842471896E00C142ED /* EmployeeCollectionCell.swift */; };
+		881BA83E2474F9F0003311D4 /* EmployeeTrainingCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881BA83D2474F9F0003311D4 /* EmployeeTrainingCollectionCell.swift */; };
+		881BA8402474FAD6003311D4 /* TrainingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881BA83F2474FAD6003311D4 /* TrainingModel.swift */; };
 		88465854246BAC61008DAE9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88465853246BAC61008DAE9D /* AppDelegate.swift */; };
 		88465856246BAC61008DAE9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88465855246BAC61008DAE9D /* SceneDelegate.swift */; };
 		88465858246BAC61008DAE9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88465857246BAC61008DAE9D /* ViewController.swift */; };
@@ -25,6 +25,9 @@
 		88465879246C297D008DAE9D /* Employee.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88465878246C297D008DAE9D /* Employee.storyboard */; };
 		88465880246C2FA4008DAE9D /* MgEditTraining.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8846587F246C2FA4008DAE9D /* MgEditTraining.storyboard */; };
 		884A354A2470449200D8A252 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884A35492470449200D8A252 /* Employee.swift */; };
+		88B692CC24740B560051F6A4 /* EmployeeProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B692CB24740B560051F6A4 /* EmployeeProfileVC.swift */; };
+		88D5DC522477AB0600B8BB41 /* EmployeeDetailTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D5DC512477AB0600B8BB41 /* EmployeeDetailTableCell.swift */; };
+		88D5DC542477B31600B8BB41 /* EmployeeTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D5DC532477B31600B8BB41 /* EmployeeTableVC.swift */; };
 		88E77183247009B8007D9E59 /* ManagementEmployeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E77182247009B8007D9E59 /* ManagementEmployeeVC.swift */; };
 		CE78F4926305CA02558CD5B0 /* Pods_FnBTrainingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B8933B4C13E9D1D89F899B /* Pods_FnBTrainingApp.framework */; };
 		EA19C388247BB40E00987951 /* ProcedureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19C387247BB40E00987951 /* ProcedureModel.swift */; };
@@ -37,10 +40,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8811F57E247187EF00C142ED /* EmployeeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTable.swift; sourceTree = "<group>"; };
-		8811F5802471881800C142ED /* EmployeeCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCollectionView.swift; sourceTree = "<group>"; };
 		8811F5822471892000C142ED /* EmployeeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableCell.swift; sourceTree = "<group>"; };
 		8811F5842471896E00C142ED /* EmployeeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCollectionCell.swift; sourceTree = "<group>"; };
+		881BA83D2474F9F0003311D4 /* EmployeeTrainingCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTrainingCollectionCell.swift; sourceTree = "<group>"; };
+		881BA83F2474FAD6003311D4 /* TrainingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModel.swift; sourceTree = "<group>"; };
 		88465850246BAC61008DAE9D /* FnBTrainingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FnBTrainingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88465853246BAC61008DAE9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88465855246BAC61008DAE9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +60,9 @@
 		88465878246C297D008DAE9D /* Employee.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Employee.storyboard; sourceTree = "<group>"; };
 		8846587F246C2FA4008DAE9D /* MgEditTraining.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MgEditTraining.storyboard; sourceTree = "<group>"; };
 		884A35492470449200D8A252 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		88B692CB24740B560051F6A4 /* EmployeeProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeProfileVC.swift; sourceTree = "<group>"; };
+		88D5DC512477AB0600B8BB41 /* EmployeeDetailTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailTableCell.swift; sourceTree = "<group>"; };
+		88D5DC532477B31600B8BB41 /* EmployeeTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableVC.swift; sourceTree = "<group>"; };
 		88E77182247009B8007D9E59 /* ManagementEmployeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementEmployeeVC.swift; sourceTree = "<group>"; };
 		930298DB93CB0F3035BDD093 /* Pods-FnBTrainingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FnBTrainingApp.release.xcconfig"; path = "Target Support Files/Pods-FnBTrainingApp/Pods-FnBTrainingApp.release.xcconfig"; sourceTree = "<group>"; };
 		A4B8933B4C13E9D1D89F899B /* Pods_FnBTrainingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FnBTrainingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,8 +100,8 @@
 		8811F586247197D700C142ED /* Table */ = {
 			isa = PBXGroup;
 			children = (
-				8811F57E247187EF00C142ED /* EmployeeTable.swift */,
 				8811F5822471892000C142ED /* EmployeeTableCell.swift */,
+				88D5DC512477AB0600B8BB41 /* EmployeeDetailTableCell.swift */,
 				B710B52F24764FFF0060B193 /* PersiapanTableViewController.swift */,
 				B710B531247650150060B193 /* PersiapanTableViewCell.swift */,
 				B79C1306247CF0B3001D0941 /* PreparationEditTableViewCell.swift */,
@@ -109,8 +115,8 @@
 		8811F587247197DE00C142ED /* Collection */ = {
 			isa = PBXGroup;
 			children = (
-				8811F5802471881800C142ED /* EmployeeCollectionView.swift */,
 				8811F5842471896E00C142ED /* EmployeeCollectionCell.swift */,
+				881BA83D2474F9F0003311D4 /* EmployeeTrainingCollectionCell.swift */,
 				B710B52D247646EE0060B193 /* TrainingCollectionViewCell.swift */,
 			);
 			path = Collection;
@@ -154,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				884A35492470449200D8A252 /* Employee.swift */,
+				881BA83F2474FAD6003311D4 /* TrainingModel.swift */,
 				EA19C387247BB40E00987951 /* ProcedureModel.swift */,
 				EA19C392247D489100987951 /* EmployeeHome.swift */,
 			);
@@ -195,6 +202,8 @@
 				B7D64BB42479247700CAE905 /* TrainingCategoryVC.swift */,
 				88465876246C278B008DAE9D /* ManagementVC.swift */,
 				88E77182247009B8007D9E59 /* ManagementEmployeeVC.swift */,
+				88B692CB24740B560051F6A4 /* EmployeeProfileVC.swift */,
+				88D5DC532477B31600B8BB41 /* EmployeeTableVC.swift */,
 				EA3CD9E7247376E20087A575 /* EmployeeProcedureVC.swift */,
 				EA3CD9E9247398E10087A575 /* EmployeeVC.swift */,
 				EA3CD9EF2474BE7B0087A575 /* EmployeePreparationVC.swift */,
@@ -342,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				881BA8402474FAD6003311D4 /* TrainingModel.swift in Sources */,
 				EA19C38A247BD2FE00987951 /* APIManager.swift in Sources */,
 				EA3CD9EA247398E10087A575 /* EmployeeVC.swift in Sources */,
 				EA19C393247D489100987951 /* EmployeeHome.swift in Sources */,
@@ -351,8 +361,11 @@
 				8811F5852471896E00C142ED /* EmployeeCollectionCell.swift in Sources */,
 				EA19C388247BB40E00987951 /* ProcedureModel.swift in Sources */,
 				884A354A2470449200D8A252 /* Employee.swift in Sources */,
+				88D5DC542477B31600B8BB41 /* EmployeeTableVC.swift in Sources */,
+				881BA83E2474F9F0003311D4 /* EmployeeTrainingCollectionCell.swift in Sources */,
 				88465854246BAC61008DAE9D /* AppDelegate.swift in Sources */,
 				8811F5832471892000C142ED /* EmployeeTableCell.swift in Sources */,
+				88D5DC522477AB0600B8BB41 /* EmployeeDetailTableCell.swift in Sources */,
 				B74B18C7247D272F0000B3F8 /* ProsedurEditVC.swift in Sources */,
 				B79C1305247CEFE3001D0941 /* Preparation.swift in Sources */,
 				88E77183247009B8007D9E59 /* ManagementEmployeeVC.swift in Sources */,
@@ -361,6 +374,7 @@
 				B74B18CB247D27C70000B3F8 /* Prosedur.swift in Sources */,
 				B74B18CE247D29040000B3F8 /* ProsedurEditTableViewCell.swift in Sources */,
 				88465877246C278B008DAE9D /* ManagementVC.swift in Sources */,
+				88B692CC24740B560051F6A4 /* EmployeeProfileVC.swift in Sources */,
 				EA3CD9F02474BE7B0087A575 /* EmployeePreparationVC.swift in Sources */,
 				8811F5812471881800C142ED /* EmployeeCollectionView.swift in Sources */,
 				EA3CD9F42474C92E0087A575 /* BelumLatihanCollectionViewCell.swift in Sources */,

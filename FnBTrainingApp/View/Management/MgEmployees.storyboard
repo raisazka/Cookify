@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Boi-1X-Hwg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Boi-1X-Hwg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -11,13 +11,13 @@
         <!--Karyawan-->
         <scene sceneID="Ows-9O-ug1">
             <objects>
-                <viewController title="Karyawan" id="3oe-tY-IMf" customClass="ManagementEmployeeVC" customModule="FnBTrainingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3oe-tY-IMf" customClass="ManagementEmployeeVC" customModule="FnBTrainingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mbr-vX-EWb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sle-7A-P8K" customClass="EmployeeTable" customModule="FnBTrainingApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="206" width="414" height="656"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sle-7A-P8K">
+                                <rect key="frame" x="0.0" y="164" width="414" height="649"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="2" indentationWidth="0.0" reuseIdentifier="empTableCell" rowHeight="190" id="YSU-oS-CQs" customClass="EmployeeTableCell" customModule="FnBTrainingApp" customModuleProvider="target">
@@ -31,24 +31,38 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="47"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employee Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UW6-dZ-46V">
-                                                            <rect key="frame" x="15" y="15.5" width="126" height="16"/>
+                                                            <rect key="frame" x="30" y="15.5" width="126" height="16"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3h-rZ-Oro">
+                                                            <rect key="frame" x="297" y="8.5" width="99" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="PGN-sY-ead"/>
+                                                                <constraint firstAttribute="width" constant="99" id="zfb-ak-IfS"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                                            <state key="normal" title="View All"/>
+                                                            <connections>
+                                                                <action selector="viewAllTapped:" destination="YSU-oS-CQs" eventType="touchUpInside" id="JkK-5C-uZw"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="m3h-rZ-Oro" secondAttribute="trailing" constant="18" id="F1J-fE-2TH"/>
                                                         <constraint firstAttribute="height" constant="47" id="RpG-2d-pQ6"/>
-                                                        <constraint firstItem="UW6-dZ-46V" firstAttribute="leading" secondItem="HH7-c2-yX5" secondAttribute="leading" constant="15" id="eJM-CI-oaH"/>
+                                                        <constraint firstItem="UW6-dZ-46V" firstAttribute="leading" secondItem="HH7-c2-yX5" secondAttribute="leading" constant="30" id="eJM-CI-oaH"/>
+                                                        <constraint firstItem="m3h-rZ-Oro" firstAttribute="centerY" secondItem="HH7-c2-yX5" secondAttribute="centerY" id="xym-WR-0zN"/>
                                                         <constraint firstItem="UW6-dZ-46V" firstAttribute="centerY" secondItem="HH7-c2-yX5" secondAttribute="centerY" id="yq4-1g-T5f"/>
                                                     </constraints>
                                                 </view>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vhe-1c-9jn" customClass="EmployeeCollectionView" customModule="FnBTrainingApp" customModuleProvider="target">
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vhe-1c-9jn">
                                                     <rect key="frame" x="0.0" y="47" width="414" height="143"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="143" id="xhn-Px-ROe"/>
+                                                        <constraint firstAttribute="height" constant="135" id="xhn-Px-ROe"/>
                                                     </constraints>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="2" minimumInteritemSpacing="6" id="fyE-sp-xgN">
                                                         <size key="itemSize" width="128" height="129"/>
@@ -79,6 +93,11 @@
                                                                 </subviews>
                                                             </collectionViewCellContentView>
                                                             <size key="customSize" width="130" height="129"/>
+                                                            <connections>
+                                                                <outlet property="empImage" destination="M9u-cs-jSp" id="nvk-te-Z3D"/>
+                                                                <outlet property="empLabel" destination="yu9-Se-Cb3" id="Ybk-Rz-gfV"/>
+                                                                <outlet property="empView" destination="245-0z-AkL" id="X8p-Ax-1Jd"/>
+                                                            </connections>
                                                         </collectionViewCell>
                                                     </cells>
                                                 </collectionView>
@@ -95,46 +114,238 @@
                                                 <constraint firstItem="vhe-1c-9jn" firstAttribute="top" secondItem="HH7-c2-yX5" secondAttribute="bottom" id="odZ-Zg-qyh"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="empCollectionView" destination="vhe-1c-9jn" id="gxf-zQ-V45"/>
+                                            <outlet property="sectionLabel" destination="UW6-dZ-46V" id="xiD-yi-S3g"/>
+                                            <outlet property="view" destination="HH7-c2-yX5" id="Aw0-Xg-tIw"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <searchBar contentMode="redraw" misplaced="YES" placeholder="Search Employees" translatesAutoresizingMaskIntoConstraints="NO" id="5CG-MA-sVa">
-                                <rect key="frame" x="20" y="140" width="374" height="56"/>
-                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                            <searchBar contentMode="redraw" placeholder="Employee Name" translatesAutoresizingMaskIntoConstraints="NO" id="LUX-Sb-XEn">
+                                <rect key="frame" x="20" y="98" width="374" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="5CG-MA-sVa" firstAttribute="top" secondItem="Fpn-8N-Jwk" secondAttribute="top" constant="5" id="TSc-rg-a60"/>
-                            <constraint firstItem="5CG-MA-sVa" firstAttribute="leading" secondItem="Fpn-8N-Jwk" secondAttribute="leading" constant="20" id="WEa-PB-BgI"/>
+                            <constraint firstItem="Fpn-8N-Jwk" firstAttribute="trailing" secondItem="LUX-Sb-XEn" secondAttribute="trailing" constant="20" id="Eyg-Hc-1gr"/>
+                            <constraint firstItem="LUX-Sb-XEn" firstAttribute="leading" secondItem="Fpn-8N-Jwk" secondAttribute="leading" constant="20" id="QsY-BZ-Efs"/>
                             <constraint firstItem="sle-7A-P8K" firstAttribute="leading" secondItem="mbr-vX-EWb" secondAttribute="leading" id="Xaa-T4-e2P"/>
+                            <constraint firstItem="LUX-Sb-XEn" firstAttribute="top" secondItem="Fpn-8N-Jwk" secondAttribute="top" constant="10" id="Ybv-fh-die"/>
                             <constraint firstItem="sle-7A-P8K" firstAttribute="bottom" secondItem="Fpn-8N-Jwk" secondAttribute="bottom" id="ZBi-Uj-g0T"/>
+                            <constraint firstItem="sle-7A-P8K" firstAttribute="top" secondItem="LUX-Sb-XEn" secondAttribute="bottom" constant="10" id="avt-cp-AdI"/>
                             <constraint firstAttribute="trailing" secondItem="sle-7A-P8K" secondAttribute="trailing" id="dGL-su-rfU"/>
-                            <constraint firstItem="sle-7A-P8K" firstAttribute="top" secondItem="5CG-MA-sVa" secondAttribute="bottom" constant="5" id="mbW-wg-l9Z"/>
-                            <constraint firstItem="Fpn-8N-Jwk" firstAttribute="trailing" secondItem="5CG-MA-sVa" secondAttribute="trailing" constant="20" id="toG-gt-9Vt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fpn-8N-Jwk"/>
                     </view>
                     <navigationItem key="navigationItem" title="Karyawan" largeTitleDisplayMode="always" id="PJe-rH-EIR"/>
                     <connections>
-                        <outlet property="searchBar" destination="5CG-MA-sVa" id="1Ay-ht-bhS"/>
+                        <outlet property="searchBar" destination="LUX-Sb-XEn" id="rdi-My-z0Q"/>
+                        <outlet property="tableView" destination="sle-7A-P8K" id="XGr-He-T6r"/>
+                        <segue destination="Wgz-es-c56" kind="show" identifier="profileSegue" id="i3C-pk-3jz"/>
+                        <segue destination="EvB-PR-zCn" kind="show" identifier="toEmployeeTable" id="zGg-j9-Q2o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QX7-Wn-bmy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2976.811594202899" y="930.80357142857133"/>
+            <point key="canvasLocation" x="2973.913043478261" y="926.78571428571422"/>
+        </scene>
+        <!--Employee TableVC-->
+        <scene sceneID="Rbm-59-OXs">
+            <objects>
+                <viewController id="EvB-PR-zCn" customClass="EmployeeTableVC" customModule="FnBTrainingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Nc-sE-DIs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" estimatedRowHeight="105" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EwU-tP-ohl">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="empTblCell" rowHeight="105" id="Urw-Hr-1zm" customClass="EmployeeDetailTableCell" customModule="FnBTrainingApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="105"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Urw-Hr-1zm" id="c19-XG-OiI">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tly-ho-qz7">
+                                                    <rect key="frame" x="20" y="10" width="85" height="85"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hendry" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5g-Iq-mGK">
+                                                    <rect key="frame" x="127" y="23" width="234" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cook" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zvy-s2-hRK">
+                                                    <rect key="frame" x="127" y="55" width="217" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="empImage" destination="tly-ho-qz7" id="Bje-Bo-jaY"/>
+                                            <outlet property="empName" destination="K5g-Iq-mGK" id="okm-IT-bOH"/>
+                                            <outlet property="empRole" destination="zvy-s2-hRK" id="stu-hZ-DUm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="j94-Ku-LFx"/>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="K1v-gn-DoW"/>
+                    <connections>
+                        <outlet property="tableView" destination="EwU-tP-ohl" id="wlq-4h-cjE"/>
+                        <segue destination="Wgz-es-c56" kind="show" identifier="toProfileFromTable" id="IwU-Gp-qcx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h3o-Zy-17U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2973.913043478261" y="1624.5535714285713"/>
+        </scene>
+        <!--Employee ProfileVC-->
+        <scene sceneID="98b-dm-MyM">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="Wgz-es-c56" customClass="EmployeeProfileVC" customModule="FnBTrainingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nfI-zP-opu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rei Azka" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwr-JL-UqH">
+                                <rect key="frame" x="193" y="135" width="161" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IyI-ne-aIY">
+                                <rect key="frame" x="193" y="166" width="161" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" white="0.0" alpha="0.43498501712328769" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2 Month  | In Probation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FlI-CT-TIv">
+                                <rect key="frame" x="193" y="209" width="161" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QLj-H8-8IG">
+                                <rect key="frame" x="51" y="135" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Training" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUb-XS-Ewh">
+                                <rect key="frame" x="20" y="336" width="102" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OFb-2q-teN">
+                                <rect key="frame" x="20" y="383" width="374" height="475"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="2" id="34g-1b-367">
+                                    <size key="itemSize" width="110" height="134"/>
+                                    <size key="estimatedItemSize" width="110" height="134"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="empTrainingCell" id="b14-6p-kDG" customClass="EmployeeTrainingCollectionCell" customModule="FnBTrainingApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="134"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GZo-aE-Kqn">
+                                            <rect key="frame" x="0.0" y="0.0" width="110" height="134"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pancake" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p3z-Uf-h1D">
+                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="98"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="p3z-Uf-h1D" secondAttribute="height" multiplier="65:48" constant="-22.708333333333343" id="6j0-Vh-Yjb"/>
+                                                        <constraint firstAttribute="width" constant="110" id="SJq-6P-k3N"/>
+                                                        <constraint firstAttribute="height" constant="98" id="wHf-2I-IvP"/>
+                                                    </constraints>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scrambled Egg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3q-Mg-uya">
+                                                    <rect key="frame" x="8" y="98" width="47" height="36"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="36" id="cb7-6S-IBu"/>
+                                                        <constraint firstAttribute="width" constant="47" id="rW8-fK-3Ae"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.5m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bX3-Yd-aSE">
+                                                    <rect key="frame" x="63" y="105" width="44" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                    <color key="textColor" red="0.43137254899999999" green="0.7843137255" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="p3z-Uf-h1D" firstAttribute="leading" secondItem="GZo-aE-Kqn" secondAttribute="leading" id="8cf-lw-JBp"/>
+                                                <constraint firstItem="l3q-Mg-uya" firstAttribute="top" secondItem="p3z-Uf-h1D" secondAttribute="bottom" id="GMP-X4-UmZ"/>
+                                                <constraint firstItem="l3q-Mg-uya" firstAttribute="leading" secondItem="GZo-aE-Kqn" secondAttribute="leading" constant="8" id="H9v-wV-646"/>
+                                                <constraint firstAttribute="trailing" secondItem="p3z-Uf-h1D" secondAttribute="trailing" id="LeL-VR-bkw"/>
+                                                <constraint firstItem="p3z-Uf-h1D" firstAttribute="top" secondItem="GZo-aE-Kqn" secondAttribute="top" id="VFy-yw-2zD"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="110" height="134"/>
+                                        <connections>
+                                            <outlet property="trainingImage" destination="p3z-Uf-h1D" id="Yol-nE-cC9"/>
+                                            <outlet property="trainingMinute" destination="bX3-Yd-aSE" id="Ird-Hb-bcB"/>
+                                            <outlet property="trainingName" destination="l3q-Mg-uya" id="6wb-jB-9GS"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="V9H-o1-YyS"/>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="WAe-5T-CR3"/>
+                    <connections>
+                        <outlet property="empImage" destination="QLj-H8-8IG" id="FQo-pS-WdR"/>
+                        <outlet property="empNameLabel" destination="rwr-JL-UqH" id="a3n-Fp-7fD"/>
+                        <outlet property="empRoleLabel" destination="IyI-ne-aIY" id="az2-e3-2aV"/>
+                        <outlet property="trainingCollection" destination="OFb-2q-teN" id="NIB-Qg-SBp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HR7-M5-xns" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4014.4927536231885" y="927.45535714285711"/>
         </scene>
         <!--Karyawan-->
         <scene sceneID="stX-ic-nzb">
             <objects>
                 <navigationController title="Karyawan" automaticallyAdjustsScrollViewInsets="NO" id="Boi-1X-Hwg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Karyawan" image="person.3" catalog="system" id="vZ1-mi-Jis"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="0KG-5R-De4">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.43137254901960786" green="0.78431372549019607" blue="0.51764705882352935" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <color key="tintColor" red="0.054902471600000002" green="0.050903998319999998" blue="0.0549024865" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.31372549020000001" green="0.7843137255" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="largeTitleTextAttributes">
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
@@ -152,7 +363,12 @@
             <point key="canvasLocation" x="2066.666666666667" y="930.80357142857133"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="IwU-Gp-qcx"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="logo" width="2000" height="2000"/>
+        <image name="pancake" width="2841" height="1735"/>
+        <image name="person.3" catalog="system" width="128" height="62"/>
     </resources>
 </document>
