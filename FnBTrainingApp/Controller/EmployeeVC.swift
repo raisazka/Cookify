@@ -16,9 +16,9 @@ class EmployeeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
     @IBOutlet weak var BelumColView: UICollectionView!
     
     
-    let menuBelum = ["Telur Orak Arik","Nasi Goreng","Mie Goreng"]
+    let menuBelum = ["Telur Orak Arik","Roti Bakar","Ayam Goreng","Roti Bakar Telur","Nasi Goreng"]
        
-    let gambarBelum = ["image.png","image.png","image.png"]
+    let gambarBelum = ["image.png","rotibakarr.png","Ayamgoreng.png","roti bakar telur.png","nasgor.png"]
        
        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
            return menuBelum.count
