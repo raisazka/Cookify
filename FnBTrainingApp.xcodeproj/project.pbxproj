@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7D045A615C1E7B6D211B56EF /* Pods_FnBTrainingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAC5F5CC80181BB8FD76E7C /* Pods_FnBTrainingApp.framework */; };
 		8811F57F247187EF00C142ED /* EmployeeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8811F57E247187EF00C142ED /* EmployeeTable.swift */; };
 		8811F5812471881800C142ED /* EmployeeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8811F5802471881800C142ED /* EmployeeCollectionView.swift */; };
 		8811F5832471892000C142ED /* EmployeeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8811F5822471892000C142ED /* EmployeeTableCell.swift */; };
@@ -45,9 +44,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1AAC5F5CC80181BB8FD76E7C /* Pods_FnBTrainingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FnBTrainingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		217B625DBAD8DF3EA13B5A3A /* Pods-FnBTrainingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FnBTrainingApp.debug.xcconfig"; path = "Target Support Files/Pods-FnBTrainingApp/Pods-FnBTrainingApp.debug.xcconfig"; sourceTree = "<group>"; };
-		3881EFF32389CE157004B795 /* Pods-FnBTrainingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FnBTrainingApp.release.xcconfig"; path = "Target Support Files/Pods-FnBTrainingApp/Pods-FnBTrainingApp.release.xcconfig"; sourceTree = "<group>"; };
 		8811F57E247187EF00C142ED /* EmployeeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTable.swift; sourceTree = "<group>"; };
 		8811F5802471881800C142ED /* EmployeeCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCollectionView.swift; sourceTree = "<group>"; };
 		8811F5822471892000C142ED /* EmployeeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableCell.swift; sourceTree = "<group>"; };
@@ -91,21 +87,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D045A615C1E7B6D211B56EF /* Pods_FnBTrainingApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2C77FDE66ECAEB62A0CAF262 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1AAC5F5CC80181BB8FD76E7C /* Pods_FnBTrainingApp.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		8811F586247197D700C142ED /* Table */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,8 +123,6 @@
 			children = (
 				88465852246BAC61008DAE9D /* FnBTrainingApp */,
 				88465851246BAC61008DAE9D /* Products */,
-				E0D1C0B3D1AB6B0028B225B0 /* Pods */,
-				2C77FDE66ECAEB62A0CAF262 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -222,16 +207,6 @@
 			path = Employee;
 			sourceTree = "<group>";
 		};
-		E0D1C0B3D1AB6B0028B225B0 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				217B625DBAD8DF3EA13B5A3A /* Pods-FnBTrainingApp.debug.xcconfig */,
-				3881EFF32389CE157004B795 /* Pods-FnBTrainingApp.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -239,11 +214,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88465864246BAC63008DAE9D /* Build configuration list for PBXNativeTarget "FnBTrainingApp" */;
 			buildPhases = (
-				BE4ACB0E0974D8E79C1A7363 /* [CP] Check Pods Manifest.lock */,
 				8846584C246BAC61008DAE9D /* Sources */,
 				8846584D246BAC61008DAE9D /* Frameworks */,
 				8846584E246BAC61008DAE9D /* Resources */,
-				A338F5BA3C9BBD743BC9F829 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -307,48 +280,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		A338F5BA3C9BBD743BC9F829 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FnBTrainingApp/Pods-FnBTrainingApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FnBTrainingApp/Pods-FnBTrainingApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FnBTrainingApp/Pods-FnBTrainingApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BE4ACB0E0974D8E79C1A7363 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FnBTrainingApp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8846584C246BAC61008DAE9D /* Sources */ = {
@@ -519,7 +450,6 @@
 		};
 		88465865246BAC63008DAE9D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 217B625DBAD8DF3EA13B5A3A /* Pods-FnBTrainingApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -538,7 +468,6 @@
 		};
 		88465866246BAC63008DAE9D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3881EFF32389CE157004B795 /* Pods-FnBTrainingApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
