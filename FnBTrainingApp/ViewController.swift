@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let role = "employee"
+    let role = "admin"
     
     @IBOutlet weak var fieldEmail: UITextField!
     @IBOutlet weak var fieldPassword: UITextField!

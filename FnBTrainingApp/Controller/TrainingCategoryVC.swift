@@ -12,11 +12,11 @@ class TrainingCategoryVC: UIViewController, UICollectionViewDelegate, UICollecti
     
     @IBOutlet var categoryCollectionView: UICollectionView!
     
-    let trainingArray: [Training] = [
-        Training(name: "Masak", image: #imageLiteral(resourceName: "masak")),
-        Training(name: "Kasir", image: #imageLiteral(resourceName: "kasir")),
-        Training(name: "Inventaris", image: #imageLiteral(resourceName: "inventaris")),
-        Training(name: "Pelayan", image: #imageLiteral(resourceName: "pelayan"))
+    let trainingArray: [TrainingModel] = [
+        TrainingModel(name: "Masak", image: #imageLiteral(resourceName: "masak"), minute: 10),
+        TrainingModel(name: "Kasir", image: #imageLiteral(resourceName: "kasir"), minute: 10),
+        TrainingModel(name: "Inventaris", image: #imageLiteral(resourceName: "inventaris"), minute: 10),
+        TrainingModel(name: "Pelayan", image: #imageLiteral(resourceName: "pelayan"), minute: 10)
     ]
     
     
