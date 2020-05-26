@@ -31,6 +31,10 @@
 		B710B532247650150060B193 /* PersiapanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B710B531247650150060B193 /* PersiapanTableViewCell.swift */; };
 		B74B18C3247D17D30000B3F8 /* AddIngredientsModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B18C2247D17D30000B3F8 /* AddIngredientsModalVC.swift */; };
 		B74B18C5247D1EE20000B3F8 /* AddProcedureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B18C4247D1EE20000B3F8 /* AddProcedureViewController.swift */; };
+		B74B18C7247D272F0000B3F8 /* ProsedurEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B18C6247D272F0000B3F8 /* ProsedurEditVC.swift */; };
+		B74B18CB247D27C70000B3F8 /* Prosedur.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B18CA247D27C70000B3F8 /* Prosedur.swift */; };
+		B74B18CE247D29040000B3F8 /* ProsedurEditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B18CC247D29040000B3F8 /* ProsedurEditTableViewCell.swift */; };
+		B74B18CF247D29040000B3F8 /* ProsedurEditTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B74B18CD247D29040000B3F8 /* ProsedurEditTableViewCell.xib */; };
 		B79C1301247CE1E9001D0941 /* PersiapanEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79C1300247CE1E9001D0941 /* PersiapanEditVC.swift */; };
 		B79C1305247CEFE3001D0941 /* Preparation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79C1304247CEFE3001D0941 /* Preparation.swift */; };
 		B79C1308247CF0B3001D0941 /* PreparationEditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79C1306247CF0B3001D0941 /* PreparationEditTableViewCell.swift */; };
@@ -66,6 +70,10 @@
 		B710B531247650150060B193 /* PersiapanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersiapanTableViewCell.swift; sourceTree = "<group>"; };
 		B74B18C2247D17D30000B3F8 /* AddIngredientsModalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddIngredientsModalVC.swift; path = FnBTrainingApp/Controller/AddIngredientsModalVC.swift; sourceTree = SOURCE_ROOT; };
 		B74B18C4247D1EE20000B3F8 /* AddProcedureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddProcedureViewController.swift; path = FnBTrainingApp/Controller/AddProcedureViewController.swift; sourceTree = SOURCE_ROOT; };
+		B74B18C6247D272F0000B3F8 /* ProsedurEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProsedurEditVC.swift; path = FnBTrainingApp/Controller/ProsedurEditVC.swift; sourceTree = SOURCE_ROOT; };
+		B74B18CA247D27C70000B3F8 /* Prosedur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prosedur.swift; sourceTree = "<group>"; };
+		B74B18CC247D29040000B3F8 /* ProsedurEditTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProsedurEditTableViewCell.swift; path = FnBTrainingApp/View/Table/ProsedurEditTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		B74B18CD247D29040000B3F8 /* ProsedurEditTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ProsedurEditTableViewCell.xib; path = FnBTrainingApp/View/Table/ProsedurEditTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		B79C1300247CE1E9001D0941 /* PersiapanEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PersiapanEditVC.swift; path = FnBTrainingApp/View/Management/PersiapanEditVC.swift; sourceTree = SOURCE_ROOT; };
 		B79C1304247CEFE3001D0941 /* Preparation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preparation.swift; sourceTree = "<group>"; };
 		B79C1306247CF0B3001D0941 /* PreparationEditTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparationEditTableViewCell.swift; sourceTree = "<group>"; };
@@ -94,6 +102,8 @@
 				B710B531247650150060B193 /* PersiapanTableViewCell.swift */,
 				B79C1306247CF0B3001D0941 /* PreparationEditTableViewCell.swift */,
 				B79C1307247CF0B3001D0941 /* PreparationEditTableViewCell.xib */,
+				B74B18CC247D29040000B3F8 /* ProsedurEditTableViewCell.swift */,
+				B74B18CD247D29040000B3F8 /* ProsedurEditTableViewCell.xib */,
 			);
 			path = Table;
 			sourceTree = "<group>";
@@ -146,6 +156,7 @@
 				884A35492470449200D8A252 /* Employee.swift */,
 				B7B188C7247BB28500441A63 /* Training.swift */,
 				B79C1304247CEFE3001D0941 /* Preparation.swift */,
+				B74B18CA247D27C70000B3F8 /* Prosedur.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,6 +189,7 @@
 		88465875246C2757008DAE9D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B74B18C6247D272F0000B3F8 /* ProsedurEditVC.swift */,
 				B74B18C4247D1EE20000B3F8 /* AddProcedureViewController.swift */,
 				B74B18C2247D17D30000B3F8 /* AddIngredientsModalVC.swift */,
 				B79C1300247CE1E9001D0941 /* PersiapanEditVC.swift */,
@@ -258,6 +270,7 @@
 				8846586E246C1D7C008DAE9D /* MgMain.storyboard in Resources */,
 				88465879246C297D008DAE9D /* Employee.storyboard in Resources */,
 				88465860246BAC63008DAE9D /* LaunchScreen.storyboard in Resources */,
+				B74B18CF247D29040000B3F8 /* ProsedurEditTableViewCell.xib in Resources */,
 				8846585D246BAC63008DAE9D /* Assets.xcassets in Resources */,
 				88465872246C1DDE008DAE9D /* MgEmployees.storyboard in Resources */,
 				8846585B246BAC61008DAE9D /* Main.storyboard in Resources */,
@@ -286,9 +299,12 @@
 				884A354A2470449200D8A252 /* Employee.swift in Sources */,
 				88465854246BAC61008DAE9D /* AppDelegate.swift in Sources */,
 				8811F5832471892000C142ED /* EmployeeTableCell.swift in Sources */,
+				B74B18C7247D272F0000B3F8 /* ProsedurEditVC.swift in Sources */,
 				B79C1305247CEFE3001D0941 /* Preparation.swift in Sources */,
 				88E77183247009B8007D9E59 /* ManagementEmployeeVC.swift in Sources */,
 				88465856246BAC61008DAE9D /* SceneDelegate.swift in Sources */,
+				B74B18CB247D27C70000B3F8 /* Prosedur.swift in Sources */,
+				B74B18CE247D29040000B3F8 /* ProsedurEditTableViewCell.swift in Sources */,
 				88465877246C278B008DAE9D /* ManagementVC.swift in Sources */,
 				B7D64BB52479247700CAE905 /* TrainingCategoryVC.swift in Sources */,
 				8811F5812471881800C142ED /* EmployeeCollectionView.swift in Sources */,
@@ -437,6 +453,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94AQ28YXX2;
 				INFOPLIST_FILE = FnBTrainingApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -454,6 +471,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94AQ28YXX2;
 				INFOPLIST_FILE = FnBTrainingApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

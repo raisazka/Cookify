@@ -1,5 +1,5 @@
 //
-//  PersiapanEditVC.swift
+//  ProsedurEdtiVC.swift
 //  FnBTrainingApp
 //
 //  Created by Theofani on 26/05/20.
@@ -8,45 +8,46 @@
 
 import UIKit
 
-class PersiapanEditVC: UIViewController, UITextFieldDelegate {
+class ProsedurEditVC: UIViewController {
+
+    @IBOutlet weak var tambahProsedur: UIButton!
+    @IBOutlet weak var prosedurTableView: UITableView!
     
+    private var myModel = [Prosedur]()
     
-    @IBOutlet var namaPelatihanTextField: UITextField!
-    @IBOutlet var persiapanTableView: UITableView!
-    
-    private var myModel = [Preparation]()
-    
-    var tambahBahan = ""
-    var tambahKeterangan = ""
+    var tambahGambarProsedur: UIImage?
+    var tambahDeskripsi = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableViewUI()
+        // Do any additional setup after loading the view.
     }
     
-    func setupTableViewUI() {
-        persiapanTableView.register(UINib(nibName: "PreparationEditTableViewCell", bundle: nil), forCellReuseIdentifier: "preparationCell")
-        persiapanTableView.tableFooterView = UIView(frame: CGRect.zero)
+    func setupTableViewUI(){
+        prosedurTableView.register(UINib(nibName: "ProsedurEditTableViewCell", bundle: nil), forCellReuseIdentifier: "prosedurCell")
+        prosedurTableView.tableFooterView = UIView(frame: CGRect.zero)
     }
-
+    
     func insertNewCell(){
-        
-        myModel.append(Preparation(name: tambahBahan, amount: tambahKeterangan))
+        let defaultImage = #imageLiteral(resourceName: "logo")
+        myModel.append(Prosedur(gambar: tambahGambarProsedur ?? defaultImage, deskripsi: tambahDeskripsi))
         
         let indexPath = IndexPath(row: myModel.count - 1, section: 0)
         
-        persiapanTableView.beginUpdates()
-        persiapanTableView.insertRows(at: [indexPath], with: .automatic)
-        persiapanTableView.endUpdates()
+        prosedurTableView.beginUpdates()
+        prosedurTableView.insertRows(at: [indexPath], with: .automatic)
+        prosedurTableView.endUpdates()
         view.endEditing(true)
     }
-    
+
     @IBAction func unwindSegue(_ sender: UIStoryboardSegue){
         insertNewCell()
     }
+
 }
 
-extension PersiapanEditVC: UITableViewDataSource, UITableViewDelegate {
+extension ProsedurEditVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return myModel.count
@@ -76,11 +77,9 @@ extension PersiapanEditVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = (tableView.dequeueReusableCell(withIdentifier: "preparationCell", for: indexPath) as? PreparationEditTableViewCell)!
-        cell.myPersiapanModel = myModel[indexPath.row]
+        let cell = (tableView.dequeueReusableCell(withIdentifier: "prosedurCell", for: indexPath) as? ProsedurEditTableViewCell)!
+        cell.myProsedurModel = myModel[indexPath.row]
         return cell
     }
     
 }
-
-

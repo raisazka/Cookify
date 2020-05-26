@@ -8,7 +8,11 @@
 
 import UIKit
 
-class AddProcedureViewController: UIViewController {
+class AddProcedureViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+
+    @IBOutlet weak var fotoBahan: UIImageView!
+    @IBOutlet weak var deskripsiTextField: UITextField!
+    @IBOutlet weak var addProsedurButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,15 +20,32 @@ class AddProcedureViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let destVC = segue.destination as! ProsedurEditVC
+        destVC.tambahDeskripsi = deskripsiTextField.text!
+        destVC.tambahGambarProsedur = fotoBahan.image
     }
-    */
 
+    @IBAction func importImageButton(_ sender: Any) {
+        let image = UIImagePickerController()
+        image.delegate = self
+        
+        image.sourceType = UIImagePickerController.SourceType.photoLibrary
+        image.allowsEditing = false
+        self.present(image, animated: true){
+            //after it's complete
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        {
+            fotoBahan.image = image
+        }
+        else{
+            //Error message
+        }
+        
+        self.dismiss(animated: true, completion: nil)
+    }
 }

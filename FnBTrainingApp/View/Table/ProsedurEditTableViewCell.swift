@@ -1,5 +1,5 @@
 //
-//  PreparationEditTableViewCell.swift
+//  ProsedurEditTableViewCell.swift
 //  FnBTrainingApp
 //
 //  Created by Theofani on 26/05/20.
@@ -8,15 +8,16 @@
 
 import UIKit
 
-class PreparationEditTableViewCell: UITableViewCell {
+class ProsedurEditTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var namaBahanLabel: UILabel!
-    @IBOutlet weak var jumlahBahanLabel: UILabel!
-    var myPersiapanModel: Preparation? {
-        didSet{
-            cellConfig()
-        }
-    }
+    @IBOutlet weak var gambarProsedur: UIImageView!
+    @IBOutlet weak var deskripsiProsedur: UILabel!
+    
+    var myProsedurModel: Prosedur? {
+           didSet{
+               cellConfig()
+           }
+       }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,8 +31,8 @@ class PreparationEditTableViewCell: UITableViewCell {
     }
     
     func cellConfig(){
-        guard let obj = myPersiapanModel else { return }
-        namaBahanLabel.text = obj.name
-        jumlahBahanLabel.text = obj.amount
-    }
+          guard let obj = myProsedurModel else { return }
+        gambarProsedur.image = obj.gambar
+        deskripsiProsedur.text = obj.deskripsi
+      }
 }

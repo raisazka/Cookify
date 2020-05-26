@@ -14,9 +14,6 @@ class AddIngredientsModalVC: UIViewController {
     @IBOutlet weak var tambahKeterangan: UITextField!
     @IBOutlet weak var tambahDataButton: UIButton!
     
-    var namaBahan = ""
-    var keterangan = ""
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
