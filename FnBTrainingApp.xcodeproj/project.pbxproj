@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,21 +26,14 @@
 		88465880246C2FA4008DAE9D /* MgEditTraining.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8846587F246C2FA4008DAE9D /* MgEditTraining.storyboard */; };
 		884A354A2470449200D8A252 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884A35492470449200D8A252 /* Employee.swift */; };
 		88E77183247009B8007D9E59 /* ManagementEmployeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E77182247009B8007D9E59 /* ManagementEmployeeVC.swift */; };
-		B710B52E247646EE0060B193 /* TrainingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B710B52D247646EE0060B193 /* TrainingCollectionViewCell.swift */; };
-		B710B53024764FFF0060B193 /* PersiapanTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B710B52F24764FFF0060B193 /* PersiapanTableViewController.swift */; };
-		B710B532247650150060B193 /* PersiapanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B710B531247650150060B193 /* PersiapanTableViewCell.swift */; };
-		B74B18C3247D17D30000B3F8 /* AddIngredientsModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B18C2247D17D30000B3F8 /* AddIngredientsModalVC.swift */; };
-		B74B18C5247D1EE20000B3F8 /* AddProcedureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B18C4247D1EE20000B3F8 /* AddProcedureViewController.swift */; };
-		B74B18C7247D272F0000B3F8 /* ProsedurEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B18C6247D272F0000B3F8 /* ProsedurEditVC.swift */; };
-		B74B18CB247D27C70000B3F8 /* Prosedur.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B18CA247D27C70000B3F8 /* Prosedur.swift */; };
-		B74B18CE247D29040000B3F8 /* ProsedurEditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B18CC247D29040000B3F8 /* ProsedurEditTableViewCell.swift */; };
-		B74B18CF247D29040000B3F8 /* ProsedurEditTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B74B18CD247D29040000B3F8 /* ProsedurEditTableViewCell.xib */; };
-		B79C1301247CE1E9001D0941 /* PersiapanEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79C1300247CE1E9001D0941 /* PersiapanEditVC.swift */; };
-		B79C1305247CEFE3001D0941 /* Preparation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79C1304247CEFE3001D0941 /* Preparation.swift */; };
-		B79C1308247CF0B3001D0941 /* PreparationEditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79C1306247CF0B3001D0941 /* PreparationEditTableViewCell.swift */; };
-		B79C1309247CF0B3001D0941 /* PreparationEditTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B79C1307247CF0B3001D0941 /* PreparationEditTableViewCell.xib */; };
-		B7B188C8247BB28500441A63 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B188C7247BB28500441A63 /* Training.swift */; };
-		B7D64BB52479247700CAE905 /* TrainingCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D64BB42479247700CAE905 /* TrainingCategoryVC.swift */; };
+		CE78F4926305CA02558CD5B0 /* Pods_FnBTrainingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B8933B4C13E9D1D89F899B /* Pods_FnBTrainingApp.framework */; };
+		EA19C388247BB40E00987951 /* ProcedureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19C387247BB40E00987951 /* ProcedureModel.swift */; };
+		EA19C38A247BD2FE00987951 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19C389247BD2FE00987951 /* APIManager.swift */; };
+		EA19C393247D489100987951 /* EmployeeHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19C392247D489100987951 /* EmployeeHome.swift */; };
+		EA3CD9E8247376E20087A575 /* EmployeeProcedureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CD9E7247376E20087A575 /* EmployeeProcedureVC.swift */; };
+		EA3CD9EA247398E10087A575 /* EmployeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CD9E9247398E10087A575 /* EmployeeVC.swift */; };
+		EA3CD9F02474BE7B0087A575 /* EmployeePreparationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CD9EF2474BE7B0087A575 /* EmployeePreparationVC.swift */; };
+		EA3CD9F42474C92E0087A575 /* BelumLatihanCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CD9F32474C92E0087A575 /* BelumLatihanCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,21 +58,16 @@
 		8846587F246C2FA4008DAE9D /* MgEditTraining.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MgEditTraining.storyboard; sourceTree = "<group>"; };
 		884A35492470449200D8A252 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		88E77182247009B8007D9E59 /* ManagementEmployeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementEmployeeVC.swift; sourceTree = "<group>"; };
-		B710B52D247646EE0060B193 /* TrainingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCollectionViewCell.swift; sourceTree = "<group>"; };
-		B710B52F24764FFF0060B193 /* PersiapanTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersiapanTableViewController.swift; sourceTree = "<group>"; };
-		B710B531247650150060B193 /* PersiapanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersiapanTableViewCell.swift; sourceTree = "<group>"; };
-		B74B18C2247D17D30000B3F8 /* AddIngredientsModalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddIngredientsModalVC.swift; path = FnBTrainingApp/Controller/AddIngredientsModalVC.swift; sourceTree = SOURCE_ROOT; };
-		B74B18C4247D1EE20000B3F8 /* AddProcedureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddProcedureViewController.swift; path = FnBTrainingApp/Controller/AddProcedureViewController.swift; sourceTree = SOURCE_ROOT; };
-		B74B18C6247D272F0000B3F8 /* ProsedurEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProsedurEditVC.swift; path = FnBTrainingApp/Controller/ProsedurEditVC.swift; sourceTree = SOURCE_ROOT; };
-		B74B18CA247D27C70000B3F8 /* Prosedur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prosedur.swift; sourceTree = "<group>"; };
-		B74B18CC247D29040000B3F8 /* ProsedurEditTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProsedurEditTableViewCell.swift; path = FnBTrainingApp/View/Table/ProsedurEditTableViewCell.swift; sourceTree = SOURCE_ROOT; };
-		B74B18CD247D29040000B3F8 /* ProsedurEditTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ProsedurEditTableViewCell.xib; path = FnBTrainingApp/View/Table/ProsedurEditTableViewCell.xib; sourceTree = SOURCE_ROOT; };
-		B79C1300247CE1E9001D0941 /* PersiapanEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PersiapanEditVC.swift; path = FnBTrainingApp/View/Management/PersiapanEditVC.swift; sourceTree = SOURCE_ROOT; };
-		B79C1304247CEFE3001D0941 /* Preparation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preparation.swift; sourceTree = "<group>"; };
-		B79C1306247CF0B3001D0941 /* PreparationEditTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparationEditTableViewCell.swift; sourceTree = "<group>"; };
-		B79C1307247CF0B3001D0941 /* PreparationEditTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreparationEditTableViewCell.xib; sourceTree = "<group>"; };
-		B7B188C7247BB28500441A63 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
-		B7D64BB42479247700CAE905 /* TrainingCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrainingCategoryVC.swift; path = FnBTrainingApp/Controller/TrainingCategoryVC.swift; sourceTree = SOURCE_ROOT; };
+		930298DB93CB0F3035BDD093 /* Pods-FnBTrainingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FnBTrainingApp.release.xcconfig"; path = "Target Support Files/Pods-FnBTrainingApp/Pods-FnBTrainingApp.release.xcconfig"; sourceTree = "<group>"; };
+		A4B8933B4C13E9D1D89F899B /* Pods_FnBTrainingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FnBTrainingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA19C387247BB40E00987951 /* ProcedureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcedureModel.swift; sourceTree = "<group>"; };
+		EA19C389247BD2FE00987951 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		EA19C392247D489100987951 /* EmployeeHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeHome.swift; sourceTree = "<group>"; };
+		EA3CD9E7247376E20087A575 /* EmployeeProcedureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeProcedureVC.swift; sourceTree = "<group>"; };
+		EA3CD9E9247398E10087A575 /* EmployeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeVC.swift; sourceTree = "<group>"; };
+		EA3CD9EF2474BE7B0087A575 /* EmployeePreparationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeePreparationVC.swift; sourceTree = "<group>"; };
+		EA3CD9F32474C92E0087A575 /* BelumLatihanCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BelumLatihanCollectionViewCell.swift; sourceTree = "<group>"; };
+		F23BA4F646FBEC462C2235BD /* Pods-FnBTrainingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FnBTrainingApp.debug.xcconfig"; path = "Target Support Files/Pods-FnBTrainingApp/Pods-FnBTrainingApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,12 +75,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE78F4926305CA02558CD5B0 /* Pods_FnBTrainingApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43EBA1B9FCE85FBB29F99B2D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F23BA4F646FBEC462C2235BD /* Pods-FnBTrainingApp.debug.xcconfig */,
+				930298DB93CB0F3035BDD093 /* Pods-FnBTrainingApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8811F586247197D700C142ED /* Table */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +121,8 @@
 			children = (
 				88465852246BAC61008DAE9D /* FnBTrainingApp */,
 				88465851246BAC61008DAE9D /* Products */,
+				43EBA1B9FCE85FBB29F99B2D /* Pods */,
+				931D4239833C711A9C2EC0E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,9 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				884A35492470449200D8A252 /* Employee.swift */,
-				B7B188C7247BB28500441A63 /* Training.swift */,
-				B79C1304247CEFE3001D0941 /* Preparation.swift */,
-				B74B18CA247D27C70000B3F8 /* Prosedur.swift */,
+				EA19C387247BB40E00987951 /* ProcedureModel.swift */,
+				EA19C392247D489100987951 /* EmployeeHome.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -196,6 +195,11 @@
 				B7D64BB42479247700CAE905 /* TrainingCategoryVC.swift */,
 				88465876246C278B008DAE9D /* ManagementVC.swift */,
 				88E77182247009B8007D9E59 /* ManagementEmployeeVC.swift */,
+				EA3CD9E7247376E20087A575 /* EmployeeProcedureVC.swift */,
+				EA3CD9E9247398E10087A575 /* EmployeeVC.swift */,
+				EA3CD9EF2474BE7B0087A575 /* EmployeePreparationVC.swift */,
+				EA3CD9F32474C92E0087A575 /* BelumLatihanCollectionViewCell.swift */,
+				EA19C389247BD2FE00987951 /* APIManager.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -207,6 +211,14 @@
 			path = Employee;
 			sourceTree = "<group>";
 		};
+		931D4239833C711A9C2EC0E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4B8933B4C13E9D1D89F899B /* Pods_FnBTrainingApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -214,9 +226,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88465864246BAC63008DAE9D /* Build configuration list for PBXNativeTarget "FnBTrainingApp" */;
 			buildPhases = (
+				E65D2C1F04C2DA8012627DC4 /* [CP] Check Pods Manifest.lock */,
 				8846584C246BAC61008DAE9D /* Sources */,
 				8846584D246BAC61008DAE9D /* Frameworks */,
 				8846584E246BAC61008DAE9D /* Resources */,
+				854477006572A91E54FA73A4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -281,33 +295,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		854477006572A91E54FA73A4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FnBTrainingApp/Pods-FnBTrainingApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FnBTrainingApp/Pods-FnBTrainingApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FnBTrainingApp/Pods-FnBTrainingApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E65D2C1F04C2DA8012627DC4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FnBTrainingApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8846584C246BAC61008DAE9D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B74B18C5247D1EE20000B3F8 /* AddProcedureViewController.swift in Sources */,
-				B74B18C3247D17D30000B3F8 /* AddIngredientsModalVC.swift in Sources */,
-				B710B52E247646EE0060B193 /* TrainingCollectionViewCell.swift in Sources */,
-				B710B532247650150060B193 /* PersiapanTableViewCell.swift in Sources */,
-				B79C1301247CE1E9001D0941 /* PersiapanEditVC.swift in Sources */,
-				B79C1308247CF0B3001D0941 /* PreparationEditTableViewCell.swift in Sources */,
+				EA19C38A247BD2FE00987951 /* APIManager.swift in Sources */,
+				EA3CD9EA247398E10087A575 /* EmployeeVC.swift in Sources */,
+				EA19C393247D489100987951 /* EmployeeHome.swift in Sources */,
 				88465858246BAC61008DAE9D /* ViewController.swift in Sources */,
 				B710B53024764FFF0060B193 /* PersiapanTableViewController.swift in Sources */,
 				B7B188C8247BB28500441A63 /* Training.swift in Sources */,
 				8811F5852471896E00C142ED /* EmployeeCollectionCell.swift in Sources */,
+				EA19C388247BB40E00987951 /* ProcedureModel.swift in Sources */,
 				884A354A2470449200D8A252 /* Employee.swift in Sources */,
 				88465854246BAC61008DAE9D /* AppDelegate.swift in Sources */,
 				8811F5832471892000C142ED /* EmployeeTableCell.swift in Sources */,
 				B74B18C7247D272F0000B3F8 /* ProsedurEditVC.swift in Sources */,
 				B79C1305247CEFE3001D0941 /* Preparation.swift in Sources */,
 				88E77183247009B8007D9E59 /* ManagementEmployeeVC.swift in Sources */,
+				EA3CD9E8247376E20087A575 /* EmployeeProcedureVC.swift in Sources */,
 				88465856246BAC61008DAE9D /* SceneDelegate.swift in Sources */,
 				B74B18CB247D27C70000B3F8 /* Prosedur.swift in Sources */,
 				B74B18CE247D29040000B3F8 /* ProsedurEditTableViewCell.swift in Sources */,
 				88465877246C278B008DAE9D /* ManagementVC.swift in Sources */,
-				B7D64BB52479247700CAE905 /* TrainingCategoryVC.swift in Sources */,
+				EA3CD9F02474BE7B0087A575 /* EmployeePreparationVC.swift in Sources */,
 				8811F5812471881800C142ED /* EmployeeCollectionView.swift in Sources */,
+				EA3CD9F42474C92E0087A575 /* BelumLatihanCollectionViewCell.swift in Sources */,
 				8811F57F247187EF00C142ED /* EmployeeTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,11 +506,13 @@
 		};
 		88465865246BAC63008DAE9D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F23BA4F646FBEC462C2235BD /* Pods-FnBTrainingApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 94AQ28YXX2;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FnBTrainingApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -468,11 +526,13 @@
 		};
 		88465866246BAC63008DAE9D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 930298DB93CB0F3035BDD093 /* Pods-FnBTrainingApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 94AQ28YXX2;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FnBTrainingApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
