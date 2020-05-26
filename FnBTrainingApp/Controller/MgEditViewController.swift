@@ -23,7 +23,6 @@ class MgEditViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     var navigationBarTitle: String = ""
     
-    
     var tempBahanModel: String = ""
     var tempJumlahModel: String = ""
     
@@ -78,6 +77,7 @@ class MgEditViewController: UIViewController, UITableViewDelegate, UITableViewDa
             let cell = prosedurTabel.dequeueReusableCell(withIdentifier: "prosedurCell", for: indexPath) as! ProsedurTableViewCell
             
             cell.prosedurImage.image = UIImage(named: dataType2[indexPath.row].prosedurImage)
+            
             cell.prosedurLabel.text = dataType2[indexPath.row].prosedurExplanation
             
             return cell
@@ -175,6 +175,14 @@ class MgEditViewController: UIViewController, UITableViewDelegate, UITableViewDa
             persiapanTabel.reloadData()
            }
        }
+    
+   /* override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+          self.tabBarController?.tabBar.isHidden = false
+    }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -15,7 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" red="0.43137254899999999" green="0.7843137255" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="xDF-FN-dbg" kind="relationship" relationship="viewControllers" id="sN2-sy-mUr"/>
@@ -31,7 +30,7 @@
         <scene sceneID="tsc-p0-bEd">
             <objects>
                 <viewControllerPlaceholder storyboardName="MgMain" id="xDF-FN-dbg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Latihan" image="rectangle.stack" catalog="system" selectedImage="rectangle.stack" id="6OW-ul-Unx"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="6OW-ul-Unx"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VrX-oD-jh2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -41,7 +40,7 @@
         <scene sceneID="bYj-W6-Gte">
             <objects>
                 <viewControllerPlaceholder storyboardName="MgTrain" id="d2e-gV-Y7p" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Tambah" image="plus.rectangle.fill" catalog="system" id="xni-M0-gTV"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="xni-M0-gTV"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1VO-WT-Nc1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,16 +50,11 @@
         <scene sceneID="US8-n7-xer">
             <objects>
                 <viewControllerPlaceholder storyboardName="MgEmployees" id="TS0-Co-l7m" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Karyawan" image="person.3" catalog="system" id="n9H-FB-lIk"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="n9H-FB-lIk"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YMv-ui-Muv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="377" y="46"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="person.3" catalog="system" width="128" height="62"/>
-        <image name="plus.rectangle.fill" catalog="system" width="128" height="93"/>
-        <image name="rectangle.stack" catalog="system" width="128" height="122"/>
-    </resources>
 </document>
