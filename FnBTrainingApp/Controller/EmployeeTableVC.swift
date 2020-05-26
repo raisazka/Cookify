@@ -16,6 +16,7 @@ class EmployeeTableVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = theEmployees[0].role
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()

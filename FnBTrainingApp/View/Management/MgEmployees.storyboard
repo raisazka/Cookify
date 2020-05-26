@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Boi-1X-Hwg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Boi-1X-Hwg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -11,13 +11,13 @@
         <!--Karyawan-->
         <scene sceneID="Ows-9O-ug1">
             <objects>
-                <viewController title="Karyawan" id="3oe-tY-IMf" customClass="ManagementEmployeeVC" customModule="FnBTrainingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3oe-tY-IMf" customClass="ManagementEmployeeVC" customModule="FnBTrainingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mbr-vX-EWb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sle-7A-P8K">
-                                <rect key="frame" x="0.0" y="216" width="414" height="646"/>
+                                <rect key="frame" x="0.0" y="164" width="414" height="649"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="2" indentationWidth="0.0" reuseIdentifier="empTableCell" rowHeight="190" id="YSU-oS-CQs" customClass="EmployeeTableCell" customModule="FnBTrainingApp" customModuleProvider="target">
@@ -124,7 +124,7 @@
                                 </prototypes>
                             </tableView>
                             <searchBar contentMode="redraw" placeholder="Employee Name" translatesAutoresizingMaskIntoConstraints="NO" id="LUX-Sb-XEn">
-                                <rect key="frame" x="20" y="150" width="374" height="56"/>
+                                <rect key="frame" x="20" y="98" width="374" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
@@ -217,7 +217,7 @@
         <!--Employee ProfileVC-->
         <scene sceneID="98b-dm-MyM">
             <objects>
-                <viewController id="Wgz-es-c56" customClass="EmployeeProfileVC" customModule="FnBTrainingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="Wgz-es-c56" customClass="EmployeeProfileVC" customModule="FnBTrainingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nfI-zP-opu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -337,7 +337,9 @@
         <scene sceneID="stX-ic-nzb">
             <objects>
                 <navigationController title="Karyawan" automaticallyAdjustsScrollViewInsets="NO" id="Boi-1X-Hwg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Karyawan" image="person.3" catalog="system" id="vZ1-mi-Jis"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="0KG-5R-De4">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -347,7 +349,7 @@
                         <color key="barTintColor" red="0.31372549020000001" green="0.7843137255" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="largeTitleTextAttributes">
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
                         </textAttributes>
                     </navigationBar>
@@ -367,5 +369,6 @@
     <resources>
         <image name="logo" width="2000" height="2000"/>
         <image name="pancake" width="2841" height="1735"/>
+        <image name="person.3" catalog="system" width="128" height="62"/>
     </resources>
 </document>
