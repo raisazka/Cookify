@@ -9,8 +9,8 @@
 import Foundation
 
 class Preparation: NSObject{
-    var name = ""
-    var amount = ""
+    var name: String
+    var amount: String
     
     init(name: String, amount: String){
         self.name = name

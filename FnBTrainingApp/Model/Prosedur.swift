@@ -11,7 +11,7 @@ import UIKit
 
 class Prosedur: NSObject {
     var gambar: UIImage?
-    var deskripsi = ""
+    var deskripsi: String
     
     init(gambar: UIImage, deskripsi: String){
         self.gambar = gambar
