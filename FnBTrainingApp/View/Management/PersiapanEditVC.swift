@@ -13,7 +13,9 @@ class PersiapanEditVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var namaPelatihanTextField: UITextField!
     @IBOutlet var persiapanTableView: UITableView!
+    @IBOutlet weak var tambahBahanPersiapanButton: UIButton!
     
+    @IBOutlet weak var selesaiPersiapanButton: UIButton!
     private var myModel = [Preparation]()
     
     var tambahBahan = ""
@@ -22,6 +24,8 @@ class PersiapanEditVC: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableViewUI()
+        selesaiPersiapanButton.layer.cornerRadius = 10.0
+        tambahBahanPersiapanButton.layer.cornerRadius = 10.0
     }
     
     func setupTableViewUI() {

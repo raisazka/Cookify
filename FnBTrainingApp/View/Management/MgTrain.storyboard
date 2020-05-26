@@ -154,6 +154,8 @@
                     <connections>
                         <outlet property="namaPelatihanTextField" destination="6zp-dM-Xi5" id="NHf-WJ-5C5"/>
                         <outlet property="persiapanTableView" destination="swN-cp-okg" id="IM9-wr-lip"/>
+                        <outlet property="selesaiPersiapanButton" destination="HHR-3j-LxD" id="8ao-w0-hNq"/>
+                        <outlet property="tambahBahanPersiapanButton" destination="QXG-nQ-QVA" id="mhq-bv-5hk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GgR-wT-fB6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -218,6 +220,7 @@
                     <navigationItem key="navigationItem" title="Prosedur" largeTitleDisplayMode="always" id="3xA-9s-6ys"/>
                     <connections>
                         <outlet property="prosedurTableView" destination="ju1-Pk-dlq" id="7Bu-mA-chQ"/>
+                        <outlet property="selesaiProsedurButton" destination="2D6-fl-kh1" id="4y0-Kk-dw7"/>
                         <outlet property="tambahProsedur" destination="h8J-um-I0b" id="ZyQ-TJ-xIW"/>
                     </connections>
                 </viewController>
@@ -427,6 +430,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jBy-Ds-Qqb">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.36645567420000003" green="0.80280823570000004" blue="0.44566031680000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.36645567420000003" green="0.80280823570000004" blue="0.44566031680000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vFf-KA-2oB">

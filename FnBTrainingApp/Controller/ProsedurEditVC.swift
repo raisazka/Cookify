@@ -12,6 +12,7 @@ class ProsedurEditVC: UIViewController {
 
     @IBOutlet weak var tambahProsedur: UIButton!
     @IBOutlet weak var prosedurTableView: UITableView!
+    @IBOutlet weak var selesaiProsedurButton: UIButton!
     
     private var myModel = [Prosedur]()
     
@@ -21,6 +22,8 @@ class ProsedurEditVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableViewUI()
+        selesaiProsedurButton.layer.cornerRadius = 10.0
+        tambahProsedur.layer.cornerRadius = 10.0
     }
     
     func setupTableViewUI(){
