@@ -44,15 +44,15 @@ class ViewController: UIViewController {
     
     @IBAction func login(_ sender: Any) {
         if role == "admin" {
-            presentStoryboard(sbName: "Management", vcIdentifier: "ManagementSB")
+            presentStoryboard(sbName: "Management")
         } else {
-            presentStoryboard(sbName: "Employee", vcIdentifier: "EmpSB")
+            presentStoryboard(sbName: "Employee")
         }
     }
     
-    private func presentStoryboard(sbName : String, vcIdentifier : String) {
+    private func presentStoryboard(sbName : String) {
          let storyboard = UIStoryboard(name: sbName, bundle: nil)
-          let vc = storyboard.instantiateViewController(withIdentifier: vcIdentifier)
+          let vc = storyboard.instantiateInitialViewController()!
           vc.modalPresentationStyle = .fullScreen
           show(vc, sender: self)
     }

@@ -2,13 +2,14 @@
 //  EmployeeCollectionView.swift
 //  FnBTrainingApp
 //
-//  Created by Rais on 17/05/20.
+//  Created by Rais on 26/05/20.
 //  Copyright © 2020 Apple Developer Academy. All rights reserved.
 //
 
 import UIKit
 
 class EmployeeCollectionView: UICollectionView, UICollectionViewDataSource, UICollectionViewDelegate {
+    
     
     override func awakeFromNib() {
         self.delegate = self
