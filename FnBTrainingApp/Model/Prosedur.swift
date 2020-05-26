@@ -2,7 +2,7 @@
 import Foundation
 import UIKit
 
-class ProsedurModel {
+class Prosedur {
     var prosedurImage: String
     var prosedurExplanation: String
     

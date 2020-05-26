@@ -8,13 +8,16 @@
 
 import UIKit
 
-class MgEditViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MgEditViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, EditLatihanDelegate {
+    
     
     @IBOutlet weak var persiapanTabel: UITableView!
     @IBOutlet weak var prosedurTabel: UITableView!
     
-    var upcomingTasks: [persiapanModel] = []
-    var dataReceived: [persiapanModel] = []
+    var upcomingTasks: [Persiapan] = []
+    var dataReceived: [Persiapan] = []
+    
+    var alert: UIAlertController!
 
     var choosenIndex: Int = -1
     
@@ -26,27 +29,29 @@ class MgEditViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var tempBahanModel: String = ""
     var tempJumlahModel: String = ""
     
+    let editLauncher = EditLatihanLauncher()
+    
     var dataType1 = [
-                        persiapanModel(bahanModel: "Telur Ayam", jumlahModel: "3 butir"),
-                        persiapanModel(bahanModel: "Margarin", jumlahModel: "2 sendok teh"),
-                        persiapanModel(bahanModel: "Susu", jumlahModel: "2 sendok makan"),
-                        persiapanModel(bahanModel: "Keju", jumlahModel: "2 sendok makan"),
-                        persiapanModel(bahanModel: "Garam", jumlahModel: "2 sendok teh"),
-                        persiapanModel(bahanModel: "Lada", jumlahModel: "1 sendok teh"),
-                        persiapanModel(bahanModel: "Wajan", jumlahModel: "ukuran sedang"),
-                        persiapanModel(bahanModel: "Sendok masak", jumlahModel: "ukuran sedang")
+                        Persiapan(bahanModel: "Telur Ayam", jumlahModel: "3 butir"),
+                        Persiapan(bahanModel: "Margarin", jumlahModel: "2 sendok teh"),
+                        Persiapan(bahanModel: "Susu", jumlahModel: "2 sendok makan"),
+                        Persiapan(bahanModel: "Keju", jumlahModel: "2 sendok makan"),
+                        Persiapan(bahanModel: "Garam", jumlahModel: "2 sendok teh"),
+                        Persiapan(bahanModel: "Lada", jumlahModel: "1 sendok teh"),
+                        Persiapan(bahanModel: "Wajan", jumlahModel: "ukuran sedang"),
+                        Persiapan(bahanModel: "Sendok masak", jumlahModel: "ukuran sedang")
                     ]
     
     var dataType2 =
     [
-        ProsedurModel(prosedurImage: "prosedur 1.png", prosedurExplanation: "Pecahkan Telur dan masukkan ke dalam mangkok"),
-        ProsedurModel(prosedurImage: "prosedur 2.png", prosedurExplanation: "Kocok telur sampai tercampur lalu masukan garam dan merica lalu aduk lagi."),
-        ProsedurModel(prosedurImage: "prosedur 3.png", prosedurExplanation: "Masukan keju dan susu kemudian aduk lagi hingga tercampur."),
-        ProsedurModel(prosedurImage: "prosedur 4.png", prosedurExplanation: "Masukan margarin kedalam wajan dan panaskan wajan hingga margarin meleleh."),
-        ProsedurModel(prosedurImage: "prosedur 5.png", prosedurExplanation: "Gunakan api kecil setelah margarin meleleh lalu masukan telur kedalam wajan."),
-        ProsedurModel(prosedurImage: "prosedur 6.png", prosedurExplanation: "Biarkan telur di dalam wajan selama 30 detik tanpa menyentuh telur sama sekali."),
-        ProsedurModel(prosedurImage: "prosedur 7.png", prosedurExplanation: "Gunakan api sedang kemudian mulai aduk telur tersebut secara merata selama 20 detik"),
-        ProsedurModel(prosedurImage: "prosedur 8.png", prosedurExplanation: "Matikan api dan tetap aduk telur selama 7 detik kemudian sajikan ke dalam piring")
+        Prosedur(prosedurImage: "prosedur 1.png", prosedurExplanation: "Pecahkan Telur dan masukkan ke dalam mangkok"),
+        Prosedur(prosedurImage: "prosedur 2.png", prosedurExplanation: "Kocok telur sampai tercampur lalu masukan garam dan merica lalu aduk lagi."),
+        Prosedur(prosedurImage: "prosedur 3.png", prosedurExplanation: "Masukan keju dan susu kemudian aduk lagi hingga tercampur."),
+        Prosedur(prosedurImage: "prosedur 4.png", prosedurExplanation: "Masukan margarin kedalam wajan dan panaskan wajan hingga margarin meleleh."),
+        Prosedur(prosedurImage: "prosedur 5.png", prosedurExplanation: "Gunakan api kecil setelah margarin meleleh lalu masukan telur kedalam wajan."),
+        Prosedur(prosedurImage: "prosedur 6.png", prosedurExplanation: "Biarkan telur di dalam wajan selama 30 detik tanpa menyentuh telur sama sekali."),
+        Prosedur(prosedurImage: "prosedur 7.png", prosedurExplanation: "Gunakan api sedang kemudian mulai aduk telur tersebut secara merata selama 20 detik"),
+        Prosedur(prosedurImage: "prosedur 8.png", prosedurExplanation: "Matikan api dan tetap aduk telur selama 7 detik kemudian sajikan ke dalam piring")
     ]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -67,8 +72,8 @@ class MgEditViewController: UIViewController, UITableViewDelegate, UITableViewDa
         {
             let cell = persiapanTabel.dequeueReusableCell(withIdentifier: "persiapanCell", for: indexPath) as! PersiapanTableViewCell
             
-            cell.bahanLabel.text = dataType1[indexPath.row].bahanModel
-            cell.jumlahLabel.text = dataType1[indexPath.row].jumlahModel
+            cell.bahanLabel.text = dataType1[indexPath.row].bahan
+            cell.jumlahLabel.text = dataType1[indexPath.row].jumlah
             
             return cell
         }
@@ -84,17 +89,42 @@ class MgEditViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         
     }
-    
+        
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let persiapanEdit = dataType1[indexPath.row]
         choosenIndex = indexPath.row
-        performSegue(withIdentifier: "persiapanEditVC", sender: persiapanEdit)
+        handelModal(persiapan: persiapanEdit)
+    }
+    
+    //Delegate Function
+    func editLatihan() {
+        if editLauncher.persiapanField.text!.isEmpty || editLauncher.keteranganField.text!.isEmpty {
+           showAlert()
+        } else {
+            view.endEditing(true)
+            dataType1[choosenIndex].bahan = editLauncher.persiapanField.text ?? ""
+            dataType1[choosenIndex].jumlah = editLauncher.keteranganField.text ?? ""
+            editLauncher.handleDismiss()
+            editLauncher.keteranganField.resignFirstResponder()
+            persiapanTabel.reloadData()
+        }
+    }
+    
+    
+    let blackView = UIView()
+
+    private func handelModal(persiapan: Persiapan) {
+        editLauncher.handelModal(persiapan: persiapan)
+    }
+    
+    @objc func handleDismiss() {
+        editLauncher.handleDismiss()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let persiapanEditVC = segue.destination as? MgEditTable{
             persiapanEditVC.saveChoosenIndex = choosenIndex
-            persiapanEditVC.initProduct(category: sender as! persiapanModel)
+            persiapanEditVC.initProduct(category: sender as! Persiapan)
         }
 
     }
@@ -167,22 +197,13 @@ class MgEditViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     @IBAction func unwindToTable(sender: UIStoryboardSegue) {
-           if let sourceViewController = sender.source as? MgEditTable {
-               
-            dataType1[choosenIndex].bahanModel = tempBahanModel
-            dataType1[choosenIndex].jumlahModel = tempJumlahModel
+        if sender.source is MgEditTable {
+            dataType1[choosenIndex].bahan = tempBahanModel
+            dataType1[choosenIndex].jumlah = tempJumlahModel
             
             persiapanTabel.reloadData()
            }
        }
-    
-   /* override func viewWillAppear(_ animated: Bool) {
-        self.tabBarController?.tabBar.isHidden = true
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-          self.tabBarController?.tabBar.isHidden = false
-    }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -195,8 +216,16 @@ class MgEditViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         prosedurTabel.dataSource = self
         prosedurTabel.delegate = self
+        
+        editLauncher.editDelegate = self
     }
     
+    func showAlert() {
+       alert = UIAlertController(title: "Error", message: "Please complete the form", preferredStyle: .alert)
+       let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+       alert.addAction(action)
+       self.present(alert, animated: true, completion: nil)
+    }
     
 
     /*

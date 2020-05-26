@@ -9,12 +9,12 @@
 import Foundation
 import UIKit
 
-class persiapanModel {
-    var bahanModel: String
-    var jumlahModel: String
+class Persiapan {
+    var bahan: String
+    var jumlah: String
     
     init(bahanModel: String, jumlahModel: String) {
-        self.bahanModel = bahanModel
-        self.jumlahModel = jumlahModel
+        self.bahan = bahanModel
+        self.jumlah = jumlahModel
     }
 }

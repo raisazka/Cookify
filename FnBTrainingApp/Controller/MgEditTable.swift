@@ -23,7 +23,7 @@ class MgEditTable: UIViewController, UITextFieldDelegate{
     var keterangan: String = ""
     var namaPersiapan1: String = ""
     var keterangan1: String = ""
-    var products: [persiapanModel] = []
+    var products: [Persiapan] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +33,9 @@ class MgEditTable: UIViewController, UITextFieldDelegate{
         editButton.layer.cornerRadius = 10
     }
     
-    func initProduct(category: persiapanModel){
-        self.namaPersiapan = category.bahanModel
-        self.keterangan = category.jumlahModel
+    func initProduct(category: Persiapan){
+        self.namaPersiapan = category.bahan
+        self.keterangan = category.jumlah
     }
     
     @IBAction func editBtn(_ sender: Any) {
@@ -44,7 +44,7 @@ class MgEditTable: UIViewController, UITextFieldDelegate{
         }else{
             namaPersiapan1 = namaPersiapanTF.text!
             keterangan1 = keteranganTF.text!
-            self.products.append(persiapanModel(bahanModel: namaPersiapan1, jumlahModel: keterangan1))
+            self.products.append(Persiapan(bahanModel: namaPersiapan1, jumlahModel: keterangan1))
             performSegue(withIdentifier: "unwindToTable" , sender: self)
         }
     }
