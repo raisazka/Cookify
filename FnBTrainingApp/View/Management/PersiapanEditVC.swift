@@ -9,7 +9,7 @@
 import UIKit
 
 class PersiapanEditVC: UIViewController, UITextFieldDelegate {
-
+    
     
     @IBOutlet var namaPelatihanTextField: UITextField!
     @IBOutlet var persiapanTableView: UITableView!
@@ -34,9 +34,19 @@ class PersiapanEditVC: UIViewController, UITextFieldDelegate {
     }
     
     func insertNewCell(){
+        myModel.append(Preparation(name: "Garam", amount: "2 sendok teh"))
         
+        let indexPath = IndexPath(row: myModel.count - 1, section: 0)
+        
+        persiapanTableView.beginUpdates()
+        persiapanTableView.insertRows(at: [indexPath], with: .automatic)
+        persiapanTableView.endUpdates()
+        view.endEditing(true)
     }
-
+    
+    @IBAction func unwindSegue(_ sender: UIStoryboardSegue){
+        insertNewCell()
+    }
 }
 
 extension PersiapanEditVC: UITableViewDataSource, UITableViewDelegate {
@@ -44,7 +54,7 @@ extension PersiapanEditVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return myModel.count
     }
-
+    
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
@@ -52,6 +62,10 @@ extension PersiapanEditVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete){
+            let alert = UIAlertController(title: "Message", message: "Clicked at index\(indexPath.row)", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
             myModel.remove(at: indexPath.row)
             tableView.reloadData()
         }

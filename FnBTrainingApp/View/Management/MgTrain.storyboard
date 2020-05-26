@@ -302,10 +302,10 @@
             </objects>
             <point key="canvasLocation" x="3085.507246376812" y="928.79464285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Ingredients ModalVC-->
         <scene sceneID="NJL-cU-W4i">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="ToU-Vt-YP7" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="ToU-Vt-YP7" customClass="AddIngredientsModalVC" customModule="FnBTrainingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TSb-rz-L6V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="446"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -351,6 +351,9 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Z61-R5-l0N" kind="unwind" unwindAction="unwindSegue:" id="HrR-Jv-zKA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -376,8 +379,13 @@
                     <value key="contentSizeForViewInPopover" type="size" width="414" height="500"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="500"/>
+                    <connections>
+                        <outlet property="tambahBahan" destination="NCi-Do-Jgn" id="mBh-9d-dUP"/>
+                        <outlet property="tambahKeterangan" destination="stV-WR-2qO" id="tQl-Zr-FVn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NNX-WU-epZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Z61-R5-l0N" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3087" y="214"/>
         </scene>
