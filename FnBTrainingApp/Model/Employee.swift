@@ -13,9 +13,9 @@ class Employee {
     var name: String
     var image: UIImage?
     var role: String
-    var trainings : [Training] = []
+    var trainings : [TrainingModel] = []
     
-    init(name: String, image: UIImage, role:String, training: [Training]) {
+    init(name: String, image: UIImage, role:String, training: [TrainingModel]) {
         self.name = name
         self.image = image
         self.role = role

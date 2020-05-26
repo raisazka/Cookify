@@ -13,11 +13,11 @@ UITableViewDataSource,EmpTableDelegate {
     
     
     var employees : [Employee] = [
-        Employee(name: "Henrdi",image: #imageLiteral(resourceName: "logo") , role: "Cook", training: [Training(name:"Kebab", image: #imageLiteral(resourceName: "kebab"), minute: 4), Training(name: "Pancake", image: #imageLiteral(resourceName: "pancake"), minute: 10),Training(name: "Steak", image: #imageLiteral(resourceName: "steak"), minute: 22)]),
+        Employee(name: "Henrdi",image: #imageLiteral(resourceName: "logo") , role: "Cook", training: [TrainingModel(name:"Kebab", image: #imageLiteral(resourceName: "kebab"), minute: 4), TrainingModel(name: "Pancake", image: #imageLiteral(resourceName: "pancake"), minute: 10),TrainingModel(name: "Steak", image: #imageLiteral(resourceName: "steak"), minute: 22)]),
         
-        Employee(name: "Edward", image: #imageLiteral(resourceName: "logo"), role: "Cook", training: [Training(name: "Pancake", image: #imageLiteral(resourceName: "pancake"), minute: 10),Training(name: "Steak", image: #imageLiteral(resourceName: "steak"), minute: 22)]),
+        Employee(name: "Edward", image: #imageLiteral(resourceName: "logo"), role: "Cook", training: [TrainingModel(name: "Pancake", image: #imageLiteral(resourceName: "pancake"), minute: 10),TrainingModel(name: "Steak", image: #imageLiteral(resourceName: "steak"), minute: 22)]),
         
-        Employee(name: "Rei", image: #imageLiteral(resourceName: "logo"), role: "Cashier", training: [Training(name:"Kebab", image: #imageLiteral(resourceName: "kebab"), minute: 4), Training(name: "Pancake", image: #imageLiteral(resourceName: "pancake"), minute: 10),Training(name: "Steak", image: #imageLiteral(resourceName: "steak"), minute: 22), Training(name:"Scrambled Egg", image: #imageLiteral(resourceName: "kebab"), minute: 15)])
+        Employee(name: "Rei", image: #imageLiteral(resourceName: "logo"), role: "Cashier", training: [TrainingModel(name:"Kebab", image: #imageLiteral(resourceName: "kebab"), minute: 4), TrainingModel(name: "Pancake", image: #imageLiteral(resourceName: "pancake"), minute: 10),TrainingModel(name: "Steak", image: #imageLiteral(resourceName: "steak"), minute: 22), TrainingModel(name:"Scrambled Egg", image: #imageLiteral(resourceName: "kebab"), minute: 15)])
     ]
     
     

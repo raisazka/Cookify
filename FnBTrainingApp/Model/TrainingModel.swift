@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Training {
+class TrainingModel {
     var name: String
     var image: UIImage
     var minute: Int

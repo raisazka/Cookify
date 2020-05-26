@@ -40,7 +40,7 @@ class EmployeeTrainingCollectionCell: UICollectionViewCell {
         layer.backgroundColor = UIColor.white.cgColor
     }
     
-    func configure(training: Training) {
+    func configure(training: TrainingModel) {
         trainingName.text = training.name
         trainingImage.image = training.image
         trainingMinute.text = "\(training.minute)min"
