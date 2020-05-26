@@ -24,7 +24,9 @@ class ManagementVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         cookTableView.separatorColor = .white
         
         self.dataType = [homeAdminModel(recipe: "Telor orak arik", imageModel: "TelorAssignee.png", peoples:["Telor Person 1.png","Telor Person 2.png","Telor Person 3.png","Telor Person 4.png"]),
-                             homeAdminModel(recipe: "Wafflee", imageModel: "Waffle Assignee.png", peoples:["Telor Person 1.png","Telor Person 4.png"])
+                        homeAdminModel(recipe: "Roti Bakar", imageModel: "Waffle Assignee.png", peoples:["Telor Person 1.png","Telor Person 4.png"]),
+                        homeAdminModel(recipe: "Ayam Goreng", imageModel: "Waffle Assignee.png", peoples:["Telor Person 2.png"]),
+                        homeAdminModel(recipe: "Roti bakar telur", imageModel: "Waffle Assignee.png", peoples:["Telor Person 3.png","Telor Person 4.png","Telor Person 1.png"])
                              ]
     }
     
