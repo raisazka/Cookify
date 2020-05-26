@@ -42,16 +42,17 @@ class MgEditViewController: UIViewController, UITableViewDelegate, UITableViewDa
                         Persiapan(bahanModel: "Sendok masak", jumlahModel: "ukuran sedang")
                     ]
     
+    //Sesuain sama model barunya
     var dataType2 =
     [
-        Prosedur(prosedurImage: "prosedur 1.png", prosedurExplanation: "Pecahkan Telur dan masukkan ke dalam mangkok"),
-        Prosedur(prosedurImage: "prosedur 2.png", prosedurExplanation: "Kocok telur sampai tercampur lalu masukan garam dan merica lalu aduk lagi."),
-        Prosedur(prosedurImage: "prosedur 3.png", prosedurExplanation: "Masukan keju dan susu kemudian aduk lagi hingga tercampur."),
-        Prosedur(prosedurImage: "prosedur 4.png", prosedurExplanation: "Masukan margarin kedalam wajan dan panaskan wajan hingga margarin meleleh."),
-        Prosedur(prosedurImage: "prosedur 5.png", prosedurExplanation: "Gunakan api kecil setelah margarin meleleh lalu masukan telur kedalam wajan."),
-        Prosedur(prosedurImage: "prosedur 6.png", prosedurExplanation: "Biarkan telur di dalam wajan selama 30 detik tanpa menyentuh telur sama sekali."),
-        Prosedur(prosedurImage: "prosedur 7.png", prosedurExplanation: "Gunakan api sedang kemudian mulai aduk telur tersebut secara merata selama 20 detik"),
-        Prosedur(prosedurImage: "prosedur 8.png", prosedurExplanation: "Matikan api dan tetap aduk telur selama 7 detik kemudian sajikan ke dalam piring")
+        Prosedur(gambar: #imageLiteral(resourceName: "prosedur 1"), deskripsi: "Pecahkan Telur dan masukkan ke dalam mangkok"),
+        Prosedur(gambar: #imageLiteral(resourceName: "prosedur 2"), deskripsi: "Kocok telur sampai tercampur lalu masukan garam dan merica lalu aduk lagi."),
+        Prosedur(gambar: #imageLiteral(resourceName: "prosedur 3"), deskripsi: "Masukan keju dan susu kemudian aduk lagi hingga tercampur."),
+        Prosedur(gambar: #imageLiteral(resourceName: "prosedur 4"), deskripsi: "Masukan margarin kedalam wajan dan panaskan wajan hingga margarin meleleh."),
+        Prosedur(gambar: #imageLiteral(resourceName: "prosedur 5"), deskripsi: "Gunakan api kecil setelah margarin meleleh lalu masukan telur kedalam wajan."),
+        Prosedur(gambar: #imageLiteral(resourceName: "prosedur 6"), deskripsi: "Biarkan telur di dalam wajan selama 30 detik tanpa menyentuh telur sama sekali."),
+        Prosedur(gambar: #imageLiteral(resourceName: "prosedur 7"), deskripsi: "Gunakan api sedang kemudian mulai aduk telur tersebut secara merata selama 20 detik"),
+        Prosedur(gambar: #imageLiteral(resourceName: "prosedur 8"), deskripsi: "Matikan api dan tetap aduk telur selama 7 detik kemudian sajikan ke dalam piring")
     ]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -81,9 +82,9 @@ class MgEditViewController: UIViewController, UITableViewDelegate, UITableViewDa
         {
             let cell = prosedurTabel.dequeueReusableCell(withIdentifier: "prosedurCell", for: indexPath) as! ProsedurTableViewCell
             
-            cell.prosedurImage.image = UIImage(named: dataType2[indexPath.row].prosedurImage)
+            cell.prosedurImage.image = dataType2[indexPath.row].gambar
             
-            cell.prosedurLabel.text = dataType2[indexPath.row].prosedurExplanation
+            cell.prosedurLabel.text = dataType2[indexPath.row].deskripsi
             
             return cell
         }
