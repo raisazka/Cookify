@@ -10,6 +10,7 @@ import UIKit
 
 class EmployeeCollectionView: UICollectionView, UICollectionViewDataSource, UICollectionViewDelegate {
     
+    
     override func awakeFromNib() {
         self.delegate = self
         self.dataSource = self
