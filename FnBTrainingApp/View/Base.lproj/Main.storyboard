@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -15,13 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="yBV-nx-VzW">
-                                <rect key="frame" x="102" y="139" width="210" height="215"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="215" id="U9f-L7-qvR"/>
-                                    <constraint firstAttribute="width" constant="210" id="b0T-HV-yO0"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1P-ND-HC1">
                                 <rect key="frame" x="165.5" y="382" width="83" height="33"/>
                                 <constraints>
@@ -79,6 +72,13 @@
                                     <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e89-tc-icr"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo Cookify" translatesAutoresizingMaskIntoConstraints="NO" id="yBV-nx-VzW">
+                                <rect key="frame" x="103" y="139" width="210" height="215"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="215" id="U9f-L7-qvR"/>
+                                    <constraint firstAttribute="width" constant="210" id="b0T-HV-yO0"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.43137254901960786" green="0.78431372549019607" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -86,7 +86,7 @@
                             <constraint firstItem="7bX-oH-d3q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="1" id="EBQ-n1-V8a"/>
                             <constraint firstItem="yBV-nx-VzW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="95" id="IvS-Lf-wfB"/>
                             <constraint firstItem="uhS-fG-ZgV" firstAttribute="centerX" secondItem="7bX-oH-d3q" secondAttribute="centerX" constant="-1" id="Ldm-xm-0ch"/>
-                            <constraint firstItem="yBV-nx-VzW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M95-hI-RRo"/>
+                            <constraint firstItem="yBV-nx-VzW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="1" id="M95-hI-RRo"/>
                             <constraint firstItem="ewy-1w-bIR" firstAttribute="top" secondItem="F1P-ND-HC1" secondAttribute="bottom" constant="48" id="Qeh-0A-1M6"/>
                             <constraint firstItem="F1P-ND-HC1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fjt-uA-NzH"/>
                             <constraint firstItem="F1P-ND-HC1" firstAttribute="top" secondItem="yBV-nx-VzW" secondAttribute="bottom" constant="28" id="jH9-C0-l90"/>
@@ -108,6 +108,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="2000" height="2000"/>
+        <image name="Logo Cookify" width="1101" height="1100"/>
     </resources>
 </document>
