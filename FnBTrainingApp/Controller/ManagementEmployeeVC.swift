@@ -12,11 +12,11 @@ class ManagementEmployeeVC: UIViewController, UITableViewDelegate,
 UITableViewDataSource,EmpTableDelegate {
         
     var employees : [Employee] = [
-        Employee(name: "Henrdi",image: #imageLiteral(resourceName: "logo") , role: "Cook", training: [TrainingModel(name:"Kebab", image: #imageLiteral(resourceName: "kebab"), minute: 4), TrainingModel(name: "Pancake", image: #imageLiteral(resourceName: "pancake"), minute: 10),TrainingModel(name: "Steak", image: #imageLiteral(resourceName: "steak"), minute: 22)]),
+        Employee(name: "Henrdi",image: #imageLiteral(resourceName: "man-3") , role: "Cook", training: [TrainingModel(name:"Kebab", image: #imageLiteral(resourceName: "kebab"), minute: 4), TrainingModel(name: "Pancake", image: #imageLiteral(resourceName: "pancake"), minute: 10),TrainingModel(name: "Steak", image: #imageLiteral(resourceName: "steak"), minute: 22)]),
         
-        Employee(name: "Edward", image: #imageLiteral(resourceName: "logo"), role: "Cook", training: [TrainingModel(name: "Pancake", image: #imageLiteral(resourceName: "pancake"), minute: 10),TrainingModel(name: "Steak", image: #imageLiteral(resourceName: "steak"), minute: 22)]),
+        Employee(name: "Leslie", image: #imageLiteral(resourceName: "man-2"), role: "Cook", training: [TrainingModel(name: "Pancake", image: #imageLiteral(resourceName: "pancake"), minute: 10),TrainingModel(name: "Steak", image: #imageLiteral(resourceName: "steak"), minute: 22)]),
         
-        Employee(name: "Rei", image: #imageLiteral(resourceName: "logo"), role: "Cashier", training: [TrainingModel(name:"Kebab", image: #imageLiteral(resourceName: "kebab"), minute: 4), TrainingModel(name: "Pancake", image: #imageLiteral(resourceName: "pancake"), minute: 10),TrainingModel(name: "Steak", image: #imageLiteral(resourceName: "steak"), minute: 22), TrainingModel(name:"Scrambled Egg", image: #imageLiteral(resourceName: "kebab"), minute: 15)])
+        Employee(name: "Rei", image: #imageLiteral(resourceName: "man-1"), role: "Head Cook", training: [TrainingModel(name:"Kebab", image: #imageLiteral(resourceName: "kebab"), minute: 4), TrainingModel(name: "Pancake", image: #imageLiteral(resourceName: "pancake"), minute: 10),TrainingModel(name: "Steak", image: #imageLiteral(resourceName: "steak"), minute: 22), TrainingModel(name:"Scrambled Egg", image: #imageLiteral(resourceName: "20150511-scrambled-eggs-vicky-wasik-9"), minute: 15)])
     ]
     
     
