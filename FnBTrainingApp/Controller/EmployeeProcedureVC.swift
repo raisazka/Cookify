@@ -36,8 +36,9 @@ class EmployeeProcedureVC: UIViewController {
     
     
     
-    var secondsA = 10
-    var secondsB = 10
+    var secondsA = 180
+    var secondsB = 180
+    var minuteA : Int = 0
     var buttonState : Int = 1
     var pageState : Int = 0
     var timer = Timer()
@@ -101,12 +102,19 @@ class EmployeeProcedureVC: UIViewController {
             break
         }
         
+//        func timerMenit() -> Int {
+//             return secondsA / 60
+//        }
     
     }
     
     @objc func counter(){
+        
+        // detik 89, 89/60 = 1, sisa hasil 29
         secondsA -= 1
-        waktu.text = String(secondsA) + " Detik"
+        waktu.text = "\(secondsA / 60 % 60):\(secondsA % 60)"
+        
+        
         
         if (secondsA < 1){
             timer.invalidate()
@@ -130,7 +138,7 @@ class EmployeeProcedureVC: UIViewController {
       let habis = UIAlertController(title: "Waktu Anda Habis", message: nil, preferredStyle: UIAlertController.Style.alert)
     habis.addAction(UIAlertAction(title: "Ulangi Latihan", style: .destructive, handler: {action in
         self.secondsA = self.secondsB
-        self.waktu.text = String(self.secondsA) + " Detik"
+        self.waktu.text = "\(self.secondsA / 60) Menit"
         print(self.secondsA)
         print(self.secondsB)
         self.imageProcedure.image = self.procedureImgOrakArikArray[0]
@@ -157,7 +165,14 @@ class EmployeeProcedureVC: UIViewController {
         self.imageProcedure.image = procedureImgOrakArikArray[0]
         self.labelProcedure.text = procedureDescOrakArikArray[0]
         
-        waktu.text = String(secondsA) + " Detik"
+        waktu.text = "\(secondsA / 60) Menit"
+        print("seconds A \(secondsA)")
+
+        print(minuteA)
+        
+        if secondsA < 60{
+            waktu.text = "\(secondsA) Detik"
+        }
         
 
         // Do any additional setup after loading the view.
